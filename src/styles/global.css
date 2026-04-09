@@ -1,0 +1,248 @@
+/* ===== REXIA'26 Global Design System ===== */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Syne:wght@700;800&display=swap');
+
+:root {
+  /* Core Colors */
+  --color-deep-purple: #2e1155;
+  --color-dark-purple: #1a0a33;
+  --color-mid-purple: #4a1a8a;
+  --color-light-purple: #7b3fe4;
+  --color-space-white: #eef0f6;
+  --color-space-gray: #a0a3b1;
+  --color-neon-blue: #00d4ff;
+  --color-neon-purple: #b44aff;
+  --color-neon-pink: #ff2d95;
+
+  /* Background */
+  --bg-primary: #0a0415;
+  --bg-secondary: #120826;
+  --bg-card: rgba(46, 17, 85, 0.25);
+
+  /* Gradients */
+  --gradient-accent: linear-gradient(135deg, #4a1a8a, #1e3a8a, #00d4ff);
+  --gradient-neon: linear-gradient(90deg, #b44aff, #00d4ff);
+  --gradient-nebula: radial-gradient(ellipse at 20% 50%, rgba(74, 26, 138, 0.4) 0%, transparent 50%),
+                     radial-gradient(ellipse at 80% 20%, rgba(30, 58, 138, 0.3) 0%, transparent 50%),
+                     radial-gradient(ellipse at 50% 80%, rgba(180, 74, 255, 0.2) 0%, transparent 50%);
+  --gradient-card: linear-gradient(135deg, rgba(74, 26, 138, 0.15), rgba(30, 58, 138, 0.1));
+  --gradient-glow: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(46, 17, 85, 0.15);
+  --glass-border: rgba(238, 240, 246, 0.08);
+  --glass-blur: 20px;
+
+  /* Shadows */
+  --shadow-glow-sm: 0 0 15px rgba(180, 74, 255, 0.2);
+  --shadow-glow-md: 0 0 30px rgba(180, 74, 255, 0.3);
+  --shadow-glow-lg: 0 0 60px rgba(180, 74, 255, 0.4);
+  --shadow-glow-neon: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(0, 212, 255, 0.1);
+
+  /* Typography */
+  --font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Syne', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3.5rem;
+  --font-size-6xl: 5rem;
+  --font-size-hero: clamp(3rem, 10vw, 8rem);
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 50%;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Z-Index Scale */
+  --z-background: -1;
+  --z-default: 1;
+  --z-card: 10;
+  --z-navbar: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+  --z-cursor: 400;
+  --z-loader: 500;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--color-space-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, textarea {
+  font-family: var(--font-family);
+  border: none;
+  outline: none;
+  background: none;
+  color: inherit;
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: rgba(180, 74, 255, 0.3);
+  color: var(--color-space-white);
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-mid-purple);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-light-purple);
+}
+
+/* ===== Utility Keyframes ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* ===== Section Base ===== */
+.section {
+  position: relative;
+  padding: var(--space-5xl) var(--space-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 8vw, 6.5rem); /* Fluid typography */
+  font-weight: 800;
+  text-align: left;
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.04em;
+  color: var(--color-space-white);
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-5xl: var(--space-3xl); /* Reduce vertical spacing on mobile */
+  }
+}
+
+.section__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-space-gray);
+  text-align: left;
+  max-width: 600px;
+  margin: 0 0 var(--space-4xl) 0;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

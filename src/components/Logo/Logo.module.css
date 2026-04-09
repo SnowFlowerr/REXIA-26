@@ -1,0 +1,32 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.logoImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
+  transition: filter 0.3s ease;
+}
+
+/* Animate variant */
+.animate .logoImg {
+  animation: logoFloat 4s ease-in-out infinite, logoGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes logoGlow {
+  0% { filter: drop-shadow(0 0 10px rgba(180, 74, 255, 0.3)); }
+  100% { filter: drop-shadow(0 0 25px rgba(0, 212, 255, 0.5)); }
+}
+
+.logo:hover .logoImg {
+  filter: drop-shadow(0 0 20px rgba(180, 74, 255, 0.6));
+}

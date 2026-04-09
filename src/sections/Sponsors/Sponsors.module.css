@@ -1,0 +1,116 @@
+.sponsors {
+  position: relative;
+  padding: var(--space-5xl) 0;
+  overflow: hidden;
+  /* Submerged Dotted Grid background */
+  background-image:
+    radial-gradient(circle at center, rgba(238, 240, 246, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+  position: relative;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16/10;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoWrapper:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(180, 74, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.logoIcon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  filter: grayscale(1) brightness(2);
+  transition: filter var(--transition-base);
+}
+
+.logoWrapper:hover .logoIcon {
+  filter: grayscale(0) brightness(1.2);
+}
+
+.logoName {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-space-white);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+/* CTA */
+.ctaWrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: var(--space-2xl);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-2xl);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-space-gray);
+  transition: all var(--transition-base);
+}
+
+.cta:hover {
+  border-color: rgba(180, 74, 255, 0.3);
+  color: var(--color-space-white);
+  box-shadow: var(--shadow-glow-sm);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logoName {
+    font-size: var(--font-size-sm);
+  }
+}

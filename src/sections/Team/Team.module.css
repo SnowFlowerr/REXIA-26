@@ -1,0 +1,128 @@
+.team {
+  position: relative;
+  padding: var(--space-5xl) 0;
+  /* Remove side padding for full-width slider feel */
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 0 var(--space-xl); */
+}
+
+.sliderWrapper {
+  margin-top: var(--space-4xl);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* We'll use this for the motion.div in React */
+.sliderTrack {
+  display: flex;
+  gap: var(--space-2xl);
+  width: max-content;
+  padding: var(--space-xl) 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  /* Remove padding for corner-to-corner photo */
+  min-width: 220px;
+  /* Wider cards */
+  height: 480px;
+  /* Taller fixed height */
+  border-radius: var(--radius-xl);
+  background: #111;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.photoArea {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  background: linear-gradient(135deg, #1a0a33 0%, #0a0415 100%);
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  max-width: 320px;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: all var(--transition-slow);
+  filter: grayscale(20%);
+  /* Artistic feel */
+}
+
+.card:hover .photo {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.cardFooter {
+  padding: var(--space-xl);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-space-white);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.role {
+  font-size: var(--font-size-sm);
+  color: var(--color-space-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.sliderTrack:hover {
+  animation-play-state: paused;
+  /* Pause slider on hover */
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 180px; /* Thinner for mobile to show more of the stack */
+    height: 380px;
+  }
+  
+  .name {
+    font-size: var(--font-size-md);
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+}

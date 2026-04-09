@@ -1,0 +1,136 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-loader);
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  gap: var(--space-xl);
+}
+
+/* Warp speed lines — enhanced with colors */
+.warp {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background: linear-gradient(to top, transparent, var(--color, var(--color-neon-blue)), var(--color-neon-purple));
+  transform-origin: center bottom;
+  transform: rotate(var(--angle));
+  animation: warpLine 1.2s var(--delay) ease-in-out infinite;
+  opacity: 0.7;
+}
+
+@keyframes warpLine {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 35vh;
+    opacity: 0.8;
+  }
+  100% {
+    height: 55vh;
+    opacity: 0;
+  }
+}
+
+/* Logo container */
+.logoContainer {
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 0 40px rgba(180, 74, 255, 0.5));
+}
+
+/* Text */
+.text {
+  position: relative;
+  z-index: 3;
+}
+
+.tagline {
+  font-size: var(--font-size-xs);
+  color: var(--color-space-gray);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  animation: glowPulse 1.5s ease-in-out infinite;
+}
+
+/* Progress bar */
+.progressWrapper {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  width: 200px;
+}
+
+.progressTrack {
+  flex: 1;
+  height: 2px;
+  background: rgba(238, 240, 246, 0.1);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--gradient-neon);
+  border-radius: 1px;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+.progressText {
+  font-size: var(--font-size-xs);
+  color: var(--color-space-gray);
+  font-variant-numeric: tabular-nums;
+  width: 30px;
+  text-align: right;
+}
+
+/* Expanding rings */
+.rings {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.ring {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(180, 74, 255, 0.2);
+  border-radius: 50%;
+  animation: ringExpand 2.4s var(--ring-delay, 0s) ease-out infinite;
+}
+
+@keyframes ringExpand {
+  0% {
+    width: 80px;
+    height: 80px;
+    opacity: 0.6;
+    border-color: rgba(0, 212, 255, 0.4);
+  }
+  100% {
+    width: 700px;
+    height: 700px;
+    opacity: 0;
+    border-color: rgba(180, 74, 255, 0);
+  }
+}

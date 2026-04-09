@@ -1,0 +1,47 @@
+.container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: var(--length, 100px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.8), rgba(180, 74, 255, 0.4), transparent);
+  transform: rotate(var(--angle, 30deg));
+  animation: shoot var(--duration, 1s) linear forwards;
+  border-radius: 1px;
+  filter: drop-shadow(0 0 3px rgba(0, 212, 255, 0.5));
+}
+
+.star::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 4px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 212, 255, 0.8), 0 0 12px rgba(0, 212, 255, 0.4);
+}
+
+@keyframes shoot {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--angle, 30deg)) translateX(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--angle, 30deg)) translateX(400px);
+  }
+}

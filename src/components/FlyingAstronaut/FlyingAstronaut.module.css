@@ -1,0 +1,31 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300%; /* Spanning multiple pages */
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.astro {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  mix-blend-mode: screen; /* To hide the black background */
+  filter: drop-shadow(0 0 20px rgba(180, 74, 255, 0.2));
+  pointer-events: none;
+}
+
+.astro img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .astro {
+    width: 150px;
+  }
+}

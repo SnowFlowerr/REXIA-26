@@ -1,6 +1,6 @@
 .sponsors {
   position: relative;
-  padding: var(--space-5xl) 0;
+  padding: var(--space-5xl) var(--safe-gutter);
   overflow: hidden;
   /* Submerged Dotted Grid background */
   background-image:

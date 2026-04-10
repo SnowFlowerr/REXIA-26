@@ -1,10 +1,12 @@
 .about {
   position: relative;
-  /* padding: var(--space-5xl) var(--space-xl); */
-  margin-top: var(--space-4xl);
+  overflow: hidden;
+  padding: 0 var(--safe-gutter);
 }
 
 .container {
+  padding-top: var(--space-4xl);
+  /* margin-top: 400px; */
   max-width: 1200px;
   margin: 0 auto;
 }

@@ -14,7 +14,7 @@
 /* Warp speed lines — enhanced with colors */
 .warp {
   position: absolute;
-  inset: 0;
+  top: 35%;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -86,6 +86,9 @@
   --z-modal: 300;
   --z-cursor: 400;
   --z-loader: 500;
+
+  /* Safe zones for mobile */
+  --safe-gutter: 1.25rem;
 }
 
 /* ===== Reset ===== */
@@ -200,7 +203,7 @@ input, textarea {
 /* ===== Section Base ===== */
 .section {
   position: relative;
-  padding: var(--space-5xl) var(--space-xl);
+  padding: var(--space-5xl) var(--safe-gutter); /* Using safe-gutter */
   max-width: 1400px;
   margin: 0 auto;
 }

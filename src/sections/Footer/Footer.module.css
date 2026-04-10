@@ -3,6 +3,7 @@
   padding: var(--space-4xl) var(--space-xl) var(--space-xl);
   border-top: 1px solid var(--glass-border);
   background: linear-gradient(to bottom, transparent, rgba(10, 4, 21, 0.5));
+  overflow: hidden;
 }
 
 .container {

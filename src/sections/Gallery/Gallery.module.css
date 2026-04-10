@@ -1,6 +1,7 @@
 .gallery {
   position: relative;
-  padding: var(--space-5xl) var(--space-xl);
+  padding: var(--space-5xl) var(--safe-gutter);
+  overflow: hidden;
 }
 
 .container {
@@ -128,7 +129,7 @@
     columns: 1;
   }
   
-  .gallery {
+  /* .gallery {
     padding: var(--space-4xl) var(--space-xl);
-  }
+  } */
 }

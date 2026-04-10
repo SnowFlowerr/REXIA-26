@@ -18,7 +18,11 @@ const linkVariants = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 3 + i * 0.08, duration: 0.4, ease: [0.16, 1, 0.3, 1] },
+    transition: {
+      delay: 0.4 + i * 0.04,
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1]
+    },
   }),
 };
 
@@ -84,7 +88,7 @@ const Navbar = () => {
         className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 2.8, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.3, delay: 1, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className={styles.inner}>
           <motion.a

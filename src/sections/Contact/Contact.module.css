@@ -1,6 +1,6 @@
 .contact {
   position: relative;
-  padding: var(--space-5xl) var(--space-xl);
+  padding: var(--space-5xl) var(--safe-gutter);
   overflow: hidden;
 }
 
@@ -24,12 +24,10 @@
 }
 
 @keyframes ambientDrift {
-
   0%,
   100% {
     transform: translate(0, 0) scale(1);
   }
-
   50% {
     transform: translate(30px, -30px) scale(1.2);
   }
@@ -240,8 +238,7 @@
 
 @media (max-width: 768px) {
   .contact {
-    padding: 0;
-    padding-top: var(--space-5xl);
+    padding: var(--space-4xl) var(--safe-gutter);
   }
 
   .grid {
@@ -257,8 +254,16 @@
     grid-template-columns: 1fr;
   }
 
-  .infoCard,
-  .formWrapper {
+  .infoCard, .formWrapper {
     padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+@media (max-width: 320px) {
+  .infoTitle {
+    font-size: var(--font-size-lg);
+  }
+  .infoCard, .formWrapper {
+    padding: var(--space-lg) var(--space-md);
   }
 }

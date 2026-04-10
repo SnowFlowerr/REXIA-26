@@ -1,7 +1,7 @@
 .mission {
   position: relative;
-  padding: var(--space-5xl) var(--space-xl);
-  background: var(--bg-primary);
+  padding: var(--space-5xl) var(--safe-gutter);
+  /* background: var(--bg-primary); */
   overflow: hidden;
   min-height: 80vh;
 }
@@ -15,7 +15,7 @@
 
 .backgroundText {
   position: absolute;
-  top: 0%;
+  top: 20%;
   left: 0%;
   transform: translate(-50%, -50%);
   font-family: var(--font-heading);
@@ -95,28 +95,30 @@
 
 @media (max-width: 1024px) {
   .mission {
-    padding: 0;
+    padding: var(--space-4xl) var(--safe-gutter);
   }
 
   .content {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
   }
-
+  
   .backgroundText {
     font-size: 15vw;
     opacity: 0.02;
+    top: 30%;
   }
 }
 
 @media (max-width: 768px) {
   .heading {
-    font-size: clamp(2.5rem, 10vw, 4.5rem);
+    font-size: clamp(1.8rem, 10vw, 4rem);
     margin-bottom: var(--space-xl);
   }
-
+  
   .backgroundText {
     font-size: 25vw;
+    top: 20%;
   }
 
   .mainText {
@@ -126,5 +128,11 @@
 
   .sideText {
     font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 320px) {
+  .heading {
+    font-size: 1.75rem;
   }
 }

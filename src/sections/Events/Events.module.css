@@ -1,10 +1,12 @@
 .events {
   position: relative;
-  /* padding: var(--space-5xl) var(--space-xl); */
+  padding: 0 var(--safe-gutter);
   margin-top: var(--space-4xl);
+  overflow: hidden;
 }
 
 .container {
+  padding-top: var(--space-5xl);
   max-width: 1200px;
   margin: 0 auto;
 }

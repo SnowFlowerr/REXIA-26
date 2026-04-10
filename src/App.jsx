@@ -16,6 +16,8 @@ import Gallery from './sections/Gallery/Gallery';
 import Sponsors from './sections/Sponsors/Sponsors';
 import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
+import { Routes, Route } from "react-router-dom";
+import Events from './sections/Events/Events';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -43,7 +45,9 @@ function App() {
 
       {/* Main content */}
       {!loading && (
-        <>
+        <Routes>
+          <Route path="/" element={
+            <>
           <Navbar />
           <main>
             <Hero />
@@ -64,6 +68,9 @@ function App() {
           </main>
           <Footer />
         </>
+        } />
+          <Route path="event" element={<Events/>}/>
+        </Routes>
       )}
     </>
   );

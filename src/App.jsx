@@ -11,8 +11,6 @@ import Philosophy from './sections/Philosophy/Philosophy';
 import About from './sections/About/About';
 import Offerings from './sections/Offerings/Offerings';
 import Mission from './sections/Mission/Mission';
-import Events from './sections/Events/Events';
-import Timeline from './sections/Timeline/Timeline';
 import Team from './sections/Team/Team';
 import Gallery from './sections/Gallery/Gallery';
 import Sponsors from './sections/Sponsors/Sponsors';
@@ -51,16 +49,10 @@ function App() {
             <Hero />
             <SectionDivider variant="purple" />
             <Mission />
-            {/* <SectionDivider variant="blue" /> */}
             <Offerings />
-            {/* <SectionDivider variant="pink" /> */}
             <Philosophy />
             <SectionDivider variant="purple" />
             <About />
-            <SectionDivider variant="blue" />
-            <Events />
-            <SectionDivider variant="purple" />
-            <Timeline />
             <SectionDivider variant="pink" />
             <Team />
             <SectionDivider variant="blue" />

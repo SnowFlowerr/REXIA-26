@@ -1,6 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
-import Logo from '../../components/Logo/Logo';
 import { useMagnetic } from '../../hooks/useMotion';
 import styles from './Hero.module.css';
 
@@ -139,7 +138,7 @@ const Hero = () => {
                 animate="visible"
                 style={{ display: 'inline-block' }}
               >
-                {char}
+                  {char}
               </motion.span>
             ))}
           </span>
@@ -186,7 +185,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <span className={styles.ctaContent}>
-              <span>Explore Fest</span>
+              <span>View Events</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M7 17l9.2-9.2M17 17V7H7" />
               </svg>
@@ -194,14 +193,14 @@ const Hero = () => {
             <span className={styles.ctaGlow} />
             <span className={styles.ctaShine} />
           </motion.a>
-          <motion.a
+          {/* <motion.a
             href="#events"
             className={styles.ctaSecondary}
             whileHover={{ scale: 1.05, borderColor: 'rgba(180,74,255,0.4)' }}
             whileTap={{ scale: 0.95 }}
           >
             View Events
-          </motion.a>
+          </motion.a> */}
         </motion.div>
       </motion.div>
 

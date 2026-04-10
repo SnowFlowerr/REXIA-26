@@ -7,6 +7,8 @@
   flex-direction: column;
   overflow: hidden;
   padding: var(--space-xl);
+  font-family: var(--font-heading);
+  letter-spacing: -0.06em;
 }
 
 /* Wallpaper Background */
@@ -24,6 +26,7 @@
   object-fit: cover;
   opacity: 0.8;
   filter: saturate(1.2) contrast(1.1);
+  
 }
 
 .wallpaperOverlay {
@@ -210,6 +213,10 @@
   perspective: 1200px;
   position: relative;
   text-transform: uppercase;
+  font-family: var(--font-heading);
+  letter-spacing: -0.05em;
+  /* font-size: clamp(6rem, 15vw, 18rem); */
+  font-weight: 900;
 }
 
 .titleInner {
@@ -279,6 +286,8 @@
   color: var(--color-space-white); /* Brighter color */
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for legibility */
   animation: subtitleGlow 4s ease-in-out infinite;
+  font-family: var(--font-heading);
+  letter-spacing: -0.06em;
 }
 
 @keyframes subtitleGlow {
@@ -474,7 +483,7 @@
     padding: var(--space-5xl) var(--safe-gutter); /* Using safe-gutter */
   }
   .title {
-    font-size: clamp(2.5rem, 15vw, 6rem); /* Tighter clamp for small mobile */
+    font-size: clamp(2.5rem, 12vw, 8.5rem);
   }
   .description {
     font-size: var(--font-size-sm);

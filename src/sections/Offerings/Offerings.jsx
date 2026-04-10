@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { useRef, useState, useEffect, useCallback } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import styles from './Offerings.module.css';
 
 const offerings = [
@@ -28,27 +28,50 @@ const offerings = [
 const Offerings = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
+  const timerRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end start'],
   });
 
-  const bgX = useTransform(scrollYProgress, [0, 1], [-200, 200]);
+  const bgY = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
-  // Animation constants for the stack effect
-  const cardVariants = (index) => {
+  // Auto-play logic
+  const startTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % offerings.length);
+    }, 5000);
+  }, []);
+
+  useEffect(() => {
+    startTimer();
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [startTimer]);
+
+  const handleCardClick = (index) => {
+    setActiveIndex(index);
+    startTimer(); // Reset timer on manual click
+  };
+
+  // Enhanced stack motion variants
+  const getCardVariants = (index) => {
     const isStage = index === activeIndex;
-    const distance = index - activeIndex;
+    let distance = index - activeIndex;
+    
+    // Looping distance logic for a smoother stack
+    if (distance > offerings.length / 2) distance -= offerings.length;
+    if (distance < -offerings.length / 2) distance += offerings.length;
 
-    // Calculate offsets based on position in stack
-    // Cards after active are stacked behind with offsets
-    // Cards before active are hidden/stacked further behind
-    const xOffset = isStage ? 0 : distance > 0 ? distance * 30 : distance * 20;
-    const yOffset = isStage ? 0 : distance > 0 ? distance * 15 : distance * -10;
-    const scale = isStage ? 1 : 1 - Math.abs(distance) * 0.08;
-    const opacity = isStage ? 1 : Math.max(0.3, 1 - Math.abs(distance) * 0.4);
+    const xOffset = isStage ? 0 : distance * 40;
+    const yOffset = isStage ? 0 : Math.abs(distance) * 20;
+    const scale = isStage ? 1 : 1 - Math.abs(distance) * 0.1;
+    const opacity = isStage ? 1 : Math.max(0, 1 - Math.abs(distance) * 0.4);
     const zIndex = 10 - Math.abs(distance);
-    const rotate = isStage ? 0 : distance * 2;
+    const rotate = isStage ? 0 : distance * 5;
 
     return {
       x: xOffset,
@@ -62,8 +85,8 @@ const Offerings = () => {
 
   return (
     <section ref={containerRef} className={styles.offerings}>
-      <motion.div style={{ x: bgX }} className={styles.backgroundText}>
-        Redefining <br /> Boun <br /> daries
+      <motion.div style={{ y: bgY }} className={styles.backgroundText}>
+        CORE OF<br />EVERYTHING
       </motion.div>
 
       <div className={styles.container}>
@@ -76,7 +99,7 @@ const Offerings = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              Multiple<br />Types Of<br />Offerings
+              Multiple<br />Types <span className={styles.titleAccent}>Of<br />Offerings</span>
             </motion.h2>
             <motion.p
               className={styles.subtitle}
@@ -85,7 +108,7 @@ const Offerings = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Speed up your innovation with these tools for elite generation. Click a pillar to dive deeper.
+              Speed up your innovation with these tools for elite generation.
             </motion.p>
           </div>
 
@@ -94,18 +117,20 @@ const Offerings = () => {
               <motion.div
                 key={item.title}
                 className={`${styles.card} ${i === activeIndex ? styles.active : ''}`}
-                animate={cardVariants(i)}
-                whileHover={i !== activeIndex ? { y: i > activeIndex ? (i - activeIndex) * 15 - 10 : (i - activeIndex) * -10 - 10, scale: 1 - Math.abs(i - activeIndex) * 0.08 + 0.02 } : { scale: 1.02 }}
-                onClick={() => setActiveIndex(i)}
+                animate={getCardVariants(i)}
+                onClick={() => handleCardClick(i)}
                 transition={{
-                  layout: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-                  duration: 0.6,
+                  duration: 0.8,
                   ease: [0.16, 1, 0.3, 1]
                 }}
               >
-                <span className={styles.cardNumber}>/ {item.no}</span>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
-                <p className={styles.cardDesc}>{item.desc}</p>
+                <div className={styles.cardHeader}>
+                  <span className={styles.cardNumber}>/ {item.no}</span>
+                </div>
+                <div className={styles.cardInfo}>
+                  <h3 className={styles.cardTitle}>{item.title}</h3>
+                  <p className={styles.cardDesc}>{item.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>

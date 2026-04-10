@@ -168,7 +168,7 @@ const Hero = () => {
         >
           Experience the most electrifying college fest in the cosmos.
           <br />
-          Three days of innovation, art, and interstellar energy.
+          Two days of innovation, art, and interstellar energy.
         </motion.p>
 
         <motion.div

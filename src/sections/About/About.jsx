@@ -48,7 +48,7 @@ const StatCounter = ({ value, label }) => {
 const About = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const containerRef = useRef(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end start'],
@@ -75,7 +75,7 @@ const About = () => {
             About The Fest
           </motion.h2>
           <p className="section__subtitle">
-            Where the cosmos meets creativity — three days of limitless possibility, innovation, and celestial energy.
+            Where the cosmos meets creativity — two days of limitless possibility, innovation, and celestial energy.
           </p>
         </motion.div>
 

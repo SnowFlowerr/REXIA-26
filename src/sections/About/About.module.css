@@ -23,7 +23,8 @@
   flex: 1;
   height: 100%;
   border-radius: var(--radius-xl);
-  background: #111111; /* Flat dark as per image 1 */
+  background: #111111;
+  /* Flat dark as per image 1 */
   overflow: hidden;
   cursor: pointer;
   display: flex;
@@ -36,7 +37,8 @@
 
 .cardActive {
   flex: 3;
-  background: #5E26E0; /* Vibrant purple as per image 2 */
+  background: #5E26E0;
+  /* Vibrant purple as per image 2 */
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -44,13 +46,17 @@
 .cardBgNumber {
   position: absolute;
   top: -60px;
-  left: -15%; /* Signature Cut-Off Positioning always present in neutral */
+  left: -15%;
+  /* Signature Cut-Off Positioning always present in neutral */
   font-family: var(--font-heading);
-  font-size: 38rem; /* Massive scale */
+  font-size: 38rem;
+  /* Massive scale */
   font-weight: 900;
   line-height: 1;
-  color: #f0f0f0; /* Sharp light color */
-  opacity: 0.12; /* High impact in neutral deactivated state */
+  color: #f0f0f0;
+  /* Sharp light color */
+  opacity: 0.12;
+  /* High impact in neutral deactivated state */
   pointer-events: none;
   z-index: 1;
   transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
@@ -59,8 +65,10 @@
 }
 
 .cardActive .cardBgNumber {
-  left: 30%; /* Shift to "complete" the activation focus */
-  opacity: 0.3; /* Becomes more defined on purple */
+  left: 30%;
+  /* Shift to "complete" the activation focus */
+  opacity: 0.3;
+  /* Becomes more defined on purple */
   transform: translateX(-40%);
 }
 
@@ -171,6 +179,7 @@
   .accordion {
     height: 480px;
   }
+
   .cardBgNumber {
     font-size: 25rem;
   }
@@ -213,6 +222,7 @@
     flex-direction: column;
     padding: 30px;
   }
+
   .statDivider {
     width: 80%;
     height: 1px;

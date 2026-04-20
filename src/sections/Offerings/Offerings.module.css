@@ -1,13 +1,10 @@
 .offerings {
   position: relative;
   padding: var(--space-5xl) var(--safe-gutter);
-  /* background: var(--bg-primary); */
   overflow: hidden;
-  height: 120vh;
   min-height: 100vh;
   display: flex;
   align-items: center;
-
 }
 
 .container {
@@ -20,211 +17,312 @@
 
 .backgroundText {
   position: absolute;
-  top: 20%;
-  left: 0;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--font-heading);
-  font-size: clamp(10rem, 25vw, 35rem);
+  font-size: clamp(8rem, 20vw, 28rem);
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.03);
   white-space: nowrap;
   pointer-events: none;
   z-index: 1;
   text-transform: uppercase;
-  line-height: 0.8;
+  line-height: 0.85;
   text-align: center;
   letter-spacing: -0.05em;
 }
 
+/* ── LAYOUT ── */
 .content {
   display: flex;
-  gap: var(--space-5xl);
+  gap: 4rem;
   align-items: center;
 }
 
 .left {
   flex: 1;
-  max-width: 500px;
+  max-width: 480px;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
+/* ── TITLE ── */
 .title {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 6vw, 6.5rem);
+  font-size: clamp(2.8rem, 5.5vw, 6rem);
   font-weight: 800;
   line-height: 0.95;
-  margin-bottom: var(--space-xl);
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -0.04em;
+  margin: 0;
 }
 
 .titleAccent {
   color: #555555;
-  /* Sophisticated grey from the image */
 }
 
 .subtitle {
-  font-size: var(--font-size-lg);
+  font-size: 1rem;
   color: #888888;
-  line-height: 1.6;
-  max-width: 400px;
+  line-height: 1.7;
   font-weight: 500;
+  margin: 0;
+}
+
+/* ── OLD CONTROLS (REMOVE OR COMMENT OUT) ── */
+/*
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+*/
+
+.arrowBtn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.arrowBtn:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.arrowBtn:active {
+  transform: scale(0.94);
+}
+
+/* Dots removed */
+
+/* ── STACK ── */
+.stackWrapper {
+  flex: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
 }
 
 .stack {
-  flex: 1.5;
   position: relative;
-  height: 600px;
+  width: 420px;
+  height: 520px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  perspective: 2000px;
+  justify-content: center;
 }
 
+/* NEW: Controls for the card stack */
+.cardControls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -23px; /* Vertically center based on 46px button height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 12;
+  pointer-events: none;
+}
+
+
+
+/* ── CARD ── */
 .card {
   position: absolute;
-  width: min(420px, 75vw);
-  min-height: 480px;
+  width: 380px;
+  height: 480px;
   background: #0f0f12;
-  /* Deep dark grey as per image */
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 32px;
-  /* Smoother rounded corners */
-  padding: 50px;
+  border-radius: 28px;
+  padding: 44px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  will-change: transform, opacity;
 }
 
 .card:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cardNumber {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.1em;
-  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.12em;
 }
 
 .cardInfo {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: 1rem;
 }
 
 .cardTitle {
   font-family: var(--font-heading);
-  font-size: 2.75rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
-  line-height: 1;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  word-break: break-word;
 }
 
 .cardDesc {
-  font-size: 1.1rem;
-  color: #999999;
-  line-height: 1.6;
+  font-size: 1rem;
+  color: #888888;
+  line-height: 1.65;
   font-weight: 400;
 }
 
+/* ── RESPONSIVE ── */
+
 @media (max-width: 1024px) {
-  .offerings {
-
-    height: 140vh;
-    /* border: 2px solid white; */
-  }
-
-  .title {
-    font-size: clamp(2rem, 5vw, 6.5rem);
-  }
-
-  .card {
-    width: min(320px, 50vw);
-    min-height: 380px;
-    padding: 50px;
-  }
-
-
-
-  .left {
-    max-width: 100%;
-    margin-bottom: var(--space-2xl);
-  }
-
-  .stack {
-    width: 100%;
-    height: 500px;
-    justify-content: center;
-    margin-right: 10vw;
-  }
-}
-
-@media (max-width: 800px) {
-  .title {
-    font-size: 9vw;
-  }
   .content {
-    margin-top: -250px;
-    flex-direction: column;
-    text-align: left;
-    gap: var(--space-4xl);
+    gap: 2.5rem;
   }
-  .card {
-    max-height: 7vw;
-    width: 90vw;
-    padding: var(--space-2xl);
-    border-radius: 24px;
-  }
+
   .stack {
-    margin-top: 100px;
-    margin-right: 0;
-    padding: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .title {
-    font-size: 9vw;
+    width: 360px;
+    height: 480px;
   }
 
   .card {
-    min-height: 400px;
-    padding: var(--space-2xl);
+    width: 320px;
+    height: 440px;
+    padding: 36px 32px;
   }
 
   .cardTitle {
     font-size: 2rem;
   }
+}
+
+@media (max-width: 768px) {
+  .offerings {
+    min-height: auto;
+    padding: 5rem var(--safe-gutter);
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .left {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .stackWrapper {
+    width: 100%;
+    justify-content: center;
+  }
 
   .stack {
-    height: 450px;
+    width: 320px;
+    height: 440px;
+  }
+
+  .card {
+    width: 300px;
+    height: 400px;
+    padding: 32px 28px;
+    border-radius: 22px;
+  }
+
+  .cardTitle {
+    font-size: 1.8rem;
+  }
+
+  .cardDesc {
+    font-size: 0.9rem;
   }
 
   .backgroundText {
-    font-size: 20vw;
-    opacity: 0.02;
+    font-size: 28vw;
     white-space: normal;
+    text-align: center;
     width: 100%;
-    line-height: 1;
   }
 
+  /* Controls width removed as we use left/right now */
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .title {
-    font-size: 2.5rem;
+    font-size: clamp(2.2rem, 9vw, 3rem);
   }
 
   .stack {
+    width: 290px;
+    height: 420px;
+  }
+
+  .card {
+    width: 270px;
+    height: 380px;
+    padding: 28px 24px;
+    border-radius: 20px;
+  }
+
+  .cardTitle {
+    font-size: 1.6rem;
+  }
+
+  .arrowBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Controls width removed */
+}
+
+@media (max-width: 360px) {
+  .stack {
+    width: 260px;
     height: 400px;
+  }
+
+  .card {
+    width: 240px;
+    height: 360px;
+    padding: 24px 20px;
+  }
+
+  .cardTitle {
+    font-size: 1.4rem;
   }
 }

@@ -117,7 +117,7 @@
 
 .cardTitle {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3vw, 4.4rem);
+  font-size: clamp(1.8rem, 2.5vw, 4rem);
   font-weight: 800;
   text-transform: uppercase;
   color: var(--color-space-white);
@@ -127,11 +127,15 @@
   text-align: center;
   width: 100%;
   transition: all 0.4s ease;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .card:not(.cardActive) .cardTitle {
   color: #eeeeee;
   transform: translateY(10px);
+  font-size: clamp(1.2rem, 1.8vw, 2.5rem);
 }
 
 /* Stats Section Below */
@@ -212,10 +216,15 @@
 
   .cardActive .cardBgNumber {
     left: 20%;
+    transform: translate(-40%, -50%);
   }
 
   .cardTitle {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .card:not(.cardActive) .cardTitle {
+    font-size: clamp(1.5rem, 6vw, 2rem);
   }
 
   .stats {

@@ -23,7 +23,7 @@ const EventsHero = () => {
     : allEvents.filter(e => e.category === activeFilter);
 
   return (
-    <div >
+    <div className={styles.page}>
 
       {/* ── HERO BANNER ── */}
       <div className={styles.banner}>

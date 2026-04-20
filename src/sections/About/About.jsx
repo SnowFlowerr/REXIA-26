@@ -83,14 +83,22 @@ const About = () => {
 
         <div
           className={styles.accordion}
-          onMouseLeave={() => setActiveIndex(null)}
+          onMouseLeave={() => {
+            if (window.innerWidth > 768) setActiveIndex(null);
+          }}
         >
           {cards.map((card, index) => (
-            <div
+            <motion.div
               key={index}
               className={`${styles.card} ${index === activeIndex ? styles.cardActive : ''}`}
-              onMouseEnter={() => setActiveIndex(index)}
+              onMouseEnter={() => {
+                if (window.innerWidth > 768) setActiveIndex(index);
+              }}
               onClick={() => setActiveIndex(index)}
+              onViewportEnter={() => {
+                if (window.innerWidth <= 768) setActiveIndex(index);
+              }}
+              viewport={{ margin: "-30% 0px -30% 0px", amount: "some" }}
             >
               <div className={styles.cardBgNumber}>{card.no}</div>
               <div className={styles.cardContent}>
@@ -100,7 +108,7 @@ const About = () => {
                 </div>
                 <h3 className={styles.cardTitle}>{card.title.split(' ')[0]}</h3>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

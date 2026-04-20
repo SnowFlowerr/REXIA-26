@@ -2,6 +2,7 @@
   background: #08030f;
   min-height: 100vh;
   color: #f0eaff;
+  padding-top: 40px;
 }
 
 /* ── BANNER ── */
@@ -214,6 +215,7 @@
 }
 
 @media (max-width: 640px) {
+  .page { padding-top: 80px; }
   .grid { grid-template-columns: 1fr; }
   .eventsSection { padding: 2rem 1.2rem 4rem; }
   .banner { padding: 2rem 1.2rem 2rem 0; }

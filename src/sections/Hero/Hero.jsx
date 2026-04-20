@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
 import { useMagnetic } from '../../hooks/useMotion';
 import styles from './Hero.module.css';
-
+import { useNavigate } from 'react-router-dom';
 const letterVariants = {
   hidden: { opacity: 0, y: 80, rotateX: 90 },
   visible: (i) => ({
@@ -21,6 +21,8 @@ const Hero = () => {
   const sectionRef = useRef(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const magneticRef = useMagnetic(0.2);
+
+  const navigate = useNavigate();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -120,7 +122,7 @@ const Hero = () => {
           style={{ y: yBadge }}
         >
           <span className={styles.badgeDot} />
-          <span>April 2026</span>
+          <span>May 2026</span>
           <span className={styles.badgeSep}>•</span>
           <span>The Future Awaits</span>
         </motion.div>
@@ -157,7 +159,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
         >
-          Beyond Gravity. Beyond Limits.
+      Redifining Boundaries
         </motion.p>
 
         <motion.p
@@ -177,10 +179,10 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3, duration: 0.6 }}
         >
-          <motion.a
-            ref={magneticRef}
-            href="#about"
+          <motion.div
+            onClick={() => navigate('/event')}
             className={styles.ctaPrimary}
+            style={{ cursor: 'pointer' }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -192,7 +194,7 @@ const Hero = () => {
             </span>
             <span className={styles.ctaGlow} />
             <span className={styles.ctaShine} />
-          </motion.a>
+          </motion.div>
           {/* <motion.a
             href="#events"
             className={styles.ctaSecondary}

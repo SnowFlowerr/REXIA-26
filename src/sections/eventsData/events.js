@@ -10,7 +10,7 @@
         "tagline": "Think fast. Code faster.",
         "description": "A high-speed competitive coding challenge where every second counts. Solve algorithmic problems under pressure and prove you're the sharpest mind in the room.",
         "location": "CS Lab Block A",
-        "managedBy": "CodeCraft Club",
+        "managedBy": "CodeCraft Club",//
         "overview": "Code Blitz is the ultimate test of algorithmic thinking and speed coding. Participants will face a series of progressively harder problems drawn from data structures, dynamic programming, and graph theory. The environment simulates real competitive programming platforms, and every millisecond of your solution runtime matters as much as correctness.",
         "details": {
           "date": "April 18, 2026",

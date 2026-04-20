@@ -37,7 +37,6 @@ const Offerings = () => {
 
   const bgY = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
-  // Auto-play logic
   const startTimer = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
@@ -47,40 +46,22 @@ const Offerings = () => {
 
   useEffect(() => {
     startTimer();
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [startTimer]);
 
-  const handleCardClick = (index) => {
-    setActiveIndex(index);
-    startTimer(); // Reset timer on manual click
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev - 1 + offerings.length) % offerings.length);
+    startTimer();
   };
 
-  // Enhanced stack motion variants
-  const getCardVariants = (index) => {
-    const isStage = index === activeIndex;
-    let distance = index - activeIndex;
-    
-    // Looping distance logic for a smoother stack
-    if (distance > offerings.length / 2) distance -= offerings.length;
-    if (distance < -offerings.length / 2) distance += offerings.length;
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % offerings.length);
+    startTimer();
+  };
 
-    const xOffset = isStage ? 0 : distance * 40;
-    const yOffset = isStage ? 0 : Math.abs(distance) * 20;
-    const scale = isStage ? 1 : 1 - Math.abs(distance) * 0.1;
-    const opacity = isStage ? 1 : Math.max(0, 1 - Math.abs(distance) * 0.4);
-    const zIndex = 10 - Math.abs(distance);
-    const rotate = isStage ? 0 : distance * 5;
-
-    return {
-      x: xOffset,
-      y: yOffset,
-      scale,
-      opacity,
-      zIndex,
-      rotate,
-    };
+  const handleDot = (index) => {
+    setActiveIndex(index);
+    startTimer();
   };
 
   return (
@@ -91,49 +72,91 @@ const Offerings = () => {
 
       <div className={styles.container}>
         <div className={styles.content}>
-         <div className={styles.left}>
-  <motion.h2
-    className={styles.title}
-    initial={{ opacity: 0, x: -50 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8 }}
-  >
-    One Fest.<br />Endless <span className={styles.titleAccent}>Ways<br />To Shine</span>
-  </motion.h2>
-  <motion.p
-    className={styles.subtitle}
-    initial={{ opacity: 0, x: -30 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    transition={{ delay: 0.2, duration: 0.8 }}
-  >
-    Compete. Create. Celebrate. Every event is a stage — find yours.
-  </motion.p>
-</div>
 
-          <div className={styles.stack}>
-            {offerings.map((item, i) => (
-              <motion.div
-                key={item.title}
-                className={`${styles.card} ${i === activeIndex ? styles.active : ''}`}
-                animate={getCardVariants(i)}
-                onClick={() => handleCardClick(i)}
-                transition={{
-                  duration: 0.8,
-                  ease: [0.16, 1, 0.3, 1]
-                }}
-              >
-                <div className={styles.cardHeader}>
-                  <span className={styles.cardNumber}>/ {item.no}</span>
-                </div>
-                <div className={styles.cardInfo}>
-                  <h3 className={styles.cardTitle}>{item.title}</h3>
-                  <p className={styles.cardDesc}>{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+          {/* LEFT */}
+          <div className={styles.left}>
+            <motion.h2
+              className={styles.title}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              One Fest.<br />Endless{' '}
+              <span className={styles.titleAccent}>Ways<br />To Shine</span>
+            </motion.h2>
+            <motion.p
+              className={styles.subtitle}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              Compete. Create. Celebrate. Every event is a stage — find yours.
+            </motion.p>
           </div>
+
+          {/* CARD STACK */}
+          <div className={styles.stackWrapper}>
+            <div className={styles.stack}>
+              {offerings.map((item, i) => {
+                let distance = i - activeIndex;
+                if (distance > offerings.length / 2) distance -= offerings.length;
+                if (distance < -offerings.length / 2) distance += offerings.length;
+
+                const isActive = i === activeIndex;
+                const xOffset = isActive ? 0 : distance * 30;
+                const yOffset = isActive ? 0 : Math.abs(distance) * 18;
+                const scale = isActive ? 1 : 1 - Math.abs(distance) * 0.1;
+                const opacity = isActive ? 1 : Math.max(0, 1 - Math.abs(distance) * 0.45);
+                const zIndex = 10 - Math.abs(distance);
+                const rotate = isActive ? 0 : distance * 4;
+
+                return (
+                  <motion.div
+                    key={item.title}
+                    className={`${styles.card} ${isActive ? styles.active : ''}`}
+                    animate={{ x: xOffset, y: yOffset, scale, opacity, zIndex, rotate }}
+                    onClick={() => handleDot(i)}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    <div className={styles.cardHeader}>
+                      <span className={styles.cardNumber}>/ {item.no}</span>
+                    </div>
+                    <div className={styles.cardInfo}>
+                      <h3 className={styles.cardTitle}>{item.title}</h3>
+                      <p className={styles.cardDesc}>{item.desc}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+
+              {/* Arrows + Dots - MOVED HERE */}
+{/* Arrows */}
+<motion.div
+  className={styles.cardControls} 
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.4, duration: 0.6 }}
+>
+  <button className={styles.arrowBtn} onClick={handlePrev} aria-label="Previous">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M19 12H5M12 5l-7 7 7 7" />
+    </svg>
+  </button>
+
+  <button className={styles.arrowBtn} onClick={handleNext} aria-label="Next">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 12h14M12 5l7 7-7 7" />
+    </svg>
+  </button>
+</motion.div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

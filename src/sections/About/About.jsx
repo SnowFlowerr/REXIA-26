@@ -72,12 +72,14 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            About The Fest
+            The Fest That Hits Different
           </motion.h2>
           <p className="section__subtitle">
-            Where the cosmos meets creativity — two days of limitless possibility, innovation, and celestial energy.
+            Two days. Zero limits. Infinite vibes — where your wildest ideas
+            get a stage and every moment hits harder than the last.
           </p>
         </motion.div>
+
 
         <div
           className={styles.accordion}

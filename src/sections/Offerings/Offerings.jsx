@@ -91,26 +91,26 @@ const Offerings = () => {
 
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.left}>
-            <motion.h2
-              className={styles.title}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              Multiple<br />Types <span className={styles.titleAccent}>Of<br />Offerings</span>
-            </motion.h2>
-            <motion.p
-              className={styles.subtitle}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              Speed up your innovation with these tools for elite generation.
-            </motion.p>
-          </div>
+         <div className={styles.left}>
+  <motion.h2
+    className={styles.title}
+    initial={{ opacity: 0, x: -50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8 }}
+  >
+    One Fest.<br />Endless <span className={styles.titleAccent}>Ways<br />To Shine</span>
+  </motion.h2>
+  <motion.p
+    className={styles.subtitle}
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: 0.2, duration: 0.8 }}
+  >
+    Compete. Create. Celebrate. Every event is a stage — find yours.
+  </motion.p>
+</div>
 
           <div className={styles.stack}>
             {offerings.map((item, i) => (

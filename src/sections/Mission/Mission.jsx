@@ -30,14 +30,14 @@ const Mission = () => {
           <span>Our Mission</span>
         </motion.div>
 
-        <motion.h2
-          style={{ y: headingY }}
-          className={styles.heading}
-        >
-          Architecting<br />
-          <span className={styles.accent}>The Future</span><br />
-          Of Technology
-        </motion.h2>
+     <motion.h2
+  style={{ y: headingY }}
+  className={styles.heading}
+>
+  Where Minds<br />
+  <span className={styles.accent}>Meet Magic</span><br />
+  And Build
+</motion.h2>
 
         <div className={styles.content}>
           <motion.p
@@ -47,18 +47,21 @@ const Mission = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            REXIA'26 is a catalyst. We bridge the gap between academic theory and industrial impact through intense engineering and creative exploration.
+              REXIA'26 — where sparks fly and legends rise. 
+  We don't just push limits, we erase them.
           </motion.p>
 
-          <motion.div
-            className={styles.sideText}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            We foster an environment where elite developers and technical architects converge to deconstruct and rebuild the global digital infrastructure for a better cosmos.
-          </motion.div>
+       <motion.div
+  className={styles.sideText}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.4, duration: 0.8 }}
+>
+  Dream it. Code it. Launch it.
+  From blueprints to breakthroughs, we turn bold ideas
+  into the tech that tomorrow runs on.
+</motion.div>
         </div>
       </div>
     </section>

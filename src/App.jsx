@@ -18,6 +18,8 @@ import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
 import { Routes, Route } from "react-router-dom";
 import Events from './sections/Events/Events';
+import NotFound from './sections/notfound/notfound';
+import EventDetail from './sections/eventDetail/eventDetails';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -70,6 +72,8 @@ function App() {
         </>
         } />
           <Route path="event" element={<Events/>}/>
+          <Route path="/event/:id" element={<EventDetail/>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       )}
     </>

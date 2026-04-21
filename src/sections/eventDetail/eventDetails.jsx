@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { eventsData } from '../eventsData/events';
 import styles from './EventDetail.module.css';
+import Footer from '../Footer/Footer';
 
 const EventDetail = () => {
   const { id } = useParams();
@@ -225,6 +226,7 @@ const EventDetail = () => {
       </div>
 
       <div className={styles.bottomPad} />
+    <Footer/>
     </div>
   );
 };

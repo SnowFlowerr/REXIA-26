@@ -1,5 +1,5 @@
 .page {
-  background: #08030f;
+  background: transparent;
   min-height: 100vh;
   color: #f0eaff;
   font-family: var(--font-heading);

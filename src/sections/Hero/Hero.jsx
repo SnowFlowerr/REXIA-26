@@ -140,7 +140,7 @@ const Hero = () => {
                 animate="visible"
                 style={{ display: 'inline-block' }}
               >
-                  {char}
+                {char}
               </motion.span>
             ))}
           </span>
@@ -159,7 +159,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
         >
-      Redifining Boundaries
+          Where Stars Are Made.
         </motion.p>
 
         <motion.p
@@ -168,11 +168,10 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.8 }}
         >
-          Experience the most electrifying college fest in the cosmos.
+          Two days. One campus. Zero limits.
           <br />
-          Two days of innovation, art, and interstellar energy.
+          Show up, stand out, and leave a legend behind.
         </motion.p>
-
         <motion.div
           className={styles.ctaGroup}
           initial={{ opacity: 0, y: 30 }}

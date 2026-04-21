@@ -1,5 +1,5 @@
 .page {
-  background: #08030f;
+  background: transparent;
   min-height: 100vh;
   color: #f0eaff;
   padding-top: 40px;
@@ -7,7 +7,7 @@
 
 /* ── BANNER ── */
 .banner {
-  background: #08030f;
+  background: transparent;
   width: 100%;
   min-height: 220px;
   position: relative;
@@ -151,7 +151,7 @@
 
 /* ── EVENTS SECTION ── */
 .eventsSection {
-  background: #08030f;
+  background: transparent;
   padding: 3rem 3rem 5rem;
 }
 

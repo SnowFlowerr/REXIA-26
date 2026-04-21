@@ -210,7 +210,7 @@ input, textarea {
 
 .section__title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 8vw, 6.5rem); /* Fluid typography */
+  font-size: clamp(2.2rem, 10vw, 6.5rem); /* Fluid typography */
   font-weight: 800;
   text-align: left;
   margin-bottom: var(--space-md);
@@ -218,6 +218,9 @@ input, textarea {
   color: var(--color-space-white);
   text-transform: uppercase;
   line-height: 0.95;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 @media (max-width: 768px) {

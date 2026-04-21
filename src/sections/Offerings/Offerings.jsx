@@ -6,22 +6,22 @@ const offerings = [
   {
     no: '01',
     title: 'Hackathons',
-    desc: '48-hour sprints where logic meets imagination, building the future of decentralized tech.'
+    desc: '24-hour sprints where logic meets imagination, building the future of decentralized tech.'
   },
   {
     no: '02',
-    title: 'Masterclasses',
-    desc: 'Guided deep-dives into advanced architectures, led by industry architects and pioneers.'
+    title: 'Go-Kart',
+    desc: 'Burn rubber, chase glory. Hit the track and race for bragging rights that last a lifetime.'
   },
   {
     no: '03',
-    title: 'Pro Shows',
-    desc: 'Stellar performances that defy gravity, featuring headline artists and immersive light shows.'
+    title: 'Concert Night',
+    desc: 'Lights down, volume up. One electric night with headline artists that shakes the whole campus.'
   },
   {
     no: '04',
-    title: 'Competitions',
-    desc: 'Elite tournaments across robotics, coding, and creative arts — where only the most disciplined survive.'
+    title: 'Startup Pitch',
+    desc: 'One idea. Two minutes. A room full of investors. Pitch bold, pitch sharp        or go home.'
   }
 ];
 
@@ -124,7 +124,9 @@ const Offerings = () => {
                       <span className={styles.cardNumber}>/ {item.no}</span>
                     </div>
                     <div className={styles.cardInfo}>
-                      <h3 className={styles.cardTitle}>{item.title}</h3>
+                      <h3 className={`${styles.cardTitle} ${item.title === 'Hackathons' ? styles.hackathonTitle : ''}`}>
+                        {item.title}
+                      </h3>
                       <p className={styles.cardDesc}>{item.desc}</p>
                     </div>
                   </motion.div>
@@ -132,28 +134,28 @@ const Offerings = () => {
               })}
 
               {/* Arrows + Dots - MOVED HERE */}
-{/* Arrows */}
-<motion.div
-  className={styles.cardControls} 
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ delay: 0.4, duration: 0.6 }}
->
-  <button className={styles.arrowBtn} onClick={handlePrev} aria-label="Previous">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M19 12H5M12 5l-7 7 7 7" />
-    </svg>
-  </button>
+              {/* Arrows */}
+              <motion.div
+                className={styles.cardControls}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+              >
+                <button className={styles.arrowBtn} onClick={handlePrev} aria-label="Previous">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M19 12H5M12 5l-7 7 7 7" />
+                  </svg>
+                </button>
 
-  <button className={styles.arrowBtn} onClick={handleNext} aria-label="Next">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M5 12h14M12 5l7 7-7 7" />
-    </svg>
-  </button>
-</motion.div>
+                <button className={styles.arrowBtn} onClick={handleNext} aria-label="Next">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </motion.div>
             </div>
           </div>
 

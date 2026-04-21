@@ -17,40 +17,41 @@ const Philosophy = () => {
     <section ref={containerRef} className={styles.philosophy}>
       <div className={styles.glow} />
       
-     <div className={styles.container}>
+  <div className={styles.container}>
   <div className={styles.heading}>
-    <motion.span 
+    <motion.span
       style={{ y: y1 }}
       className={`${styles.line} ${styles.white}`}
     >
-      Where Code
+      Where Stages
     </motion.span>
-    <motion.span 
+    <motion.span
       style={{ y: y2 }}
       className={`${styles.line} ${styles.white}`}
     >
-      Becomes
+      Become
     </motion.span>
-    <motion.span 
+    <motion.span
       style={{ y: y3 }}
       className={`${styles.line} ${styles.gray}`}
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 0.7, scale: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      Legend
+      Stories
     </motion.span>
   </div>
 
-  <motion.p 
+  <motion.p
     className={styles.description}
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay: 0.3, duration: 0.8 }}
   >
-    Think sharp. Build fast. Break limits. REXIA'26 is where raw talent 
-    meets real opportunity — and the boldest ideas don't just survive, they lead.
+    Dance hard. Compete harder. Live loudest. REXIA'26 is where every
+    performance, every cheer, and every unforgettable moment becomes
+    the story you tell for years.
   </motion.p>
 </div>
     </section>

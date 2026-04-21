@@ -109,6 +109,12 @@
   background-position: 100% 0;
 }
 
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -221,5 +227,14 @@
 
   .links {
     display: none;
+  }
+  
+  .navActions {
+    gap: var(--space-md);
+  }
+  
+  .cta {
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--font-size-xs);
   }
 }

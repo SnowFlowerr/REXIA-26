@@ -1,7 +1,8 @@
 .gallery {
   position: relative;
-  padding: var(--space-5xl) var(--safe-gutter);
-  overflow: hidden;
+  padding: 50px var(--safe-gutter) 0;
+  background: transparent;
+  margin: 30px 0;
 }
 
 .container {

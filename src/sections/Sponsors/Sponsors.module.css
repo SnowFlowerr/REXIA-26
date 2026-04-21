@@ -1,7 +1,8 @@
 .sponsors {
   position: relative;
-  padding: var(--space-5xl) var(--safe-gutter);
-  overflow: hidden;
+  padding: 10px var(--safe-gutter) 0;
+  background: transparent;
+  margin: 16px 0;
   /* Submerged Dotted Grid background */
   background-image:
     radial-gradient(circle at center, rgba(238, 240, 246, 0.05) 1px, transparent 1px);
@@ -18,7 +19,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-xl);
-  margin-top: var(--space-3xl);
+  margin-top: var(--space-xl);
   position: relative;
 }
 

@@ -52,7 +52,7 @@ const Team = () => {
   viewport={{ once: true, margin: '-100px' }}
   transition={{ duration: 0.6 }}
 >
-  <h2 className="section__title">The Masterminds</h2>
+  <h2 className="section__title">The Planners</h2>
   <p className="section__subtitle">
     Great things are built by greater people. <br />
     The faces behind REXIA'26 — dropping soon. Stay locked in. 🚀

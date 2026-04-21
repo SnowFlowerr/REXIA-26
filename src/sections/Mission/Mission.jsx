@@ -47,7 +47,7 @@ const Mission = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-              REXIA'26 — where sparks fly and legends rise. 
+              REXIA'26, where sparks fly and legends rise. 
   We don't just push limits, we erase them.
           </motion.p>
 
@@ -58,9 +58,10 @@ const Mission = () => {
   viewport={{ once: true }}
   transition={{ delay: 0.4, duration: 0.8 }}
 >
-  Dream it. Code it. Launch it.
-  From blueprints to breakthroughs, we turn bold ideas
-  into the tech that tomorrow runs on.
+Sweat it. Stage it. Slay it.
+<br />
+From mosh pits to mic drops,
+we turn one weekend into a lifetime memory.
 </motion.div>
         </div>
       </div>

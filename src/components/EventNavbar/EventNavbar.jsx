@@ -6,7 +6,7 @@ import styles from '../Navbar/Navbar.module.css';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Event', href: '/event' },
+  { label: 'Events', href: '/event' },
 ];
 
 const linkVariants = {
@@ -43,7 +43,7 @@ const mobileLinkVariants = {
   }),
 };
 
-const EventNavbar = () => {
+const EventNavbar = ({ onRegisterClick }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
@@ -98,7 +98,13 @@ const EventNavbar = () => {
                 </Link>
               </motion.div>
             ))}
-            <motion.div
+          </div>
+
+          <div className={styles.navActions}>
+            <motion.a
+              href="#"
+              className={styles.cta}
+              onClick={(e) => { e.preventDefault(); onRegisterClick(); setMobileOpen(false); }}
               custom={navLinks.length}
               variants={linkVariants}
               initial="hidden"
@@ -106,23 +112,21 @@ const EventNavbar = () => {
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0,212,255,0.3)' }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="/#contact" className={styles.cta} onClick={() => setMobileOpen(false)}>
-                <span className={styles.ctaText}>Register</span>
-                <span className={styles.ctaShine} />
-              </Link>
-            </motion.div>
-          </div>
+              <span className={styles.ctaText}>Register</span>
+              <span className={styles.ctaShine} />
+            </motion.a>
 
-          <motion.button
-            className={`${styles.hamburger} ${mobileOpen ? styles.active : ''}`}
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-            whileTap={{ scale: 0.9 }}
-          >
-            <span />
-            <span />
-            <span />
-          </motion.button>
+            <motion.button
+              className={`${styles.hamburger} ${mobileOpen ? styles.active : ''}`}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+              whileTap={{ scale: 0.9 }}
+            >
+              <span />
+              <span />
+              <span />
+            </motion.button>
+          </div>
         </div>
       </motion.nav>
 
@@ -170,13 +174,13 @@ const EventNavbar = () => {
                   initial="hidden"
                   animate="visible"
                 >
-                  <Link
-                    to="/#contact"
+                  <a
+                    href="#"
                     className={styles.mobileCta}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={(e) => { e.preventDefault(); onRegisterClick(); setMobileOpen(false); }}
                   >
                     Register →
-                  </Link>
+                  </a>
                 </motion.div>
               </div>
             </motion.div>

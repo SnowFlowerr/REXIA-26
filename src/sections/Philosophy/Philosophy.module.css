@@ -1,7 +1,7 @@
 .philosophy {
   position: relative;
   /* background: var(--bg-primary); */
-  padding: var(--space-5xl) var(--space-xl);
+  padding: var(--space-3xl) var(--space-xl);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +71,8 @@
 
 @media (max-width: 768px) {
   .philosophy {
-    padding: var(--space-4xl) var(--space-lg);
+    padding: var(--space-2xl) var(--space-lg);
+    min-height: auto;
   }
   
   .description {

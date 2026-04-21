@@ -183,11 +183,11 @@
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
-  font-size: var(--font-size-xs);
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-space-gray);
+  color: var(--color-space-white);
 }
 
 .badgeDot {
@@ -519,7 +519,7 @@
     font-size: 2.25rem;
   }
   .badge {
-    font-size: 10px;
-    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.85rem;
   }
 }

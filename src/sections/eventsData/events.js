@@ -15,14 +15,10 @@ export const eventsData = [
           time: "10:00 AM (24 Hours)",
           venue: "Main Auditorium",
           club: "Tech Club",
-          facultyAdvisor: "Dr. Sharma",
+          facultyAdvisor: "Yashwant",
           teamSize: "2-4 members",
-          registrationFee: "₹500 per team",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          registrationFee: "₹649 per team",
+          prizePoll: "60,000*"
         },
         snapshots: [
           { round: "Round 1", format: "Idea Pitch", duration: "Day 1", eliminates: "No" },
@@ -48,21 +44,17 @@ export const eventsData = [
         name: "Startup Pitch Competition",
         tagline: "Pitch your next big idea",
         description: "Present your startup idea to a panel of expert judges and investors.",
-        location: "Seminar Hall A",
+        location: "Computer Science Block",
         overview: "An opportunity for budding entrepreneurs to showcase their business models and prototypes.",
         details: {
-          date: "April 19, 2026",
+          date: "6th May, 2026",
           time: "11:00 AM",
-          venue: "Seminar Hall A",
+          venue: "Computer Science Block",
           club: "E-Cell",
-          facultyAdvisor: "Prof. Gupta",
-          teamSize: "1-3 members",
-          registrationFee: "₹300 per team",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          facultyAdvisor: "Yashwant",
+          teamSize: "2-4 members",
+          registrationFee: "₹649 per team",
+          prizePoll: "60,000*"
         },
         snapshots: [
           { round: "Round 1", format: "Pitch Deck", duration: "10 mins", eliminates: "Yes" }
@@ -82,45 +74,7 @@ export const eventsData = [
           { name: "Bob", role: "Lead", phone: "+91 9876543211", email: "bob@example.com" }
         ]
       },
-      {
-        id: "tech-03",
-        name: "Quization",
-        tagline: "The ultimate tech quiz",
-        description: "Test your knowledge on technology, coding, and the latest trends in IT.",
-        location: "Room 101",
-        overview: "A fast-paced quiz competition spanning various topics from software to hardware.",
-        details: {
-          date: "April 18, 2026",
-          time: "2:00 PM",
-          venue: "Room 101",
-          club: "Quiz Club",
-          facultyAdvisor: "Mr. Rakesh",
-          teamSize: "1-2 members",
-          registrationFee: "₹100",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
-        },
-        snapshots: [
-          { round: "Prelims", format: "Written Test", duration: "30 mins", eliminates: "Yes" },
-          { round: "Finals", format: "Buzzer Round", duration: "1 hour", eliminates: "No" }
-        ],
-        rules: [
-          "No electronic devices allowed during the quiz.",
-          "Decision of the quizmaster is final.",
-          "*Prize pool may vary according to participant registration."
-        ],
-        judgementCriteria: [
-          { criteria: "Accuracy", weightage: "50%" },
-          { criteria: "Speed", weightage: "50%" }
-        ],
-        ranking: "Top 3 teams will be awarded.",
-        contact: [
-          { name: "Charlie", role: "Quizmaster", phone: "+91 9876543212", email: "charlie@example.com" }
-        ]
-      },
+      
       {
         id: "tech-04",
         name: "Stock Market Simulation",
@@ -136,11 +90,7 @@ export const eventsData = [
           facultyAdvisor: "Dr. Mehra",
           teamSize: "1 member",
           registrationFee: "₹150",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Trading Session", format: "Simulation", duration: "3 hours", eliminates: "No" }
@@ -179,11 +129,7 @@ export const eventsData = [
           facultyAdvisor: "Mr. Singh",
           teamSize: "1-2 members",
           registrationFee: "₹200",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Knockouts", format: "Best of 3", duration: "30 mins", eliminates: "Yes" },
@@ -217,11 +163,7 @@ export const eventsData = [
           facultyAdvisor: "Mr. Singh",
           teamSize: "6-8 members",
           registrationFee: "₹600 per team",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Knockouts", format: "1 Set (25 pts)", duration: "20 mins", eliminates: "Yes" },
@@ -255,11 +197,7 @@ export const eventsData = [
           facultyAdvisor: "Mr. Singh",
           teamSize: "1-2 members",
           registrationFee: "₹300",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Qualifiers", format: "1 Set", duration: "40 mins", eliminates: "Yes" },
@@ -293,11 +231,7 @@ export const eventsData = [
           facultyAdvisor: "Dr. Verma",
           teamSize: "1 member",
           registrationFee: "₹100",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Swiss Rounds", format: "10+5 Rapid", duration: "4 hours", eliminates: "No" }
@@ -330,11 +264,7 @@ export const eventsData = [
           facultyAdvisor: "Mr. Singh",
           teamSize: "8 members",
           registrationFee: "₹400 per team",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Knockouts", format: "Best of 3 pulls", duration: "10 mins", eliminates: "Yes" }
@@ -367,11 +297,7 @@ export const eventsData = [
           facultyAdvisor: "Mr. Kumar",
           teamSize: "4 members",
           registrationFee: "₹400 per squad",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Qualifiers", format: "2 Matches", duration: "1.5 hours", eliminates: "Yes" },
@@ -391,6 +317,46 @@ export const eventsData = [
           { name: "Jack", role: "Admin", phone: "+91 9876543219", email: "jack@example.com" }
         ]
       }
+      ,{
+  id: "sports-07",
+  name: "Table Tennis",
+  tagline: "Small ball. Big battles.",
+  description: "Step up to the table and prove your reflexes are faster than the rest. Singles and doubles — every point counts.",
+  location: "Indoor Sports Complex",
+  overview: "Singles and doubles tournaments for both men and women. Fast-paced rallies, precision shots, and nerves of steel — the table tennis arena at REXIA'26 is where champions are separated from the rest.",
+  details: {
+    date: "April 19, 2026",
+    time: "10:00 AM",
+    venue: "Indoor Sports Complex, Table Tennis Hall",
+    club: "Sports Committee",
+    facultyAdvisor: "Mr. Singh",
+    teamSize: "1-2 members",
+    registrationFee: "₹200",
+    prizePoll: "10,000*"
+  },
+  snapshots: [
+    { round: "Group Stage", format: "Round Robin", duration: "20 mins", eliminates: "Bottom 50%" },
+    { round: "Knockouts", format: "Best of 3 sets", duration: "30 mins", eliminates: "Yes" },
+    { round: "Finals", format: "Best of 5 sets", duration: "45 mins", eliminates: "No" }
+  ],
+  rules: [
+    "Standard ITTF rules apply.",
+    "Bring your own paddle. Balls will be provided.",
+    "Players must report 15 minutes before their scheduled match.",
+    "No-show after 10 minutes of scheduled time counts as a forfeit.",
+    "Umpire decisions are final and non-negotiable.",
+    "*Prize pool may vary according to participant registration."
+  ],
+  judgementCriteria: [
+    { criteria: "Sets Won", weightage: "70%" },
+    { criteria: "Points Differential", weightage: "20%" },
+    { criteria: "Sportsmanship", weightage: "10%" }
+  ],
+  ranking: "Winner, Runner-up, and 3rd Place decided by playoff.",
+  contact: [
+    { name: "Eve", role: "Sports Rep", phone: "+91 9876543214", email: "eve@example.com" }
+  ]
+}
     ]
   },
   {
@@ -412,11 +378,7 @@ export const eventsData = [
           facultyAdvisor: "Mrs. Desai",
           teamSize: "5-15 members",
           registrationFee: "₹1000 per team",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Finals", format: "Stage Performance", duration: "5-7 mins", eliminates: "No" }
@@ -436,45 +398,7 @@ export const eventsData = [
           { name: "Karen", role: "Coordinator", phone: "+91 9876543220", email: "karen@example.com" }
         ]
       },
-      {
-        id: "cult-02",
-        name: "Fashion Show / Ramp Walk",
-        tagline: "Own the runway",
-        description: "Strut down the runway and display your unique fashion sense.",
-        location: "Main Stage",
-        overview: "A glamorous event combining style, confidence, and creativity on the ramp.",
-        details: {
-          date: "April 19, 2026",
-          time: "7:00 PM",
-          venue: "Main Stage",
-          club: "Fashion Club",
-          facultyAdvisor: "Ms. Arora",
-          teamSize: "1-10 members",
-          registrationFee: "₹500",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
-        },
-        snapshots: [
-          { round: "Finals", format: "Ramp Walk", duration: "10 mins per team", eliminates: "No" }
-        ],
-        rules: [
-          "Themes must be approved beforehand.",
-          "Indecent clothing will lead to disqualification.",
-          "*Prize pool may vary according to participant registration."
-        ],
-        judgementCriteria: [
-          { criteria: "Theme adherence", weightage: "40%" },
-          { criteria: "Walk and Posture", weightage: "40%" },
-          { criteria: "Costume Design", weightage: "20%" }
-        ],
-        ranking: "Best Team, Best Male Model, Best Female Model.",
-        contact: [
-          { name: "Leo", role: "Coordinator", phone: "+91 9876543221", email: "leo@example.com" }
-        ]
-      },
+    
       {
         id: "cult-03",
         name: "Singing",
@@ -490,11 +414,7 @@ export const eventsData = [
           facultyAdvisor: "Dr. Bose",
           teamSize: "1-2 members",
           registrationFee: "₹200",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Prelims", format: "Unplugged", duration: "3 mins", eliminates: "Yes" },
@@ -530,11 +450,7 @@ export const eventsData = [
           facultyAdvisor: "Mr. Das",
           teamSize: "1-2 members",
           registrationFee: "₹150",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Creation", format: "Live Design", duration: "2 hours", eliminates: "No" }
@@ -569,11 +485,7 @@ export const eventsData = [
           facultyAdvisor: "Mrs. Kapoor",
           teamSize: "1-3 members",
           registrationFee: "Free (Inner Students Only)",
-          prizePoll: {
-            "1st": "₹5,000*",
-            "2nd": "₹3,000*",
-            "3rd": "₹2,000*"
-          }
+          prizePoll: "10,000*"
         },
         snapshots: [
           { round: "Submission", format: "Online Upload", duration: "48 hours", eliminates: "No" }
@@ -596,3 +508,4 @@ export const eventsData = [
     ]
   }
 ];
+

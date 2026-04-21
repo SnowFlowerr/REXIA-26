@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from '../Logo/Logo';
 import styles from './Navbar.module.css';
@@ -6,6 +7,7 @@ import styles from './Navbar.module.css';
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
+  { label: 'Events', href: '/event' },
   { label: 'Team', href: '#team' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Contact', href: '#contact' },
@@ -45,10 +47,11 @@ const mobileLinkVariants = {
   }),
 };
 
-const Navbar = () => {
+const Navbar = ({ onRegisterClick }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,9 +77,14 @@ const Navbar = () => {
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    
+    if (href.startsWith('#')) {
+      const el = document.querySelector(href);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(href);
     }
   };
 
@@ -122,10 +130,13 @@ const Navbar = () => {
                 )}
               </motion.a>
             ))}
+          </div>
+
+          <div className={styles.navActions}>
             <motion.a
-              href="#contact"
+              href="#"
               className={styles.cta}
-              onClick={(e) => handleNavClick(e, '#contact')}
+              onClick={(e) => { e.preventDefault(); onRegisterClick(); setMobileOpen(false); }}
               custom={navLinks.length}
               variants={linkVariants}
               initial="hidden"
@@ -136,18 +147,18 @@ const Navbar = () => {
               <span className={styles.ctaText}>Register Now</span>
               <span className={styles.ctaShine} />
             </motion.a>
-          </div>
 
-          <motion.button
-            className={`${styles.hamburger} ${mobileOpen ? styles.active : ''}`}
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-            whileTap={{ scale: 0.9 }}
-          >
-            <span />
-            <span />
-            <span />
-          </motion.button>
+            <motion.button
+              className={`${styles.hamburger} ${mobileOpen ? styles.active : ''}`}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+              whileTap={{ scale: 0.9 }}
+            >
+              <span />
+              <span />
+              <span />
+            </motion.button>
+          </div>
         </div>
       </motion.nav>
 
@@ -187,9 +198,9 @@ const Navbar = () => {
                   </motion.a>
                 ))}
                 <motion.a
-                  href="#contact"
+                  href="#"
                   className={styles.mobileCta}
-                  onClick={(e) => handleNavClick(e, '#contact')}
+                  onClick={(e) => { e.preventDefault(); onRegisterClick(); setMobileOpen(false); }}
                   custom={navLinks.length}
                   variants={mobileLinkVariants}
                   initial="hidden"

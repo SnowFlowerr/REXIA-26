@@ -122,9 +122,9 @@ const Hero = () => {
           style={{ y: yBadge }}
         >
           <span className={styles.badgeDot} />
-          <span>May 2026</span>
-          <span className={styles.badgeSep}>•</span>
-          <span>The Future Awaits</span>
+          <span> 6th-7th May 2026</span> {/*  */}
+       
+        
         </motion.div>
 
         {/* Letter-by-letter title reveal */}

@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { eventsData } from '../eventsData/events';
 import styles from './EventDetail.module.css';
 import Footer from '../Footer/Footer';
@@ -6,6 +7,10 @@ import Footer from '../Footer/Footer';
 const EventDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const allEvents = eventsData.flatMap(cat =>
     cat.events.map(e => ({ ...e, category: cat.category, color: cat.color }))
@@ -56,19 +61,9 @@ const EventDetail = () => {
             <div className={styles.prizeLabel}>PRIZE POOL</div>
             <div className={styles.prizes}>
               <div className={styles.prizeItem}>
-                <span className={styles.prizeMedal} style={{ color: '#FFD700' }}>🥇</span>
-                <span className={styles.prizeRank}>1st</span>
-                <span className={styles.prizeAmt}>{event.details.prizePoll['1st']}</span>
-              </div>
-              <div className={styles.prizeItem}>
-                <span className={styles.prizeMedal} style={{ color: '#C0C0C0' }}>🥈</span>
-                <span className={styles.prizeRank}>2nd</span>
-                <span className={styles.prizeAmt}>{event.details.prizePoll['2nd']}</span>
-              </div>
-              <div className={styles.prizeItem}>
-                <span className={styles.prizeMedal} style={{ color: '#CD7F32' }}>🥉</span>
-                <span className={styles.prizeRank}>3rd</span>
-                <span className={styles.prizeAmt}>{event.details.prizePoll['3rd']}</span>
+                <span className={styles.prizeMedal} style={{ color: '#FFD700' }}>🏆</span>
+                <span className={styles.prizeRank}>Total</span>
+                <span className={styles.prizeAmt}>{event.details.prizePoll}</span>
               </div>
             </div>
           </div>

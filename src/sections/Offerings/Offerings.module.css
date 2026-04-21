@@ -1,6 +1,6 @@
 .offerings {
   position: relative;
-  padding: var(--space-5xl) var(--safe-gutter);
+  padding: var(--space-3xl) var(--safe-gutter);
   overflow: hidden;
   min-height: 100vh;
   display: flex;
@@ -190,13 +190,12 @@
 
 .cardTitle {
   font-family: var(--font-heading);
-  font-size: 2.4rem;
-  font-weight: 800;
+  font-size: clamp(1.4rem, 5vw, 2.4rem);
+  font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.01em;
   line-height: 1.05;
-  word-break: break-word;
 }
 
 .cardDesc {
@@ -204,6 +203,10 @@
   color: #888888;
   line-height: 1.65;
   font-weight: 400;
+}
+
+.hackathonTitle {
+  font-size: clamp(1.1rem, 4vw, 2.2rem) !important;
 }
 
 /* ── RESPONSIVE ── */
@@ -214,25 +217,21 @@
   }
 
   .stack {
-    width: 360px;
+    width: 400px;
     height: 480px;
   }
 
   .card {
-    width: 320px;
+    width: 360px;
     height: 440px;
     padding: 36px 32px;
-  }
-
-  .cardTitle {
-    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .offerings {
     min-height: auto;
-    padding: 5rem var(--safe-gutter);
+    padding: 3rem var(--safe-gutter);
   }
 
   .content {
@@ -252,19 +251,15 @@
   }
 
   .stack {
-    width: 320px;
+    width: 360px;
     height: 440px;
   }
 
   .card {
-    width: 300px;
+    width: 340px;
     height: 400px;
     padding: 32px 28px;
     border-radius: 22px;
-  }
-
-  .cardTitle {
-    font-size: 1.8rem;
   }
 
   .cardDesc {
@@ -277,8 +272,6 @@
     text-align: center;
     width: 100%;
   }
-
-  /* Controls width removed as we use left/right now */
 }
 
 @media (max-width: 480px) {
@@ -287,42 +280,40 @@
   }
 
   .stack {
-    width: 290px;
+    width: 330px;
     height: 420px;
   }
 
   .card {
-    width: 270px;
+    width: 310px;
     height: 380px;
-    padding: 28px 24px;
+    padding: 24px 24px;
     border-radius: 20px;
-  }
-
-  .cardTitle {
-    font-size: 1.6rem;
   }
 
   .arrowBtn {
     width: 40px;
     height: 40px;
   }
-
-  /* Controls width removed */
+  
+  .hackathonTitle {
+    font-size: 1.3rem !important;
+  }
 }
 
 @media (max-width: 360px) {
   .stack {
-    width: 260px;
+    width: 300px;
     height: 400px;
   }
 
   .card {
-    width: 240px;
+    width: 280px;
     height: 360px;
-    padding: 24px 20px;
+    padding: 24px 16px;
   }
-
-  .cardTitle {
-    font-size: 1.4rem;
+  
+  .hackathonTitle {
+    font-size: 1.6rem !important;
   }
 }

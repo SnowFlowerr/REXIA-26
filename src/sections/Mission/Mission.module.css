@@ -1,6 +1,6 @@
 .mission {
   position: relative;
-  padding: var(--space-5xl) var(--safe-gutter);
+  padding: var(--space-3xl) var(--safe-gutter);
   /* background: var(--bg-primary); */
   overflow: hidden;
   min-height: 80vh;
@@ -77,11 +77,10 @@
 }
 
 .mainText {
-  font-size: clamp(1.25rem, 2vw, 2.25rem);
-  color: var(--color-space-white);
-  line-height: 1.3;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--color-space-gray);
+  line-height: 1.6;
+  font-weight: 300;
 }
 
 .sideText {
@@ -95,7 +94,7 @@
 
 @media (max-width: 1024px) {
   .mission {
-    padding: var(--space-4xl) var(--safe-gutter);
+    padding: var(--space-2xl) var(--safe-gutter);
   }
 
   .content {
@@ -122,10 +121,7 @@
     top: 20%;
   }
 
-  .mainText {
-    font-size: 1.15rem;
-    line-height: 1.4;
-  }
+
 
   .sideText {
     font-size: var(--font-size-sm);

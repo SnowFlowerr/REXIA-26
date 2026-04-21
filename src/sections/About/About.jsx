@@ -72,11 +72,12 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            The Fest That Hits Different
+            Engineered for Excellence
           </motion.h2>
           <p className="section__subtitle">
-            Two days. Zero limits. Infinite vibes — where your wildest ideas
-            get a stage and every moment hits harder than the last.
+            We are more than just a fest with hackathons and cultural events. 
+            REXIA is built on a foundation of pure technological efficiency, 
+            resilient architecture, and uncompromising scale.
           </p>
         </motion.div>
 

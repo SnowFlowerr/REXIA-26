@@ -10,6 +10,7 @@ import Hero from './sections/Hero/Hero';
 import Philosophy from './sections/Philosophy/Philosophy';
 import About from './sections/About/About';
 import Offerings from './sections/Offerings/Offerings';
+import Drift from './driftX/drift';
 import Mission from './sections/Mission/Mission';
 import Team from './sections/Team/Team';
 import Gallery from './sections/Gallery/Gallery';
@@ -22,9 +23,11 @@ import NotFound from './sections/notfound/notfound';
 import EventDetail from './sections/eventDetail/eventDetails';
 
 import EventNavbar from './components/EventNavbar/EventNavbar';
+import RegisterModal from './components/RegisterModal/RegisterModal';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [isRegisterModalOpen, setRegisterModalOpen] = useState(false);
 
   const handleLoaderComplete = useCallback(() => {
     setLoading(false);
@@ -47,34 +50,38 @@ function App() {
       {/* Loader */}
       {loading && <Loader onComplete={handleLoaderComplete} />}
 
+      {/* Register Modal */}
+      <RegisterModal isOpen={isRegisterModalOpen} onClose={() => setRegisterModalOpen(false)} />
+
       {/* Main content */}
       {!loading && (
         <Routes>
           <Route path="/" element={
             <>
-          <Navbar />
+          <Navbar onRegisterClick={() => setRegisterModalOpen(true)} />
           <main>
             <Hero />
             <SectionDivider variant="purple" />
             <Mission />
             <Offerings />
+            <Drift onRegisterClick={() => setRegisterModalOpen(true)} />
             <Philosophy />
-            <SectionDivider variant="purple" />
+            {/* <SectionDivider variant="purple" />
             <About />
             <SectionDivider variant="pink" />
-            <Team />
-            <SectionDivider variant="blue" />
+            <Team /> */}
+            {/* <SectionDivider variant="blue" /> */}
             <Gallery />
-            <SectionDivider variant="pink" />
+            {/* <SectionDivider variant="pink" /> */}
             <Sponsors />
-            <SectionDivider variant="purple" />
+            {/* <SectionDivider variant="purple" /> */}
             <Contact />
           </main>
           <Footer />
         </>
         } />
-          <Route path="event" element={<><EventNavbar /><Events/></>}/>
-          <Route path="/event/:id" element={<><EventNavbar /><EventDetail/></>}/>
+          <Route path="event" element={<><EventNavbar onRegisterClick={() => setRegisterModalOpen(true)} /><Events/></>}/>
+          <Route path="/event/:id" element={<><EventNavbar onRegisterClick={() => setRegisterModalOpen(true)} /><EventDetail/></>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       )}

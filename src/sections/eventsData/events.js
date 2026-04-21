@@ -1,719 +1,598 @@
- export const eventsData=
-[
+export const eventsData = [
   {
-    "category": "technical",
-    "color": "#b44aff",
-    "events": [
+    category: "technical",
+    color: "#b44aff",
+    events: [
       {
-        "id": "tech-01",
-        "name": "Code Blitz",
-        "tagline": "Think fast. Code faster.",
-        "description": "A high-speed competitive coding challenge where every second counts. Solve algorithmic problems under pressure and prove you're the sharpest mind in the room.",
-        "location": "CS Lab Block A",
-        "managedBy": "CodeCraft Club",//
-        "overview": "Code Blitz is the ultimate test of algorithmic thinking and speed coding. Participants will face a series of progressively harder problems drawn from data structures, dynamic programming, and graph theory. The environment simulates real competitive programming platforms, and every millisecond of your solution runtime matters as much as correctness.",
-        "details": {
-          "date": "April 18, 2026",
-          "time": "10:00 AM – 1:00 PM",
-          "venue": "CS Lab Block A, Room 204",
-          "club": "CodeCraft Club",
-          "facultyAdvisor": "Dr. Ramesh Iyer",
-          "teamSize": "1–2 members",
-          "registrationFee": "₹100 per team",
-          "prizePoll": {
-            "1st": "₹8,000",
-            "2nd": "₹4,000",
-            "3rd": "₹2,000"
+        id: "tech-01",
+        name: "starHack 1.0",
+        tagline: "24 Hour Hackathon",
+        description: "A thrilling 24-hour hackathon where you build, break, and innovate. Push your limits and create something extraordinary.",
+        location: "Main Auditorium",
+        overview: "starHack 1.0 is the premier 24-hour hackathon. Teams will collaborate to solve real-world problems. Expect late-night coding, mentors, and intense competition.",
+        details: {
+          date: "April 18, 2026",
+          time: "10:00 AM (24 Hours)",
+          venue: "Main Auditorium",
+          club: "Tech Club",
+          facultyAdvisor: "Dr. Sharma",
+          teamSize: "2-4 members",
+          registrationFee: "₹500 per team",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Round 1", "format": "MCQ + Output Prediction", "duration": "30 mins", "eliminates": "Bottom 60%" },
-          { "round": "Round 2", "format": "3 Coding Problems", "duration": "90 mins", "eliminates": "Bottom 70%" },
-          { "round": "Round 3 (Final)", "format": "2 Hard Problems", "duration": "60 mins", "eliminates": "Ranks 4 onwards" }
+        snapshots: [
+          { round: "Round 1", format: "Idea Pitch", duration: "Day 1", eliminates: "No" },
+          { round: "Round 2", format: "Final Demo", duration: "Day 2", eliminates: "Yes" }
         ],
-        "rules": [
-          "No internet access allowed during the contest.",
-          "Allowed languages: C, C++, Java, Python.",
-          "Plagiarism leads to immediate disqualification.",
-          "Participants must carry their college ID.",
-          "Late entry after 15 minutes of start is not permitted.",
-          "Judges' decision is final and binding."
+        rules: [
+          "Participants must bring their own laptops.",
+          "All code must be written during the hackathon.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Correctness", "weightage": "50%" },
-          { "criteria": "Time Complexity", "weightage": "25%" },
-          { "criteria": "Code Efficiency", "weightage": "15%" },
-          { "criteria": "Speed of Submission", "weightage": "10%" }
+        judgementCriteria: [
+          { criteria: "Innovation", weightage: "40%" },
+          { criteria: "Execution", weightage: "40%" },
+          { criteria: "Presentation", weightage: "20%" }
         ],
-        "ranking": "Leaderboard updated live after each round. Final ranking based on total problems solved, then by time penalty.",
-        "contact": [
-          { "name": "Arjun Mehta", "role": "Event Coordinator", "phone": "+91 98765 43210", "email": "arjun@rexia26.in" },
-          { "name": "Priya Nair", "role": "Co-Coordinator", "phone": "+91 91234 56789", "email": "priya@rexia26.in" }
+        ranking: "Top 3 teams will be awarded.",
+        contact: [
+          { name: "Alice", role: "Coordinator", phone: "+91 9876543210", email: "alice@example.com" }
         ]
       },
       {
-        "id": "tech-02",
-        "name": "Hack Orbit",
-        "tagline": "24 hours. One big idea.",
-        "description": "A full-cycle hackathon where teams design, build and pitch a working product from scratch. Real problems. Real solutions. Real stakes.",
-        "location": "Innovation Hub, Main Block",
-        "managedBy": "DevForge Society",
-        "overview": "Hack Orbit is REXIA's flagship hackathon that pushes teams to ideate, prototype and present a fully functional product within 24 hours. Problem statements span domains including healthcare, sustainability, fintech and education. Teams will have access to mentors, cloud credits, and hardware kits throughout the event.",
-        "details": {
-          "date": "April 18–19, 2026",
-          "time": "9:00 AM Day 1 – 9:00 AM Day 2",
-          "venue": "Innovation Hub, Main Block Ground Floor",
-          "club": "DevForge Society",
-          "facultyAdvisor": "Prof. Sunita Verma",
-          "teamSize": "2–4 members",
-          "registrationFee": "₹200 per team",
-          "prizePoll": {
-            "1st": "₹15,000",
-            "2nd": "₹8,000",
-            "3rd": "₹4,000"
+        id: "tech-02",
+        name: "Startup Pitch Competition",
+        tagline: "Pitch your next big idea",
+        description: "Present your startup idea to a panel of expert judges and investors.",
+        location: "Seminar Hall A",
+        overview: "An opportunity for budding entrepreneurs to showcase their business models and prototypes.",
+        details: {
+          date: "April 19, 2026",
+          time: "11:00 AM",
+          venue: "Seminar Hall A",
+          club: "E-Cell",
+          facultyAdvisor: "Prof. Gupta",
+          teamSize: "1-3 members",
+          registrationFee: "₹300 per team",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Problem Release", "format": "Statement reveal + team ideation", "duration": "1 hr", "eliminates": "None" },
-          { "round": "Mid Check", "format": "Mentor review of prototype", "duration": "30 mins", "eliminates": "Weak teams flagged" },
-          { "round": "Final Pitch", "format": "5-min demo + 5-min Q&A", "duration": "10 mins/team", "eliminates": "Non-finalists" }
+        snapshots: [
+          { round: "Round 1", format: "Pitch Deck", duration: "10 mins", eliminates: "Yes" }
         ],
-        "rules": [
-          "All code must be written during the hackathon — no pre-built projects.",
-          "Open source libraries and APIs are permitted.",
-          "Teams must submit GitHub repo link before the deadline.",
-          "Hardware provided must be returned after the event.",
-          "Any form of cheating or impersonation results in disqualification.",
-          "Participants must be present for the final pitch to be eligible for prizes."
+        rules: [
+          "Presentations must not exceed 10 minutes.",
+          "Prototypes are highly encouraged.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Innovation & Creativity", "weightage": "30%" },
-          { "criteria": "Technical Complexity", "weightage": "25%" },
-          { "criteria": "Feasibility & Impact", "weightage": "25%" },
-          { "criteria": "Presentation & Demo", "weightage": "20%" }
+        judgementCriteria: [
+          { criteria: "Feasibility", weightage: "30%" },
+          { criteria: "Market Potential", weightage: "40%" },
+          { criteria: "Pitch", weightage: "30%" }
         ],
-        "ranking": "Teams shortlisted by mentor scores at mid-check. Final ranking decided by panel of 3 judges post pitch session.",
-        "contact": [
-          { "name": "Karthik Rao", "role": "Event Head", "phone": "+91 99887 76655", "email": "karthik@rexia26.in" },
-          { "name": "Sneha Pillai", "role": "Logistics Lead", "phone": "+91 88776 65544", "email": "sneha@rexia26.in" }
+        ranking: "Top 3 startups will be funded/awarded.",
+        contact: [
+          { name: "Bob", role: "Lead", phone: "+91 9876543211", email: "bob@example.com" }
         ]
       },
       {
-        "id": "tech-03",
-        "name": "Circuit Clash",
-        "tagline": "Where hardware meets hustle.",
-        "description": "An electronics and embedded systems competition. Design and demo a working circuit or IoT prototype that solves a real-world problem.",
-        "location": "Electronics Lab, B Block",
-        "managedBy": "Embedded Systems Club",
-        "overview": "Circuit Clash invites electronics and hardware enthusiasts to build and demonstrate a working circuit or IoT-based prototype. Participants will be judged on the practicality of their solution, the elegance of their design, and how well they can explain their build to a panel of industry experts and faculty judges.",
-        "details": {
-          "date": "April 18, 2026",
-          "time": "11:00 AM – 5:00 PM",
-          "venue": "Electronics Lab, B Block Room 102",
-          "club": "Embedded Systems Club",
-          "facultyAdvisor": "Dr. Alok Sharma",
-          "teamSize": "2–3 members",
-          "registrationFee": "₹150 per team",
-          "prizePoll": {
-            "1st": "₹7,000",
-            "2nd": "₹3,500",
-            "3rd": "₹1,500"
+        id: "tech-03",
+        name: "Quization",
+        tagline: "The ultimate tech quiz",
+        description: "Test your knowledge on technology, coding, and the latest trends in IT.",
+        location: "Room 101",
+        overview: "A fast-paced quiz competition spanning various topics from software to hardware.",
+        details: {
+          date: "April 18, 2026",
+          time: "2:00 PM",
+          venue: "Room 101",
+          club: "Quiz Club",
+          facultyAdvisor: "Mr. Rakesh",
+          teamSize: "1-2 members",
+          registrationFee: "₹100",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Submission", "format": "Problem statement + design plan", "duration": "1 hr", "eliminates": "Incomplete plans" },
-          { "round": "Build Phase", "format": "Live circuit building", "duration": "4 hrs", "eliminates": "Non-functional builds" },
-          { "round": "Demo & Q&A", "format": "Live demo to judges", "duration": "15 mins/team", "eliminates": "Ranked by score" }
+        snapshots: [
+          { round: "Prelims", format: "Written Test", duration: "30 mins", eliminates: "Yes" },
+          { round: "Finals", format: "Buzzer Round", duration: "1 hour", eliminates: "No" }
         ],
-        "rules": [
-          "Components will be provided by organizers — personal components not allowed.",
-          "Damage to lab equipment leads to disqualification and penalty.",
-          "Wireless transmission modules must be pre-approved.",
-          "Only team members may handle the circuit during demo.",
-          "Teams must present a one-page design doc before build phase begins.",
-          "Judges' evaluation is final."
+        rules: [
+          "No electronic devices allowed during the quiz.",
+          "Decision of the quizmaster is final.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Functionality", "weightage": "40%" },
-          { "criteria": "Design Elegance", "weightage": "25%" },
-          { "criteria": "Real-world Applicability", "weightage": "20%" },
-          { "criteria": "Explanation & Q&A", "weightage": "15%" }
+        judgementCriteria: [
+          { criteria: "Accuracy", weightage: "50%" },
+          { criteria: "Speed", weightage: "50%" }
         ],
-        "ranking": "Each team scored out of 100. Ties broken by Q&A performance score.",
-        "contact": [
-          { "name": "Vikram Das", "role": "Event Coordinator", "phone": "+91 97654 32109", "email": "vikram@rexia26.in" },
-          { "name": "Ananya Roy", "role": "Lab In-charge", "phone": "+91 96543 21098", "email": "ananya@rexia26.in" }
+        ranking: "Top 3 teams will be awarded.",
+        contact: [
+          { name: "Charlie", role: "Quizmaster", phone: "+91 9876543212", email: "charlie@example.com" }
         ]
       },
       {
-        "id": "tech-04",
-        "name": "Debug Duel",
-        "tagline": "Find the bug. Win the glory.",
-        "description": "You get broken code. You fix it. Fastest and cleanest solution wins. A test of patience, precision, and pure programming instinct.",
-        "location": "CS Lab Block B",
-        "managedBy": "CodeCraft Club",
-        "overview": "Debug Duel is a solo programming event that hands participants intentionally broken code across multiple languages and complexity levels. Contestants must identify, explain, and fix the bugs as quickly as possible. This is not just about getting it to compile — the fix must be clean, efficient, and logically sound.",
-        "details": {
-          "date": "April 19, 2026",
-          "time": "2:00 PM – 4:00 PM",
-          "venue": "CS Lab Block B, Room 301",
-          "club": "CodeCraft Club",
-          "facultyAdvisor": "Dr. Ramesh Iyer",
-          "teamSize": "1 member (solo)",
-          "registrationFee": "₹80 per participant",
-          "prizePoll": {
-            "1st": "₹5,000",
-            "2nd": "₹2,500",
-            "3rd": "₹1,000"
+        id: "tech-04",
+        name: "Stock Market Simulation",
+        tagline: "Trade to win",
+        description: "Experience the thrill of the stock market in this real-time simulation.",
+        location: "Computer Lab 3",
+        overview: "Participants will use virtual money to trade stocks in a simulated environment reflecting real-world market volatility.",
+        details: {
+          date: "April 19, 2026",
+          time: "9:00 AM",
+          venue: "Computer Lab 3",
+          club: "Finance Club",
+          facultyAdvisor: "Dr. Mehra",
+          teamSize: "1 member",
+          registrationFee: "₹150",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Level 1", "format": "Syntax & logic bugs — easy", "duration": "30 mins", "eliminates": "Bottom 50%" },
-          { "round": "Level 2", "format": "Runtime & logical errors — medium", "duration": "45 mins", "eliminates": "Bottom 60%" },
-          { "round": "Level 3 (Final)", "format": "Multi-language debug — hard", "duration": "45 mins", "eliminates": "Ranks 4 onwards" }
+        snapshots: [
+          { round: "Trading Session", format: "Simulation", duration: "3 hours", eliminates: "No" }
         ],
-        "rules": [
-          "No internet access, no external tools beyond IDE.",
-          "Participants must not alter the core logic — only fix bugs.",
-          "Each unfixed bug carries a time penalty.",
-          "Submitting without fixing all bugs is allowed but penalized.",
-          "Languages used: Python, C++, JavaScript.",
-          "Code editor environment will be provided on lab systems."
+        rules: [
+          "All trading must be done on the provided platform.",
+          "Any exploit of the simulation will lead to disqualification.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Number of Bugs Fixed", "weightage": "50%" },
-          { "criteria": "Fix Quality & Cleanliness", "weightage": "30%" },
-          { "criteria": "Time Taken", "weightage": "20%" }
+        judgementCriteria: [
+          { criteria: "Total Portfolio Value", weightage: "100%" }
         ],
-        "ranking": "Points per bug fixed minus time penalties. Final leaderboard decides winners.",
-        "contact": [
-          { "name": "Meera Iyer", "role": "Event Head", "phone": "+91 95432 10987", "email": "meera@rexia26.in" },
-          { "name": "Rohit Sen", "role": "Technical Support", "phone": "+91 94321 09876", "email": "rohit@rexia26.in" }
-        ]
-      },
-      {
-        "id": "tech-05",
-        "name": "AI Arena",
-        "tagline": "Train it. Tame it. Win it.",
-        "description": "Build and present an AI/ML model trained on a given dataset. Judged on accuracy, innovation, and the story your model tells.",
-        "location": "Data Science Lab, C Block",
-        "managedBy": "AI & ML Club",
-        "overview": "AI Arena challenges participants to build a machine learning model on a provided dataset and present their findings to a panel of judges. The event tests end-to-end ML skills — from data preprocessing and feature engineering to model selection, tuning, and visualization. What sets teams apart is how well they can interpret and narrate what their model has learned.",
-        "details": {
-          "date": "April 19, 2026",
-          "time": "10:00 AM – 3:00 PM",
-          "venue": "Data Science Lab, C Block Room 401",
-          "club": "AI & ML Club",
-          "facultyAdvisor": "Prof. Divya Menon",
-          "teamSize": "2–3 members",
-          "registrationFee": "₹150 per team",
-          "prizePoll": {
-            "1st": "₹12,000",
-            "2nd": "₹6,000",
-            "3rd": "₹3,000"
-          }
-        },
-        "snapshots": [
-          { "round": "Dataset Release", "format": "Dataset + problem brief given", "duration": "15 mins", "eliminates": "None" },
-          { "round": "Build Phase", "format": "Model training & evaluation", "duration": "3.5 hrs", "eliminates": "None" },
-          { "round": "Presentation", "format": "10-min pitch + 5-min Q&A", "duration": "15 mins/team", "eliminates": "Ranked by score" }
-        ],
-        "rules": [
-          "Dataset will be revealed at the start — no prior data collection allowed.",
-          "Pre-trained foundation models are not allowed.",
-          "All code must be written during the event.",
-          "Python is the only permitted language.",
-          "Teams must submit a Jupyter notebook before presenting.",
-          "Internet allowed only for library documentation, not for solutions."
-        ],
-        "judgementCriteria": [
-          { "criteria": "Model Accuracy", "weightage": "35%" },
-          { "criteria": "Data Processing & Feature Engineering", "weightage": "25%" },
-          { "criteria": "Innovation in Approach", "weightage": "20%" },
-          { "criteria": "Presentation & Insights", "weightage": "20%" }
-        ],
-        "ranking": "Judged on combined score of model metrics and presentation. Panel of 3 judges gives independent scores averaged for final result.",
-        "contact": [
-          { "name": "Ravi Kumar", "role": "Event Coordinator", "phone": "+91 93210 98765", "email": "ravi@rexia26.in" },
-          { "name": "Ishaan Bose", "role": "ML Mentor", "phone": "+91 92109 87654", "email": "ishaan@rexia26.in" }
+        ranking: "Traders with the highest portfolio value win.",
+        contact: [
+          { name: "Diana", role: "Coordinator", phone: "+91 9876543213", email: "diana@example.com" }
         ]
       }
     ]
   },
   {
-    "category": "cultural",
-    "color": "#ff2d95",
-    "events": [
+    category: "sports",
+    color: "#00d4ff",
+    events: [
       {
-        "id": "cult-01",
-        "name": "Rhythm Riot",
-        "tagline": "Feel the beat. Own the stage.",
-        "description": "A high-energy dance competition open to solo, duo, and group acts. Bring your genre, bring your fire — the stage is yours.",
-        "location": "Main Auditorium",
-        "managedBy": "Nrityanjali Dance Club",
-        "overview": "Rhythm Riot is REXIA's grandest stage event — a dance competition that welcomes every style from classical Bharatanatyam to contemporary hip-hop and fusion. Performers are given creative freedom to express their art form while being evaluated on synchronization, expression, and stage command. The auditorium transforms into an electrifying arena of movement and music.",
-        "details": {
-          "date": "April 18, 2026",
-          "time": "12:00 PM – 6:00 PM",
-          "venue": "Main Auditorium, Ground Floor",
-          "club": "Nrityanjali Dance Club",
-          "facultyAdvisor": "Prof. Kavitha Nair",
-          "teamSize": "1–15 members",
-          "registrationFee": "₹200 per act",
-          "prizePoll": {
-            "1st": "₹10,000",
-            "2nd": "₹5,000",
-            "3rd": "₹2,500"
+        id: "sports-01",
+        name: "Badminton",
+        tagline: "Smash your way to victory",
+        description: "Compete in the ultimate badminton tournament. Show your agility and reflexes.",
+        location: "Indoor Sports Complex",
+        overview: "Singles and doubles tournaments for both men and women.",
+        details: {
+          date: "April 18, 2026",
+          time: "9:00 AM",
+          venue: "Indoor Sports Complex",
+          club: "Sports Committee",
+          facultyAdvisor: "Mr. Singh",
+          teamSize: "1-2 members",
+          registrationFee: "₹200",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Prelims", "format": "3-min performance", "duration": "3 mins/act", "eliminates": "Bottom 50% acts" },
-          { "round": "Semi-finals", "format": "4-min performance", "duration": "4 mins/act", "eliminates": "Bottom 50% acts" },
-          { "round": "Grand Finale", "format": "6-min performance + props allowed", "duration": "6 mins/act", "eliminates": "Ranked 4 onwards" }
+        snapshots: [
+          { round: "Knockouts", format: "Best of 3", duration: "30 mins", eliminates: "Yes" },
+          { round: "Finals", format: "Best of 3", duration: "45 mins", eliminates: "No" }
         ],
-        "rules": [
-          "Music track must be submitted 24 hours before the event.",
-          "Vulgarity or offensive content leads to immediate disqualification.",
-          "Props allowed only in the final round.",
-          "Time limit strictly enforced — exceed by 30s for deduction.",
-          "Costumes must be performance-appropriate.",
-          "Only registered members may perform on stage."
+        rules: [
+          "Standard BWF rules apply.",
+          "Bring your own racquets. Shuttles will be provided.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Choreography & Sync", "weightage": "30%" },
-          { "criteria": "Expression & Energy", "weightage": "30%" },
-          { "criteria": "Costume & Presentation", "weightage": "20%" },
-          { "criteria": "Crowd Connect", "weightage": "20%" }
+        judgementCriteria: [
+          { criteria: "Points Scored", weightage: "100%" }
         ],
-        "ranking": "Each judge scores out of 100. Average of 3 judges' scores determines the winner. Audience vote counts for 10% in the final round.",
-        "contact": [
-          { "name": "Ananya Singh", "role": "Event Head", "phone": "+91 91098 76543", "email": "ananya.s@rexia26.in" },
-          { "name": "Priya Sharma", "role": "Stage Manager", "phone": "+91 90987 65432", "email": "priya.s@rexia26.in" }
+        ranking: "Winner, Runner-up, and 3rd Place.",
+        contact: [
+          { name: "Eve", role: "Sports Rep", phone: "+91 9876543214", email: "eve@example.com" }
         ]
       },
       {
-        "id": "cult-02",
-        "name": "Mic Drop",
-        "tagline": "One voice. Infinite impact.",
-        "description": "A singing competition that celebrates raw vocal talent. From classical to contemporary — if it gives goosebumps, it belongs here.",
-        "location": "Main Auditorium",
-        "managedBy": "Swarangini Music Club",
-        "overview": "Mic Drop is a solo and duet singing competition that spans every genre — Bollywood, Carnatic, Western, Indie, and Folk. No auto-tune, no gimmicks. Just a voice, a microphone, and the courage to own the silence before the applause. Participants are judged on vocal purity, emotional delivery, and musical understanding.",
-        "details": {
-          "date": "April 19, 2026",
-          "time": "11:00 AM – 4:00 PM",
-          "venue": "Main Auditorium, Ground Floor",
-          "club": "Swarangini Music Club",
-          "facultyAdvisor": "Prof. Harish Balakrishnan",
-          "teamSize": "1–2 members",
-          "registrationFee": "₹100 per act",
-          "prizePoll": {
-            "1st": "₹8,000",
-            "2nd": "₹4,000",
-            "3rd": "₹2,000"
+        id: "sports-02",
+        name: "Volleyball",
+        tagline: "Spike it down",
+        description: "High energy 6v6 volleyball tournament.",
+        location: "Main Ground",
+        overview: "Inter-college volleyball championship. Bring your best team to dominate the court.",
+        details: {
+          date: "April 18, 2026",
+          time: "10:00 AM",
+          venue: "Main Ground",
+          club: "Sports Committee",
+          facultyAdvisor: "Mr. Singh",
+          teamSize: "6-8 members",
+          registrationFee: "₹600 per team",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Prelims", "format": "One song — max 3 mins", "duration": "3 mins/act", "eliminates": "Bottom 60%" },
-          { "round": "Finals", "format": "Two songs — one chosen, one surprise", "duration": "7 mins/act", "eliminates": "Ranks 4 onwards" }
+        snapshots: [
+          { round: "Knockouts", format: "1 Set (25 pts)", duration: "20 mins", eliminates: "Yes" },
+          { round: "Finals", format: "Best of 3 Sets", duration: "1 hour", eliminates: "No" }
         ],
-        "rules": [
-          "Live instruments allowed and encouraged.",
-          "Backing track must be instrumental only — no original vocals.",
-          "Songs with explicit lyrics must be edited.",
-          "Participants must perform at least one song in their regional language.",
-          "Time overrun of more than 1 minute leads to score deduction.",
-          "Judges' decision is final."
+        rules: [
+          "Standard FIVB rules apply.",
+          "Maximum 2 substitutes allowed per team.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Vocal Quality & Pitch", "weightage": "35%" },
-          { "criteria": "Emotional Delivery", "weightage": "30%" },
-          { "criteria": "Song Selection & Arrangement", "weightage": "20%" },
-          { "criteria": "Stage Presence", "weightage": "15%" }
+        judgementCriteria: [
+          { criteria: "Match Wins", weightage: "100%" }
         ],
-        "ranking": "Panel of 3 judges scores each act. Scores averaged for prelims. Final winner decided by combined judge + faculty score.",
-        "contact": [
-          { "name": "Meera Iyer", "role": "Event Coordinator", "phone": "+91 89876 54321", "email": "meera.i@rexia26.in" },
-          { "name": "Arjun Nair", "role": "Sound Engineer", "phone": "+91 88765 43210", "email": "arjun.n@rexia26.in" }
+        ranking: "Top 3 teams will be awarded.",
+        contact: [
+          { name: "Frank", role: "Coordinator", phone: "+91 9876543215", email: "frank@example.com" }
         ]
       },
       {
-        "id": "cult-03",
-        "name": "Frame & Fire",
-        "tagline": "Capture the chaos. Tell the story.",
-        "description": "A photography and short film challenge. Shoot, edit, and submit within the fest grounds. Theme revealed on day one.",
-        "location": "Campus Wide + Editing Suite, D Block",
-        "managedBy": "Lens & Light Film Club",
-        "overview": "Frame & Fire is a two-track creative event. The Photography track challenges participants to capture the essence of a revealed theme within the campus over 4 hours. The Short Film track gives teams 24 hours to shoot, edit, and submit a 3–5 minute film. Both tracks are judged by a panel of professional photographers and filmmakers.",
-        "details": {
-          "date": "April 18–19, 2026",
-          "time": "Photography: 9 AM – 1 PM | Film: Day 1 9 AM – Day 2 9 AM",
-          "venue": "Campus Grounds + Editing Suite D Block Room 202",
-          "club": "Lens & Light Film Club",
-          "facultyAdvisor": "Prof. Rekha Menon",
-          "teamSize": "1–3 members",
-          "registrationFee": "₹120 per team",
-          "prizePoll": {
-            "1st": "₹6,000",
-            "2nd": "₹3,000",
-            "3rd": "₹1,500"
+        id: "sports-03",
+        name: "Lawn Tennis",
+        tagline: "Ace the game",
+        description: "Compete on the clay courts in singles and doubles.",
+        location: "Tennis Courts",
+        overview: "Showcase your serves and volleys in our open tennis tournament.",
+        details: {
+          date: "April 19, 2026",
+          time: "8:00 AM",
+          venue: "Tennis Courts",
+          club: "Sports Committee",
+          facultyAdvisor: "Mr. Singh",
+          teamSize: "1-2 members",
+          registrationFee: "₹300",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Theme Reveal", "format": "Theme announced, shoot begins", "duration": "15 mins", "eliminates": "None" },
-          { "round": "Shoot Phase", "format": "On-campus capture", "duration": "4 hrs (photo) / 24 hrs (film)", "eliminates": "None" },
-          { "round": "Judging", "format": "Panel review of submissions", "duration": "Half day", "eliminates": "Ranked by score" }
+        snapshots: [
+          { round: "Qualifiers", format: "1 Set", duration: "40 mins", eliminates: "Yes" },
+          { round: "Finals", format: "Best of 3 Sets", duration: "2 hours", eliminates: "No" }
         ],
-        "rules": [
-          "All shots must be taken within the campus boundary.",
-          "Heavy post-processing or AI-generated content is disqualified.",
-          "Films must be original — no copyrighted music without license.",
-          "Participants must submit raw files along with final submission.",
-          "Maximum 5 photos per participant in photography track.",
-          "Short films must be between 3 and 5 minutes — no exceptions."
+        rules: [
+          "Standard ITF rules apply.",
+          "Players must wear non-marking shoes.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Theme Relevance", "weightage": "30%" },
-          { "criteria": "Composition & Framing", "weightage": "30%" },
-          { "criteria": "Creativity & Storytelling", "weightage": "25%" },
-          { "criteria": "Technical Quality", "weightage": "15%" }
+        judgementCriteria: [
+          { criteria: "Match Wins", weightage: "100%" }
         ],
-        "ranking": "Photography and film tracks ranked separately. Each track has its own prize pool. Combined 'Best Overall' award for top scorer across both tracks.",
-        "contact": [
-          { "name": "Sneha Patel", "role": "Event Head", "phone": "+91 87654 32109", "email": "sneha.p@rexia26.in" },
-          { "name": "Dev Kapoor", "role": "Film Track Lead", "phone": "+91 86543 21098", "email": "dev@rexia26.in" }
+        ranking: "Winner, Runner-up, and 3rd Place.",
+        contact: [
+          { name: "Grace", role: "Coordinator", phone: "+91 9876543216", email: "grace@example.com" }
         ]
       },
       {
-        "id": "cult-04",
-        "name": "Spotlight",
-        "tagline": "Drama that hits different.",
-        "description": "A street play and skit competition. Perform original scripts on powerful social themes. No sets. No props. Just pure storytelling.",
-        "location": "Open Air Theatre",
-        "managedBy": "Rangmanch Drama Society",
-        "overview": "Spotlight is a raw, unfiltered theatre competition where teams perform original street plays or skits on socially relevant themes announced two weeks in advance. With no elaborate sets or props, everything rests on the script, the performance, and the energy of the cast. This is theatre that punches you in the chest and makes you think.",
-        "details": {
-          "date": "April 18, 2026",
-          "time": "3:00 PM – 7:00 PM",
-          "venue": "Open Air Theatre, Campus Ground",
-          "club": "Rangmanch Drama Society",
-          "facultyAdvisor": "Prof. Suresh Pillai",
-          "teamSize": "5–12 members",
-          "registrationFee": "₹250 per team",
-          "prizePoll": {
-            "1st": "₹10,000",
-            "2nd": "₹5,000",
-            "3rd": "₹2,500"
+        id: "sports-04",
+        name: "Chess",
+        tagline: "Checkmate your rivals",
+        description: "A battle of minds in a classic chess tournament.",
+        location: "Library Hall",
+        overview: "Rapid and blitz chess tournaments. Calculate your moves and outsmart your opponents.",
+        details: {
+          date: "April 18, 2026",
+          time: "1:00 PM",
+          venue: "Library Hall",
+          club: "Chess Club",
+          facultyAdvisor: "Dr. Verma",
+          teamSize: "1 member",
+          registrationFee: "₹100",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Script Submission", "format": "Script submitted 48 hrs prior", "duration": "Deadline", "eliminates": "Late entries" },
-          { "round": "Performance", "format": "Live performance on open stage", "duration": "10–15 mins/team", "eliminates": "None" },
-          { "round": "Jury Deliberation", "format": "Closed-door jury scoring", "duration": "30 mins", "eliminates": "Ranked by score" }
+        snapshots: [
+          { round: "Swiss Rounds", format: "10+5 Rapid", duration: "4 hours", eliminates: "No" }
         ],
-        "rules": [
-          "Scripts must be original and submitted 48 hours before event.",
-          "Maximum performance time is 15 minutes including setup.",
-          "No pre-recorded audio — live dialogue and sound effects only.",
-          "Offensive, casteist, or communally sensitive content is strictly banned.",
-          "Props limited to hand-held items only.",
-          "All team members must be registered participants."
+        rules: [
+          "Standard FIDE rules apply.",
+          "Touch move rule is strictly enforced.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Script & Storyline", "weightage": "30%" },
-          { "criteria": "Acting & Character Depth", "weightage": "30%" },
-          { "criteria": "Direction & Flow", "weightage": "25%" },
-          { "criteria": "Audience Impact", "weightage": "15%" }
+        judgementCriteria: [
+          { criteria: "Points", weightage: "100%" }
         ],
-        "ranking": "Jury of 3 experts scores each team independently. Scores averaged. Tie-breaker: audience applause meter reading.",
-        "contact": [
-          { "name": "Karthik Rao", "role": "Event Head", "phone": "+91 85432 10987", "email": "karthik.r@rexia26.in" },
-          { "name": "Nisha Varma", "role": "Script Review Lead", "phone": "+91 84321 09876", "email": "nisha@rexia26.in" }
+        ranking: "Based on final Swiss standings.",
+        contact: [
+          { name: "Heidi", role: "Arbiter", phone: "+91 9876543217", email: "heidi@example.com" }
         ]
       },
       {
-        "id": "cult-05",
-        "name": "Brush & Beyond",
-        "tagline": "Art has no limits here.",
-        "description": "A live art and installation challenge. Sketch, paint, or sculpt — interpret the theme your way and leave something unforgettable behind.",
-        "location": "Art Gallery Hall, E Block",
-        "managedBy": "Canvas & Craft Club",
-        "overview": "Brush & Beyond is a live art event where participants transform blank canvases into powerful visual narratives. The theme is revealed at the start, and artists have 4 hours to create their masterpiece on-site using any medium they choose — charcoal, acrylic, watercolor, or mixed media. The completed works are displayed in a gallery walk judged by art faculty and guest curators.",
-        "details": {
-          "date": "April 19, 2026",
-          "time": "10:00 AM – 2:00 PM",
-          "venue": "Art Gallery Hall, E Block",
-          "club": "Canvas & Craft Club",
-          "facultyAdvisor": "Prof. Lalitha Krishnan",
-          "teamSize": "1–2 members",
-          "registrationFee": "₹80 per team",
-          "prizePoll": {
-            "1st": "₹5,000",
-            "2nd": "₹2,500",
-            "3rd": "₹1,000"
+        id: "sports-05",
+        name: "Tug of War",
+        tagline: "Pull to glory",
+        description: "The ultimate test of strength and teamwork.",
+        location: "Main Ground",
+        overview: "Gather your strongest teammates and pull your way to the top.",
+        details: {
+          date: "April 19, 2026",
+          time: "4:00 PM",
+          venue: "Main Ground",
+          club: "Sports Committee",
+          facultyAdvisor: "Mr. Singh",
+          teamSize: "8 members",
+          registrationFee: "₹400 per team",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Theme Reveal + Setup", "format": "Theme announced, canvas assigned", "duration": "15 mins", "eliminates": "None" },
-          { "round": "Creation Phase", "format": "Live art on canvas", "duration": "4 hrs", "eliminates": "None" },
-          { "round": "Gallery Walk & Judging", "format": "Artists explain their work to judges", "duration": "1 hr", "eliminates": "Ranked by score" }
+        snapshots: [
+          { round: "Knockouts", format: "Best of 3 pulls", duration: "10 mins", eliminates: "Yes" }
         ],
-        "rules": [
-          "All materials will be provided — personal materials not allowed.",
-          "Digital art tools are strictly prohibited.",
-          "Artwork must remain within the assigned canvas size.",
-          "Copying from references is not allowed.",
-          "Participants must be present for the gallery walk explanation.",
-          "Artwork becomes property of REXIA'26 organizing committee post-event."
+        rules: [
+          "No cleats or spiked shoes allowed.",
+          "Gloves are permitted.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Theme Interpretation", "weightage": "30%" },
-          { "criteria": "Technique & Skill", "weightage": "30%" },
-          { "criteria": "Originality", "weightage": "25%" },
-          { "criteria": "Artist Explanation", "weightage": "15%" }
+        judgementCriteria: [
+          { criteria: "Pulls Won", weightage: "100%" }
         ],
-        "ranking": "Each artwork scored by 2 judges independently. Average score determines rank. People's Choice Award given separately by visitor votes.",
-        "contact": [
-          { "name": "Ananya Singh", "role": "Event Coordinator", "phone": "+91 83210 98765", "email": "ananya.art@rexia26.in" },
-          { "name": "Rohan Das", "role": "Materials In-charge", "phone": "+91 82109 87654", "email": "rohan@rexia26.in" }
+        ranking: "Last team standing wins.",
+        contact: [
+          { name: "Ivan", role: "Coordinator", phone: "+91 9876543218", email: "ivan@example.com" }
+        ]
+      },
+      {
+        id: "sports-06",
+        name: "Esports (BGMI)",
+        tagline: "Survival of the fittest",
+        description: "Battle Royale tournament featuring BGMI.",
+        location: "Computer Lab 1 & 2",
+        overview: "Squad up and drop into the battleground. Show your tactical skills and gunplay to secure the chicken dinner.",
+        details: {
+          date: "April 18, 2026",
+          time: "5:00 PM",
+          venue: "Computer Lab 1",
+          club: "Gaming Club",
+          facultyAdvisor: "Mr. Kumar",
+          teamSize: "4 members",
+          registrationFee: "₹400 per squad",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
+          }
+        },
+        snapshots: [
+          { round: "Qualifiers", format: "2 Matches", duration: "1.5 hours", eliminates: "Yes" },
+          { round: "Finals", format: "4 Matches", duration: "3 hours", eliminates: "No" }
+        ],
+        rules: [
+          "Emulators are strictly prohibited.",
+          "Use of hacks will result in an immediate ban.",
+          "*Prize pool may vary according to participant registration."
+        ],
+        judgementCriteria: [
+          { criteria: "Placement Points", weightage: "60%" },
+          { criteria: "Finish Points", weightage: "40%" }
+        ],
+        ranking: "Based on overall team standings.",
+        contact: [
+          { name: "Jack", role: "Admin", phone: "+91 9876543219", email: "jack@example.com" }
         ]
       }
     ]
   },
   {
-    "category": "sports",
-    "color": "#00d4ff",
-    "events": [
+    category: "cultural",
+    color: "#ff2d95",
+    events: [
       {
-        "id": "sport-01",
-        "name": "Iron League",
-        "tagline": "Strongest squad takes all.",
-        "description": "A multi-sport team relay combining strength, speed and strategy. Compete across stations and rack up points before time runs out.",
-        "location": "Sports Ground, North Campus",
-        "managedBy": "Sports Council",
-        "overview": "Iron League is REXIA's ultimate team endurance challenge — a multi-station relay that tests raw strength, sprint speed, and coordinated strategy. Teams rotate through stations including weighted carries, obstacle sprints, tug-of-war, and relay racing. Points accumulate across all stations and the team with the highest combined score takes the crown.",
-        "details": {
-          "date": "April 18, 2026",
-          "time": "8:00 AM – 1:00 PM",
-          "venue": "Sports Ground, North Campus",
-          "club": "Sports Council",
-          "facultyAdvisor": "Prof. Vijay Kumar",
-          "teamSize": "4–6 members",
-          "registrationFee": "₹300 per team",
-          "prizePoll": {
-            "1st": "₹8,000",
-            "2nd": "₹4,000",
-            "3rd": "₹2,000"
+        id: "cult-01",
+        name: "Group Dance",
+        tagline: "Sync your steps",
+        description: "Showcase your choreography and coordination in the group dance competition.",
+        location: "Main Stage",
+        overview: "An energetic dance battle where teams perform various styles from hip-hop to classical.",
+        details: {
+          date: "April 18, 2026",
+          time: "6:00 PM",
+          venue: "Main Stage",
+          club: "Dance Society",
+          facultyAdvisor: "Mrs. Desai",
+          teamSize: "5-15 members",
+          registrationFee: "₹1000 per team",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Heat 1", "format": "Obstacle relay + sprint", "duration": "45 mins", "eliminates": "Bottom 40% teams" },
-          { "round": "Heat 2", "format": "Weighted carry + tug-of-war", "duration": "45 mins", "eliminates": "Bottom 40% remaining" },
-          { "round": "Grand Final", "format": "Full circuit all stations", "duration": "1 hr", "eliminates": "Ranks 4 onwards" }
+        snapshots: [
+          { round: "Finals", format: "Stage Performance", duration: "5-7 mins", eliminates: "No" }
         ],
-        "rules": [
-          "All team members must participate in at least one station.",
-          "Substitutions not allowed after registration.",
-          "Unsportsmanlike conduct leads to immediate disqualification.",
-          "Proper sports shoes are mandatory — no sandals or slippers.",
-          "Teams must report 30 minutes before their heat.",
-          "Decision of referee is final and non-negotiable."
+        rules: [
+          "Props are allowed but must be cleared immediately.",
+          "Audio tracks must be submitted 2 hours prior.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Station Completion Time", "weightage": "40%" },
-          { "criteria": "Points Per Station", "weightage": "40%" },
-          { "criteria": "Team Coordination", "weightage": "20%" }
+        judgementCriteria: [
+          { criteria: "Choreography", weightage: "40%" },
+          { criteria: "Coordination", weightage: "30%" },
+          { criteria: "Expressions & Costumes", weightage: "30%" }
         ],
-        "ranking": "Points tallied across all stations. Final leaderboard published after Grand Final. Ties broken by fastest completion time in Final.",
-        "contact": [
-          { "name": "Vikram Das", "role": "Sports Coordinator", "phone": "+91 81098 76543", "email": "vikram.s@rexia26.in" },
-          { "name": "Suresh Babu", "role": "Ground Manager", "phone": "+91 80987 65432", "email": "suresh@rexia26.in" }
+        ranking: "Top 3 performances.",
+        contact: [
+          { name: "Karen", role: "Coordinator", phone: "+91 9876543220", email: "karen@example.com" }
         ]
       },
       {
-        "id": "sport-02",
-        "name": "Net Blaze",
-        "tagline": "Spike it. Win it.",
-        "description": "A fast-paced volleyball tournament with knockout rounds. Bring the energy, own the net, and make every set count.",
-        "location": "Volleyball Court, Sports Complex",
-        "managedBy": "Sports Council",
-        "overview": "Net Blaze is a knockout-format volleyball tournament that brings together the best teams from across departments and colleges. Fast-paced rallies, powerful spikes, and strategic blocks define this event. Games are played on standard volleyball rules with modified scoring to keep the energy high and the crowd louder with every set.",
-        "details": {
-          "date": "April 19, 2026",
-          "time": "9:00 AM – 5:00 PM",
-          "venue": "Volleyball Court, Sports Complex",
-          "club": "Sports Council",
-          "facultyAdvisor": "Prof. Vijay Kumar",
-          "teamSize": "6 members + 2 substitutes",
-          "registrationFee": "₹400 per team",
-          "prizePoll": {
-            "1st": "₹6,000",
-            "2nd": "₹3,000",
-            "3rd": "₹1,500"
+        id: "cult-02",
+        name: "Fashion Show / Ramp Walk",
+        tagline: "Own the runway",
+        description: "Strut down the runway and display your unique fashion sense.",
+        location: "Main Stage",
+        overview: "A glamorous event combining style, confidence, and creativity on the ramp.",
+        details: {
+          date: "April 19, 2026",
+          time: "7:00 PM",
+          venue: "Main Stage",
+          club: "Fashion Club",
+          facultyAdvisor: "Ms. Arora",
+          teamSize: "1-10 members",
+          registrationFee: "₹500",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Group Stage", "format": "Round-robin within groups", "duration": "Morning session", "eliminates": "Bottom teams per group" },
-          { "round": "Quarter & Semi Finals", "format": "Best of 3 sets", "duration": "Afternoon session", "eliminates": "Losing teams" },
-          { "round": "Final", "format": "Best of 5 sets", "duration": "Evening", "eliminates": "Runner-up ranked 2nd" }
+        snapshots: [
+          { round: "Finals", format: "Ramp Walk", duration: "10 mins per team", eliminates: "No" }
         ],
-        "rules": [
-          "Standard FIVB volleyball rules apply.",
-          "Teams must field minimum 6 players to begin a match.",
-          "Maximum 2 substitutions per set allowed.",
-          "Net touch results in point to opponent.",
-          "Warm-up time is 5 minutes before each match.",
-          "Referee decisions are final."
+        rules: [
+          "Themes must be approved beforehand.",
+          "Indecent clothing will lead to disqualification.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Sets Won", "weightage": "60%" },
-          { "criteria": "Points Differential", "weightage": "25%" },
-          { "criteria": "Sportsmanship (referee assessment)", "weightage": "15%" }
+        judgementCriteria: [
+          { criteria: "Theme adherence", weightage: "40%" },
+          { criteria: "Walk and Posture", weightage: "40%" },
+          { criteria: "Costume Design", weightage: "20%" }
         ],
-        "ranking": "Knockout bracket — winner advances, loser is eliminated. 3rd place decided by play-off between semi-final losers.",
-        "contact": [
-          { "name": "Ravi Kumar", "role": "Tournament Director", "phone": "+91 79876 54321", "email": "ravi.s@rexia26.in" },
-          { "name": "Priya Nair", "role": "Court Coordinator", "phone": "+91 78765 43210", "email": "priya.n@rexia26.in" }
+        ranking: "Best Team, Best Male Model, Best Female Model.",
+        contact: [
+          { name: "Leo", role: "Coordinator", phone: "+91 9876543221", email: "leo@example.com" }
         ]
       },
       {
-        "id": "sport-03",
-        "name": "Pixel Kombat",
-        "tagline": "Controller in hand. Throne in sight.",
-        "description": "An esports showdown spanning FIFA, Valorant, and BGMI. Bracket-style elimination with live commentary and crowd energy.",
-        "location": "E-Sports Arena, F Block",
-        "managedBy": "GameZone E-Sports Club",
-        "overview": "Pixel Kombat is REXIA's premier esports tournament running three parallel tracks — FIFA (console), Valorant (PC), and BGMI (mobile). Each game runs its own bracket with separate registrations and prize pools. The event features live commentary, spectator screens, and a dedicated crowd zone making it the most electric indoor event of the fest.",
-        "details": {
-          "date": "April 18–19, 2026",
-          "time": "10:00 AM – 8:00 PM (both days)",
-          "venue": "E-Sports Arena, F Block Ground Floor",
-          "club": "GameZone E-Sports Club",
-          "facultyAdvisor": "Prof. Anil Menon",
-          "teamSize": "1 (FIFA/BGMI Solo) – 5 (Valorant)",
-          "registrationFee": "₹150 per game per team",
-          "prizePoll": {
-            "1st": "₹12,000",
-            "2nd": "₹6,000",
-            "3rd": "₹3,000"
+        id: "cult-03",
+        name: "Singing",
+        tagline: "Let your voice be heard",
+        description: "Solo and duet singing competition covering all genres.",
+        location: "Acoustic Hall",
+        overview: "Serenade the audience and judges with your vocal prowess.",
+        details: {
+          date: "April 18, 2026",
+          time: "11:00 AM",
+          venue: "Acoustic Hall",
+          club: "Music Society",
+          facultyAdvisor: "Dr. Bose",
+          teamSize: "1-2 members",
+          registrationFee: "₹200",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Group Stage", "format": "Round-robin per game", "duration": "Day 1", "eliminates": "Bottom 50% per bracket" },
-          { "round": "Quarter Finals", "format": "Single elimination", "duration": "Day 2 Morning", "eliminates": "Losing teams" },
-          { "round": "Semi + Grand Final", "format": "Best of 3 matches", "duration": "Day 2 Evening", "eliminates": "Runner-up ranked 2nd" }
+        snapshots: [
+          { round: "Prelims", format: "Unplugged", duration: "3 mins", eliminates: "Yes" },
+          { round: "Finals", format: "With Backing Track", duration: "5 mins", eliminates: "No" }
         ],
-        "rules": [
-          "Participants must bring their own peripherals for PC events.",
-          "Console and mobile devices will be provided by organizers.",
-          "Hacking, cheating software, or exploits result in permanent ban.",
-          "Match schedules are fixed — no-show treated as forfeit.",
-          "All in-game settings must be at default unless tournament mode allows.",
-          "Participants must be 17+ years old."
+        rules: [
+          "Karaoke tracks must be submitted in advance.",
+          "Live instruments are allowed.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Match Wins", "weightage": "70%" },
-          { "criteria": "Score Differential", "weightage": "20%" },
-          { "criteria": "Sportsmanship", "weightage": "10%" }
+        judgementCriteria: [
+          { criteria: "Vocal Quality", weightage: "50%" },
+          { criteria: "Rhythm and Pitch", weightage: "30%" },
+          { criteria: "Stage Presence", weightage: "20%" }
         ],
-        "ranking": "Each game bracket ranked independently. Winners per game crowned separately. An 'Overall Champion' title awarded to the team/player with the highest combined points across all games they entered.",
-        "contact": [
-          { "name": "Arjun Mehta", "role": "Esports Head", "phone": "+91 77654 32109", "email": "arjun.g@rexia26.in" },
-          { "name": "Ishaan Bose", "role": "Tech Setup Lead", "phone": "+91 76543 21098", "email": "ishaan.g@rexia26.in" }
+        ranking: "Top 3 singers.",
+        contact: [
+          { name: "Mona", role: "Coordinator", phone: "+91 9876543222", email: "mona@example.com" }
         ]
       },
       {
-        "id": "sport-04",
-        "name": "Court Kings",
-        "tagline": "Ball. Court. Crown.",
-        "description": "A 3-on-3 street basketball tournament. Fast, physical, and full of flair — half-court, full-heart rules apply.",
-        "location": "Basketball Court, Sports Complex",
-        "managedBy": "Hoops Club",
-        "overview": "Court Kings brings the street basketball culture alive on campus with a 3-on-3 half-court tournament. Games are intense, fast, and physical — played to 21 points or 10 minutes, whichever comes first. This format rewards individual skill, team chemistry, and clutch performance under pressure. Trash talk encouraged. Fouls punished.",
-        "details": {
-          "date": "April 18, 2026",
-          "time": "2:00 PM – 7:00 PM",
-          "venue": "Basketball Court, Sports Complex",
-          "club": "Hoops Club",
-          "facultyAdvisor": "Prof. Sandeep Bose",
-          "teamSize": "3 members + 1 substitute",
-          "registrationFee": "₹250 per team",
-          "prizePoll": {
-            "1st": "₹6,000",
-            "2nd": "₹3,000",
-            "3rd": "₹1,500"
+        id: "cult-04",
+        name: "Poster Design",
+        tagline: "Paint your imagination",
+        description: "A digital and physical poster making competition.",
+        location: "Art Gallery",
+        overview: "Showcase your artistic and design skills based on a given theme.",
+        details: {
+          date: "April 19, 2026",
+          time: "10:00 AM",
+          venue: "Art Gallery",
+          club: "Fine Arts Club",
+          facultyAdvisor: "Mr. Das",
+          teamSize: "1-2 members",
+          registrationFee: "₹150",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Pool Play", "format": "Round-robin within pools", "duration": "Afternoon", "eliminates": "Bottom team per pool" },
-          { "round": "Knockouts", "format": "Single elimination", "duration": "Evening", "eliminates": "Losing teams" },
-          { "round": "Championship", "format": "First to 21 or 10 mins", "duration": "Final slot", "eliminates": "Runner-up ranked 2nd" }
+        snapshots: [
+          { round: "Creation", format: "Live Design", duration: "2 hours", eliminates: "No" }
         ],
-        "rules": [
-          "FIBA 3x3 basketball rules apply.",
-          "Games played to 21 points or 10 minutes.",
-          "Fouls result in free throws from the arc.",
-          "5 team fouls per game — 6th results in technical foul.",
-          "Players must wear matching jerseys.",
-          "Referees decision is final."
+        rules: [
+          "Theme will be given on the spot.",
+          "Participants must bring their own art supplies or laptops.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Points Scored", "weightage": "70%" },
-          { "criteria": "Win/Loss Record", "weightage": "20%" },
-          { "criteria": "Fair Play Score", "weightage": "10%" }
+        judgementCriteria: [
+          { criteria: "Creativity", weightage: "40%" },
+          { criteria: "Relevance to Theme", weightage: "40%" },
+          { criteria: "Neatness/Aesthetics", weightage: "20%" }
         ],
-        "ranking": "Pool stage ranked by wins then point differential. Knockout rounds single elimination. Champions decided by final game score.",
-        "contact": [
-          { "name": "Karthik Rao", "role": "Tournament Organizer", "phone": "+91 75432 10987", "email": "karthik.b@rexia26.in" },
-          { "name": "Meera Iyer", "role": "Court Referee", "phone": "+91 74321 09876", "email": "meera.b@rexia26.in" }
+        ranking: "Top 3 designs.",
+        contact: [
+          { name: "Nina", role: "Coordinator", phone: "+91 9876543223", email: "nina@example.com" }
         ]
       },
       {
-        "id": "sport-05",
-        "name": "Sprint Zero",
-        "tagline": "First off the line. First in history.",
-        "description": "Track and field sprints plus obstacle relay races. Pure athleticism, raw speed — no excuses, no shortcuts.",
-        "location": "Athletics Track, North Campus",
-        "managedBy": "Athletics Club",
-        "overview": "Sprint Zero is the purest test of human speed on campus — a track and field event covering 100m, 200m, and 4x100m relay races alongside a timed obstacle course relay. Every millisecond counts. Participants are timed using digital sensors and ranked on certified timing sheets. This is where legends of REXIA's track are made.",
-        "details": {
-          "date": "April 19, 2026",
-          "time": "7:00 AM – 12:00 PM",
-          "venue": "Athletics Track, North Campus",
-          "club": "Athletics Club",
-          "facultyAdvisor": "Prof. Ramesh Pillai",
-          "teamSize": "1 (sprints) – 4 (relay)",
-          "registrationFee": "₹100 per event per participant",
-          "prizePoll": {
-            "1st": "₹5,000",
-            "2nd": "₹2,500",
-            "3rd": "₹1,000"
+        id: "cult-05",
+        name: "Reel-a-thon (For Inner Students)",
+        tagline: "Capture the moment",
+        description: "A short-form video making competition exclusive to our college students.",
+        location: "Campus Wide",
+        overview: "Create the most engaging and viral reel showcasing the spirit of REXIA'26.",
+        details: {
+          date: "April 18-19, 2026",
+          time: "All Day",
+          venue: "Campus Wide",
+          club: "Media Club",
+          facultyAdvisor: "Mrs. Kapoor",
+          teamSize: "1-3 members",
+          registrationFee: "Free (Inner Students Only)",
+          prizePoll: {
+            "1st": "₹5,000*",
+            "2nd": "₹3,000*",
+            "3rd": "₹2,000*"
           }
         },
-        "snapshots": [
-          { "round": "Heats", "format": "All participants run — top times advance", "duration": "Morning", "eliminates": "Bottom 60% per event" },
-          { "round": "Semi Finals", "format": "Top times compete", "duration": "Mid morning", "eliminates": "Bottom 50%" },
-          { "round": "Finals", "format": "Top 8 per event race for medals", "duration": "Late morning", "eliminates": "Ranks 4 onwards" }
+        snapshots: [
+          { round: "Submission", format: "Online Upload", duration: "48 hours", eliminates: "No" }
         ],
-        "rules": [
-          "Spiked shoes allowed on track only.",
-          "False start results in warning — second false start is disqualification.",
-          "Relay baton must be passed within the exchange zone.",
-          "Participants must wear proper athletic wear.",
-          "Each participant can register for maximum 2 individual events.",
-          "Timing sensor readings are official and final."
+        rules: [
+          "Reels must be uploaded to Instagram tagging the official page.",
+          "Must include event specific hashtags.",
+          "*Prize pool may vary according to participant registration."
         ],
-        "judgementCriteria": [
-          { "criteria": "Finish Time (digital sensor)", "weightage": "90%" },
-          { "criteria": "Lane Discipline", "weightage": "10%" }
+        judgementCriteria: [
+          { criteria: "Creativity", weightage: "40%" },
+          { criteria: "Engagement (Likes/Views)", weightage: "30%" },
+          { criteria: "Editing & Quality", weightage: "30%" }
         ],
-        "ranking": "Ranked purely by finish time. Ties broken by photo finish review. Relay ranked by team's total leg time.",
-        "contact": [
-          { "name": "Vikram Das", "role": "Athletics Coordinator", "phone": "+91 73210 98765", "email": "vikram.a@rexia26.in" },
-          { "name": "Sneha Patel", "role": "Timing Official", "phone": "+91 72109 87654", "email": "sneha.a@rexia26.in" }
+        ranking: "Most viral and creative reels.",
+        contact: [
+          { name: "Oscar", role: "Coordinator", phone: "+91 9876543224", email: "oscar@example.com" }
         ]
       }
     ]
   }
-]
-
+];

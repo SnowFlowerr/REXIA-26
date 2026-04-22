@@ -1,125 +1,152 @@
 export const eventsData = [
-  {
-    category: "technical",
-    color: "#b44aff",
-    events: [
-      {
-        id: "tech-01",
-        name: "starHack 1.0",
-        tagline: "24 Hour Hackathon",
-        description: "A thrilling 24-hour hackathon where you build, break, and innovate. Push your limits and create something extraordinary.",
-        location: "computer science block",
-        overview: "starHack 1.0 is the premier 24-hour hackathon. Teams will collaborate to solve real-world problems. Expect late-night coding, mentors, and intense competition.",
-        details: {
-          date: "May 6th & 7th, 2026",
-          time: "10:00 AM (24 Hours)",
-          venue: "computer science block",
-          club: "Tech Club",
-          facultyAdvisor: "Yashwant",
-          teamSize: "2-4 members",
-          registrationFee: "₹649 per team",
-          prizePoll: "10,000*"
-        },
-        snapshots: [
-          { round: "Round 1", format: "Idea Pitch", duration: "Day 1", eliminates: "No" },
-          { round: "Round 2", format: "Final Demo", duration: "Day 2", eliminates: "Yes" }
-        ],
-        rules: [
-          "Participants must bring their own laptops.",
-          "All code must be written during the hackathon — no pre-built projects.",
-          "Open source libraries and APIs are permitted.",
-          "Teams must submit GitHub repo link before the deadline.",
-          "Any form of cheating or impersonation results in disqualification.",
-          "Participants must be present for the final pitch to be eligible for prizes.",
-          "*Prize pool may vary according to participant registration."
-        ],
-        judgementCriteria: [
-          { criteria: "Innovation", weightage: "40%" },
-          { criteria: "Execution", weightage: "40%" },
-          { criteria: "Presentation", weightage: "20%" }
-        ],
-        ranking: "Top 3 teams will be awarded.",
-        contact: [
-          { name: "Ravi", role: "Coordinator", phone: "+91 9311891503", email: "jharavi0605@gmail.com" }
-        ]
+{
+  category: "technical",
+  color: "#b44aff",
+  events: [
+    {
+      id: "tech-01",
+      name: "starHack 1.0",
+      tagline: "24 Hour Hackathon",
+      description: "A thrilling 24-hour hackathon where you build, break, and innovate. Push your limits and create something extraordinary.",
+      location: "computer science block",
+      overview: "starHack 1.0 is the premier 24-hour hackathon. Teams will collaborate to solve real-world problems. Expect late-night coding, mentors, and intense competition.",
+      details: {
+        date: "May 6th & 7th, 2026",
+        time: "10:00 AM (24 Hours)",
+        venue: "computer science block",
+        club: "Tech Club",
+        facultyAdvisor: "Yashwant",
+        teamSize: "2-4 members",
+        registrationFee: "₹649 per team",
+        prizePoll: "10,000*"
       },
-      {
-        id: "tech-02",
-        name: "Startup Pitch Competition",
-        tagline: "Pitch your next big idea",
-        description: "Present your startup idea to a panel of expert judges and investors.",
-        location: "amar krishna hall",
-        overview: "An opportunity for budding entrepreneurs to showcase their business models and prototypes.",
-        details: {
-          date: "May 6th, 2026",
-          time: "11:00 AM",
-          venue: "amar krishna hall",
-          club: "E-Cell",
-          facultyAdvisor: "Yashwant",
-          teamSize: "2-4 members",
-          registrationFee: "₹659 per team",
+      snapshots: [
+        { round: "Round 1", format: "Idea Pitch", duration: "Day 1", eliminates: "No" },
+        { round: "Round 2", format: "Final Demo", duration: "Day 2", eliminates: "Yes" }
+      ],
+      rules: [
+        "Open to college students across Delhi NCR — valid College ID and Government ID mandatory.",
+        "Team size: minimum 3, maximum 5 members. All must be officially registered.",
+        "All development must occur within the official 24-hour timeframe only.",
+        "Pre-built or previously developed projects are strictly disqualified.",
+        "Functional prototype is mandatory — incomplete or non-functional projects may be penalized.",
+        "Submission via GitHub or official portal — must include source code, README/documentation, and setup instructions.",
+        "Open source libraries, development frameworks, and organiser-approved APIs are permitted.",
+        "Plagiarism, copied code, or use of unauthorised/proprietary code leads to immediate disqualification.",
+        "Missing the submission deadline may result in rejection.",
+        "Misconduct, unfair collaboration, or false information results in disqualification.",
+        "Organisers may modify rules, problem statements, or timelines at any stage.",
+        "Organisers may audit code for originality. All decisions are final and binding.",
+        "*Prize pool may vary according to participant registration."
+      ],
+      judgementCriteria: [
+        { criteria: "Innovation & Originality", weightage: "25%" },
+        { criteria: "Technical Complexity", weightage: "25%" },
+        { criteria: "Functionality & Usability", weightage: "20%" },
+        { criteria: "Problem-Solving Approach", weightage: "15%" },
+        { criteria: "Presentation & Clarity", weightage: "15%" }
+      ],
+      ranking: "Winner ₹7k, Runner-up ₹3k. Tie-break: higher score in Innovation, then Technical Implementation, then Judges' Panel decision.",
+      contact: [
+        { name: "Ravi", role: "Coordinator", phone: "+91 9311891503", email: "jharavi0605@gmail.com" }
+      ]
+    },
+    {
+      id: "tech-02",
+      name: "Startup Pitch Competition",
+      tagline: "Pitch your next big idea",
+      description: "Present your startup idea to a panel of expert judges and investors.",
+      location: "amar krishna hall",
+      overview: "An opportunity for budding entrepreneurs to showcase their business models and prototypes.",
+      details: {
+        date: "May 6th, 2026",
+        time: "11:00 AM",
+        venue: "amar krishna hall",
+        club: "E-Cell",
+        facultyAdvisor: "Yashwant",
+        teamSize: "2-4 members",
+        registrationFee: "₹659 per team",
         prizePoll: "Equity + Mentorship. Your idea sets the prize."
-        },
-        snapshots: [
-          { round: "Round 1", format: "Pitch Deck", duration: "10 mins", eliminates: "Yes" }
-        ],
-        rules: [
-          "Presentations must not exceed 10 minutes.",
-          "Prototypes are highly encouraged.",
-          "Pitch deck must be submitted before the event.",
-          "Teams must be present for Q&A after their pitch.",
-          "No plagiarized business models — original ideas only.",
-          "*Prize pool may vary according to participant registration."
-        ],
-        judgementCriteria: [
-          { criteria: "Feasibility", weightage: "30%" },
-          { criteria: "Market Potential", weightage: "40%" },
-          { criteria: "Pitch", weightage: "30%" }
-        ],
-        ranking: "Top 3 startups will be funded/awarded.",
-        contact: [
-          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }
-        ]
       },
-      {
-        id: "tech-04",
-        name: "Stock Market Simulation",
-        tagline: "Trade to win",
-        description: "Experience the thrill of the stock market in this real-time simulation.",
-        location: "computer science block",
-        overview: "Participants will use virtual money to trade stocks in a simulated environment reflecting real-world market volatility.",
-        details: {
-          date: "May 6th, 2026",
-          time: "11:00 AM",
-          venue: "computer science block",
-          club: "Finance Club",
-          facultyAdvisor: "Dr. Mehra",
-          teamSize: "1 member",
-          registrationFee: "₹249",
-          prizePoll: "10,000*"
-        },
-        snapshots: [
-          { round: "Trading Session", format: "Simulation", duration: "3 hours", eliminates: "No" }
-        ],
-        rules: [
-          "All trading must be done on the provided platform.",
-          "Any exploit of the simulation will lead to disqualification.",
-          "No external financial tools, apps, or advice allowed during session.",
-          "Participants must carry valid College ID and Government ID proof.",
-          "Organisers reserve the right to modify market conditions during the event.",
-          "*Prize pool may vary according to participant registration."
-        ],
-        judgementCriteria: [
-          { criteria: "Total Portfolio Value", weightage: "100%" }
-        ],
-        ranking: "Traders with the highest portfolio value win.",
-        contact: [
-          { name: "Bhudeo", role: "Coordinator", phone: "+91 6206310174", email: "jharavi0605@gmail.com" },
-          { name: "Aditya Jindal", role: "Coordinator", phone: "+91 7719415700", email: "jharavi0605@gmail.com" }
-        ]
-      }
-    ]
-  },
+      snapshots: [
+        { round: "Round 1", format: "Pitch Deck (PPT/PDF)", duration: "8–10 mins", eliminates: "Yes" },
+        { round: "Round 2", format: "Q&A with Judges", duration: "5 mins", eliminates: "No" }
+      ],
+      rules: [
+        "Open to college students across Delhi NCR — valid College ID and Government ID mandatory.",
+        "Team size: 3–5 members. All must be officially registered participants.",
+        "Pitch duration: 8–10 minutes strictly, followed by Q&A with judges.",
+        "Presentation format: PPT or PDF only.",
+        "Pitch must cover: problem statement, solution, business model, market opportunity, competitive advantage, and financial/growth plan.",
+        "Plagiarised ideas, copied content, or misleading/false data leads to immediate disqualification.",
+        "Exceeding time limit significantly will result in score deduction or disqualification.",
+        "Unprofessional or disruptive behavior during Q&A results in disqualification.",
+        "Organisers may modify format, timing, or evaluation process at any stage.",
+        "Judges' and organisers' decisions are final and binding.",
+        "*Prize pool may vary according to participant registration."
+      ],
+      judgementCriteria: [
+        { criteria: "Innovation & Uniqueness", weightage: "25%" },
+        { criteria: "Feasibility & Scalability", weightage: "25%" },
+        { criteria: "Market Understanding", weightage: "20%" },
+        { criteria: "Business Model Clarity", weightage: "15%" },
+        { criteria: "Presentation & Communication", weightage: "15%" }
+      ],
+      ranking: "Winner ₹7k, Runner-up ₹3k. Tie-break: higher score in Innovation, then Feasibility & Market Viability, then Judges' Panel decision.",
+      contact: [
+        { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }
+      ]
+    },
+    {
+      id: "tech-04",
+      name: "Stock Market Simulation",
+      tagline: "Trade to win",
+      description: "Experience the thrill of the stock market in this real-time simulation.",
+      location: "computer science block",
+      overview: "Participants will use virtual money to trade stocks in a simulated environment reflecting real-world market volatility.",
+      details: {
+        date: "May 6th, 2026",
+        time: "11:00 AM",
+        venue: "computer science block",
+        club: "Finance Club",
+        facultyAdvisor: "Dr. Mehra",
+        teamSize: "1 member",
+        registrationFee: "₹249",
+        prizePoll: "10,000*"
+      },
+      snapshots: [
+        { round: "Round 1", format: "Simulation", duration: "30 mins", eliminates: "No" },
+        { round: "Round 2", format: "Simulation", duration: "30 mins", eliminates: "No" },
+        { round: "Round 3", format: "Simulation", duration: "30 mins", eliminates: "No" },
+        { round: "Round 4 (Final)", format: "Simulation", duration: "30 mins", eliminates: "Ranked by portfolio" }
+      ],
+      rules: [
+        "Open to college students across Delhi NCR — valid College ID and Government ID mandatory.",
+        "Individual competition only — no team collaboration allowed.",
+        "Total rounds: 4. Each round duration: 30 minutes. All trading on the provided platform only.",
+        "Participants may analyse market trends, virtual news, buy/sell assets, and build a diversified portfolio.",
+        "Collusion, coordination with other participants, or manipulation of the system/platform is strictly prohibited.",
+        "Use of unauthorised external tools, apps, or software is not allowed.",
+        "Attempt to exploit or manipulate the simulation results in immediate disqualification.",
+        "Organisers may modify simulation rules, platform, or scoring system at any stage.",
+        "Organisers are not responsible for technical or server issues during the event.",
+        "All decisions are final and binding.",
+        "*Prize pool may vary according to participant registration."
+      ],
+      judgementCriteria: [
+        { criteria: "Final Portfolio Value", weightage: "40%" },
+        { criteria: "Profit Percentage", weightage: "25%" },
+        { criteria: "Risk Management", weightage: "20%" },
+        { criteria: "Consistency Across Rounds", weightage: "15%" }
+      ],
+      ranking: "Winner ₹7k, Runner-up ₹3k. Tie-break: higher portfolio value, then better risk-adjusted returns, then organisers' decision.",
+      contact: [
+        { name: "Bhudeo", role: "Coordinator", phone: "+91 6206310174", email: "jharavi0605@gmail.com" },
+        { name: "Aditya Jindal", role: "Coordinator", phone: "+91 7719415700", email: "jharavi0605@gmail.com" }
+      ]
+    }
+  ]
+},
   {
     category: "sports",
     color: "#00d4ff",
@@ -439,179 +466,189 @@ export const eventsData = [
       }
     ]
   },
-  {
-    category: "cultural",
-    color: "#ff2d95",
-    events: [
-      {
-        id: "cult-01",
-        name: "Group Dance",
-        tagline: "Sync your steps",
-        description: "Showcase your choreography and coordination in the group dance competition.",
-        location: "amar krishna hall",
-        overview: "An energetic dance battle where teams perform various styles from hip-hop to classical.",
-        details: {
-          date: "May 6th, 2026",
-          time: "4:00 PM",
-          venue: "Main Stage",
-          club: "Dance Society",
-          facultyAdvisor: "Mrs. Desai",
-          teamSize: "2-9 members",
-          registrationFee: "₹599 per team",
-          prizePoll: "10,000*"
-        },
-        snapshots: [
-          { round: "Finals", format: "Stage Performance", duration: "5-7 mins", eliminates: "No" }
-        ],
-        rules: [
-          "Open to college students across Delhi NCR — valid College ID and Government ID mandatory.",
-          "Team size: 2–9 members.",
-          "Performance duration: 5–7 minutes strictly enforced.",
-          "Audio tracks must be submitted 2 hours prior to the event.",
-          "Props are allowed but must be cleared from the stage immediately after performance.",
-          "Vulgarity or offensive content leads to immediate disqualification.",
-          "Only registered members may perform on stage.",
-          "Costumes must be performance-appropriate.",
-          "Organisers reserve full authority to modify rules, format, and schedule.",
-          "*Prize pool may vary according to participant registration."
-        ],
-        judgementCriteria: [
-          { criteria: "Choreography", weightage: "40%" },
-          { criteria: "Coordination", weightage: "30%" },
-          { criteria: "Expressions & Costumes", weightage: "30%" }
-        ],
-        ranking: "Top 3 performances.",
-        contact: [
-          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }
-        ]
+{
+  category: "cultural",
+  color: "#ff2d95",
+  events: [
+    {
+      id: "cult-01",
+      name: "Group Dance",
+      tagline: "Sync your steps",
+      description: "Showcase your choreography and coordination in the group dance competition.",
+      location: "amar krishna hall",
+      overview: "An energetic dance battle where teams perform various styles from hip-hop to classical.",
+      details: {
+        date: "May 6th, 2026",
+        time: "4:00 PM",
+        venue: "Main Stage",
+        club: "Dance Society",
+        facultyAdvisor: "Mrs. Desai",
+        teamSize: "3-9 members",
+        registrationFee: "₹599 per team",
+        prizePoll: "10,000*"
       },
-      {
-        id: "cult-03",
-        name: "Singing",
-        tagline: "Let your voice be heard",
-        description: "Solo and duet singing competition covering all genres.",
-        location: "amar krishna hall",
-        overview: "Serenade the audience and judges with your vocal prowess.",
-        details: {
-          date: "May 6th, 2026",
-          time: "11:00 AM",
-          venue: "amar krishna hall",
-          club: "Music Society",
-          facultyAdvisor: "Dr. Bose",
-          teamSize: "1 members",
-          registrationFee: "₹249",
-          prizePoll: "10,000*"
-        },
-        snapshots: [
-          { round: "Prelims", format: "Unplugged", duration: "3 mins", eliminates: "Yes" },
-          { round: "Finals", format: "With Backing Track", duration: "5 mins", eliminates: "No" }
-        ],
-        rules: [
-          "Open to college students across Delhi NCR — valid College ID and Government ID mandatory.",
-          "Karaoke/backing tracks must be submitted in advance — instrumental only, no original vocals.",
-          "Live instruments are allowed and encouraged.",
-          "Prelims: maximum 3 minutes. Finals: maximum 5 minutes.",
-          "Time overrun of more than 1 minute leads to score deduction.",
-          "Songs with explicit lyrics must be edited before submission.",
-          "No offensive or communally sensitive content.",
-          "Judges' decision is final and binding.",
-          "Organisers reserve full authority to modify rules, format, and schedule.",
-          "*Prize pool may vary according to participant registration."
-        ],
-        judgementCriteria: [
-          { criteria: "Vocal Quality & Pitch", weightage: "50%" },
-          { criteria: "Rhythm and Pitch Accuracy", weightage: "30%" },
-          { criteria: "Stage Presence", weightage: "20%" }
-        ],
-        ranking: "Top 3 singers.",
-        contact: [
-          { name: "Subhi", role: "Coordinator", phone: "+91 8112540737", email: "jharavi0605@gmail.com" }
-        ]
+      snapshots: [
+        { round: "Finals", format: "Stage Performance", duration: "4–8 mins", eliminates: "No" }
+      ],
+      rules: [
+        "Open to college students across Delhi NCR — valid College ID and Government ID mandatory.",
+        "Team size: minimum 3, maximum 9 members. All performers must be registered participants.",
+        "Performance duration: 4–8 minutes including entry and exit. Exceeding limit may result in score deduction or termination.",
+        "Music tracks must be submitted in advance. Carry backup music on USB or personal device.",
+        "Props are permitted only if safe, pre-approved by organisers, and easily removable from stage.",
+        "Vulgar, offensive, or plagiarised content leads to immediate disqualification.",
+        "Unsafe props will result in disqualification.",
+        "Only registered members may perform on stage.",
+        "Organisers reserve full authority to modify rules, format, and schedule.",
+        "All decisions are final and binding.",
+        "*Prize pool may vary according to participant registration."
+      ],
+      judgementCriteria: [
+        { criteria: "Choreography & Creativity", weightage: "30%" },
+        { criteria: "Synchronization", weightage: "25%" },
+        { criteria: "Expressions & Energy", weightage: "20%" },
+        { criteria: "Stage Utilization", weightage: "15%" },
+        { criteria: "Overall Impact", weightage: "10%" }
+      ],
+      ranking: "Winner ₹7k, Runner-up ₹3k. Tie-break: Choreography score, then Synchronization score, then Judges' decision.",
+      contact: [
+        { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }
+      ]
+    },
+    {
+      id: "cult-03",
+      name: "Singing",
+      tagline: "Let your voice be heard",
+      description: "Solo singing competition covering all genres.",
+      location: "amar krishna hall",
+      overview: "Serenade the audience and judges with your vocal prowess.",
+      details: {
+        date: "May 6th, 2026",
+        time: "11:00 AM",
+        venue: "amar krishna hall",
+        club: "Music Society",
+        facultyAdvisor: "Dr. Bose",
+        teamSize: "1 member",
+        registrationFee: "₹249",
+        prizePoll: "10,000*"
       },
-      {
-        id: "cult-04",
-        name: "Poster Design (For Inner Students)",
-        tagline: "Paint your imagination",
-        description: "A digital and physical poster making competition.",
-        location: "Guru teg Bahadur hall",
-        overview: "Showcase your artistic and design skills based on a given theme.",
-        details: {
-          date: "May 6th, 2026",
-          time: "10:00 AM",
-          venue: "Guru teg Bahadur hall",
-          club: "Fine Arts Club",
-          facultyAdvisor: "Mr. Das",
-          teamSize: "1 members",
-          registrationFee: "₹150",
-          prizePoll: "10,000*"
-        },
-        snapshots: [
-          { round: "Creation", format: "Live Design", duration: "2 hours", eliminates: "No" }
-        ],
-        rules: [
-          "Open to inner college students only — valid College ID mandatory.",
-          "Theme will be given on the spot at the start of the event.",
-          "Participants must bring their own art supplies or laptops.",
-          "Digital art tools allowed only on personal laptops — no AI-generated content.",
-          "Artwork must remain within the assigned canvas or screen size.",
-          "Copying from references is not allowed.",
-          "Participants must be present for the judging walkthrough.",
-          "Artwork becomes property of REXIA'26 organising committee post-event.",
-          "Organisers reserve full authority to modify rules, format, and schedule.",
-          "*Prize pool may vary according to participant registration."
-        ],
-        judgementCriteria: [
-          { criteria: "Creativity & Originality", weightage: "40%" },
-          { criteria: "Relevance to Theme", weightage: "40%" },
-          { criteria: "Neatness & Aesthetics", weightage: "20%" }
-        ],
-        ranking: "Top 3 designs.",
-        contact: [
-          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }
-        ]
+      snapshots: [
+        { round: "Prelims", format: "Unplugged", duration: "3 mins", eliminates: "Yes" },
+        { round: "Finals", format: "With Backing Track", duration: "5 mins", eliminates: "No" }
+      ],
+      rules: [
+        "Open to college students across Delhi NCR — valid College ID and Government ID mandatory.",
+        "Individual performance only.",
+        "Performance duration: 3–5 minutes. A warning will be issued 30 seconds before the time limit.",
+        "Exceeding the time limit may result in score deductions.",
+        "Karaoke/backing tracks must be submitted in advance — instrumental only, no original vocals.",
+        "Live instruments are allowed and encouraged.",
+        "Performances must avoid hate speech, discriminatory language, or explicit/offensive material.",
+        "Violation of content guidelines leads to immediate disqualification.",
+        "Judges' decision is final and binding.",
+        "Organisers reserve full authority to modify rules, format, and schedule.",
+        "*Prize pool may vary according to participant registration."
+      ],
+      judgementCriteria: [
+        { criteria: "Singing Quality & Voice Clarity", weightage: "35%" },
+        { criteria: "Delivery & Expression", weightage: "25%" },
+        { criteria: "Audience Engagement", weightage: "20%" },
+        { criteria: "Presentation & Stage Presence", weightage: "20%" }
+      ],
+      ranking: "Winner ₹7k, Runner-up ₹3k. Tie-break: Content score, then Delivery/Presentation, then Judges' decision.",
+      contact: [
+        { name: "Subhi", role: "Coordinator", phone: "+91 8112540737", email: "jharavi0605@gmail.com" }
+      ]
+    },
+    {
+      id: "cult-04",
+      name: "Poster Design (For Inner Students)",
+      tagline: "Paint your imagination",
+      description: "A digital and physical poster making competition.",
+      location: "Guru teg Bahadur hall",
+      overview: "Showcase your artistic and design skills based on a given theme.",
+      details: {
+        date: "May 6th, 2026",
+        time: "10:00 AM",
+        venue: "Guru teg Bahadur hall",
+        club: "Fine Arts Club",
+        facultyAdvisor: "Mr. Das",
+        teamSize: "1 member",
+        registrationFee: "₹150",
+        prizePoll: "10,000*"
       },
-      {
-        id: "cult-05",
-        name: "Reel-a-thon",
-        tagline: "Capture the moment",
-        description: "A short-form video making competition exclusive to our college students.",
-        location: "Campus Wide",
-        overview: "Create the most engaging and viral reel showcasing the spirit of REXIA'26.",
-        details: {
-          date: "May 6th, 2026",
-          time: "All Day",
-          venue: "Campus Wide",
-          club: "Media Club",
-          facultyAdvisor: "Mrs. Kapoor",
-          teamSize: "2-4 members",
-          registrationFee: "₹249",
-          prizePoll: "10,000*"
-        },
-        snapshots: [
-          { round: "Submission", format: "Online Upload", duration: "48 hours", eliminates: "No" }
-        ],
-        rules: [
-          "Open to inner college students only — valid College ID mandatory.",
-          "Reels must be uploaded to Instagram tagging the official REXIA'26 page.",
-          "Must include all event-specific hashtags as announced.",
-          "All footage must be shot on campus during the fest.",
-          "Heavy AI-generated content or plagiarised edits are disqualified.",
-          "No offensive, communally sensitive, or explicit content.",
-          "Maximum reel duration: 60 seconds.",
-          "Submission deadline strictly enforced — late uploads not accepted.",
-          "Organisers reserve full authority to modify rules, format, and schedule.",
-          "*Prize pool may vary according to participant registration."
-        ],
-        judgementCriteria: [
-          { criteria: "Creativity & Concept", weightage: "40%" },
-          { criteria: "Engagement (Likes/Views)", weightage: "30%" },
-          { criteria: "Editing & Production Quality", weightage: "30%" }
-        ],
-        ranking: "Most viral and creative reels. Top 3 winners awarded.",
-        contact: [
-          { name: "Oscar", role: "Coordinator", phone: "+91 9876543224", email: "oscar@example.com" }
-        ]
-      }
-    ]
-  }
+      snapshots: [
+        { round: "Creation", format: "Live Design", duration: "2 hours", eliminates: "No" }
+      ],
+      rules: [
+        "Open to inner college students only — valid College ID mandatory.",
+        "Theme will be given on the spot at the start of the event.",
+        "Participants must bring their own art supplies or laptops.",
+        "Digital art tools allowed only on personal laptops — no AI-generated content.",
+        "Artwork must remain within the assigned canvas or screen size.",
+        "Copying from references is not allowed.",
+        "Participants must be present for the judging walkthrough.",
+        "Artwork becomes property of REXIA'26 organising committee post-event.",
+        "Organisers reserve full authority to modify rules, format, and schedule.",
+        "All decisions are final and binding.",
+        "*Prize pool may vary according to participant registration."
+      ],
+      judgementCriteria: [
+        { criteria: "Creativity & Originality", weightage: "40%" },
+        { criteria: "Relevance to Theme", weightage: "40%" },
+        { criteria: "Neatness & Aesthetics", weightage: "20%" }
+      ],
+      ranking: "Top 3 designs. Winner ₹7k, Runner-up ₹3k.",
+      contact: [
+        { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }
+      ]
+    },
+    {
+      id: "cult-05",
+      name: "Reel-a-thon",
+      tagline: "Capture the moment",
+      description: "A short-form video making competition for college students.",
+      location: "Campus Wide",
+      overview: "Create the most engaging and viral reel showcasing the spirit of REXIA'26.",
+      details: {
+        date: "May 6th, 2026",
+        time: "All Day",
+        venue: "Campus Wide",
+        club: "Media Club",
+        facultyAdvisor: "Mrs. Kapoor",
+        teamSize: "2-4 members",
+        registrationFee: "₹249",
+        prizePoll: "10,000*"
+      },
+      snapshots: [
+        { round: "Submission", format: "Online Upload / On-campus Screening", duration: "30–90 seconds", eliminates: "No" }
+      ],
+      rules: [
+        "Open to college students across Delhi NCR — valid College ID and Government ID mandatory.",
+        "Team size: minimum 2, maximum 4 members. All must be registered participants.",
+        "Reel duration: 30–90 seconds. A warning will be issued 30 seconds before the time limit.",
+        "Format: vertical video (9:16 preferred). Accepted formats: MP4 or MOV. Minimum resolution: 720p (1080p recommended).",
+        "Reel must be original and created specifically for this competition. No previously published content.",
+        "Must align with the given theme (if applicable). Theme will be provided prior to submission.",
+        "Copyright-free or properly credited audio/video only. No plagiarism or reuse of stock content.",
+        "Avoid hate speech, offensive/explicit content, or political/religious targeting — violation = immediate disqualification.",
+        "Submission deadline strictly enforced — late submissions will be rejected.",
+        "By participating, teams grant organisers permission to showcase reels on official platforms for promotional use.",
+        "Organisers reserve full authority to modify rules, format, and schedule. All decisions are final and binding.",
+        "*Prize pool may vary according to participant registration."
+      ],
+      judgementCriteria: [
+        { criteria: "Creativity & Originality", weightage: "30%" },
+        { criteria: "Storytelling & Concept Clarity", weightage: "25%" },
+        { criteria: "Editing & Technical Quality", weightage: "25%" },
+        { criteria: "Relevance to Theme", weightage: "10%" },
+        { criteria: "Overall Impact & Engagement", weightage: "10%" }
+      ],
+      ranking: "Winner ₹7k, Runner-up ₹3k. Tie-break: Creativity & Originality score, then Storytelling & Concept, then Judges' decision.",
+      contact: [
+        { name: "Aryan", role: "Coordinator", phone: "+91 97843360002", email: "jharavi0605@gmail.com" }
+      ]
+    }
+  ]
+}
 ];

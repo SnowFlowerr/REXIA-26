@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { eventsData } from '../eventsData/events';
 import styles from './EventsHero.module.css';
@@ -13,6 +13,10 @@ const categoryLabels = {
 const EventsHero = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const allEvents = eventsData.flatMap(cat =>
     cat.events.map(e => ({ ...e, category: cat.category, color: cat.color }))

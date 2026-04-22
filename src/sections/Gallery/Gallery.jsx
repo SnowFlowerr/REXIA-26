@@ -7,7 +7,7 @@ const galleryItems = [
   { id: 1, title: 'Opening Ceremony', gradient: 'linear-gradient(135deg, #2e1155, #4a1a8a)', aspect: 'tall' },
   { id: 2, title: 'Hackathon Floor', gradient: 'linear-gradient(135deg, #1e3a8a, #00d4ff)', aspect: 'wide' },
   { id: 3, title: 'Dance Battle', gradient: 'linear-gradient(135deg, #ff2d95, #b44aff)', aspect: 'normal' },
-  { id: 4, title: 'Robotics Arena', gradient: 'linear-gradient(135deg, #00d4ff, #2e1155)', aspect: 'normal' },
+  { id: 4, title: 'Sports', gradient: 'linear-gradient(135deg, #00d4ff, #2e1155)', aspect: 'normal' },
   { id: 5, title: 'Pro Show Night', gradient: 'linear-gradient(135deg, #b44aff, #ff2d95)', aspect: 'tall' },
   { id: 6, title: 'Coding Sprint', gradient: 'linear-gradient(135deg, #1e3a8a, #b44aff)', aspect: 'wide' },
   { id: 7, title: 'Art Installation', gradient: 'linear-gradient(135deg, #4a1a8a, #00d4ff)', aspect: 'normal' },

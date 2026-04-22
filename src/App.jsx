@@ -66,9 +66,9 @@ function App() {
             <Offerings />
             <Drift onRegisterClick={() => setRegisterModalOpen(true)} />
             <Philosophy />
-            {/* <SectionDivider variant="purple" />
-            <About />
-            <SectionDivider variant="pink" />
+          {/* <SectionDivider variant="purple" />
+            <About /> */}
+           {/*    <SectionDivider variant="pink" />
             <Team /> */}
             {/* <SectionDivider variant="blue" /> */}
             <Gallery />

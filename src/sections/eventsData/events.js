@@ -15,9 +15,9 @@ export const eventsData = [
         time: "10:00 AM (24 Hours)",
         venue: "computer science block",
         club: "Tech Club",
-        facultyAdvisor: "Yashwant",
+        facultyAdvisor: "Yashwant & Ritu Malik",
         teamSize: "2-4 members",
-        registrationFee: "₹649 per team",
+        registrationFee: "₹650 per team",
         prizePoll: "10,000*"
       },
       snapshots: [
@@ -59,13 +59,13 @@ export const eventsData = [
       location: "amar krishna hall",
       overview: "An opportunity for budding entrepreneurs to showcase their business models and prototypes.",
       details: {
-        date: "May 6th, 2026",
+        date: "May 7th, 2026",
         time: "11:00 AM",
         venue: "amar krishna hall",
         club: "E-Cell",
         facultyAdvisor: "Yashwant",
         teamSize: "2-4 members",
-        registrationFee: "₹659 per team",
+        registrationFee: "₹600 per team",
         prizePoll: "Equity + Mentorship. Your idea sets the prize."
       },
       snapshots: [
@@ -111,7 +111,7 @@ export const eventsData = [
         club: "Finance Club",
         facultyAdvisor: "Dr. Mehra",
         teamSize: "1 member",
-        registrationFee: "₹249",
+        registrationFee: "₹250",
         prizePoll: "10,000*"
       },
       snapshots: [
@@ -165,7 +165,7 @@ export const eventsData = [
           club: "Badminton court",
           facultyAdvisor: "Mr. Singh",
           teamSize: "1 members",
-          registrationFee: "₹249",
+          registrationFee: "₹250",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -210,7 +210,7 @@ export const eventsData = [
           club: "Sports Committee",
           facultyAdvisor: "Mr. Singh",
           teamSize: "6-8 members",
-          registrationFee: "₹249 per team",
+          registrationFee: "₹599 per team",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -238,7 +238,7 @@ export const eventsData = [
         ],
         ranking: "Top 3 teams will be awarded. Winner ₹7k, Runner-up ₹3k.",
         contact: [
-          { name: "Frank", role: "Coordinator", phone: "+91 9876543215", email: "frank@example.com" }
+        { name: "Aryan", role: "Coordinator", phone: "+91 97843360002", email: "jharavi0605@gmail.com" }
         ]
       },
       {
@@ -255,7 +255,7 @@ export const eventsData = [
           club: "Sports Committee",
           facultyAdvisor: "Mr. Singh",
           teamSize: "1 members",
-          registrationFee: "₹300",
+          registrationFee: "₹250",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -301,7 +301,7 @@ export const eventsData = [
           club: "Chess Club",
           facultyAdvisor: "Dr. Verma",
           teamSize: "1 member",
-          registrationFee: "₹249",
+          registrationFee: "₹250",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -345,7 +345,7 @@ export const eventsData = [
           club: "Sports Committee",
           facultyAdvisor: "Mr. Singh",
           teamSize: "8 members",
-          registrationFee: "₹549 per team",
+          registrationFee: "₹600 per team",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -388,7 +388,7 @@ export const eventsData = [
           club: "Gaming Club",
           facultyAdvisor: "Mr. Kumar",
           teamSize: "4 members",
-          registrationFee: "₹400 per squad",
+          registrationFee: "₹500 per squad",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -432,7 +432,7 @@ export const eventsData = [
           club: "Sports Committee",
           facultyAdvisor: "Mr. Singh",
           teamSize: "1 members",
-          registrationFee: "₹249",
+          registrationFee: "₹250",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -483,8 +483,8 @@ export const eventsData = [
         venue: "Main Stage",
         club: "Dance Society",
         facultyAdvisor: "Mrs. Desai",
-        teamSize: "3-9 members",
-        registrationFee: "₹599 per team",
+        teamSize: "2-9 members",
+        registrationFee: "₹600 per team",
         prizePoll: "10,000*"
       },
       snapshots: [
@@ -517,7 +517,7 @@ export const eventsData = [
     },
     {
       id: "cult-03",
-      name: "Singing",
+      name: "Solo Singing",
       tagline: "Let your voice be heard",
       description: "Solo singing competition covering all genres.",
       location: "amar krishna hall",
@@ -529,7 +529,7 @@ export const eventsData = [
         club: "Music Society",
         facultyAdvisor: "Dr. Bose",
         teamSize: "1 member",
-        registrationFee: "₹249",
+        registrationFee: "₹250",
         prizePoll: "10,000*"
       },
       snapshots: [
@@ -574,8 +574,8 @@ export const eventsData = [
         club: "Fine Arts Club",
         facultyAdvisor: "Mr. Das",
         teamSize: "1 member",
-        registrationFee: "₹150",
-        prizePoll: "10,000*"
+        registrationFee: "Free",
+      
       },
       snapshots: [
         { round: "Creation", format: "Live Design", duration: "2 hours", eliminates: "No" }
@@ -616,8 +616,8 @@ export const eventsData = [
         venue: "Campus Wide",
         club: "Media Club",
         facultyAdvisor: "Mrs. Kapoor",
-        teamSize: "2-4 members",
-        registrationFee: "₹249",
+        teamSize: "1 members",
+        registrationFee: "₹250",
         prizePoll: "10,000*"
       },
       snapshots: [

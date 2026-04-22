@@ -10,7 +10,7 @@ const offerings = [
   },
   {
     no: '02',
-    title: 'Go-Kart',
+    title: 'DriftX (Go-Kart)',
     desc: 'Burn rubber, chase glory. Hit the track and race for bragging rights that last a lifetime.'
   },
   {

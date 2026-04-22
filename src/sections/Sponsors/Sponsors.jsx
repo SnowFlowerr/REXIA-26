@@ -3,11 +3,11 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import styles from './Sponsors.module.css';
 
 const INITIAL_SPONSORS = [
-  { id: 1, name: 'Red Bull', color: '#ff2d95' },
-  { id: 2, name: 'CampusXL', color: '#00d4ff' },
-  { id: 3, name: 'Denver', color: '#b44aff' },
-  { id: 4, name: 'DriftX', color: '#ff2d95' },
-  { id: 5, name: 'Parera', color: '#00d4ff' },
+  { id: 1, name: 'Red Bull', image: '/redbull.png' },
+  { id: 2, name: 'CampusXL', image: '/campusxl.png' },
+  { id: 3, name: 'Denver', image: '/denver.png' },
+  { id: 4, name: 'DriftX', image: '/driftx.png' },
+  { id: 5, name: 'Parera', image: '/Prera.png' },
 ];
 
 const shuffleArray = (array) => {
@@ -33,11 +33,7 @@ const SponsorLogo = ({ sponsor }) => (
     className={styles.logoWrapper}
   >
     <div className={styles.logoIcon}>
-      {/* Abstract logo placeholder */}
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-      </svg>
-      <span className={styles.logoName}>{sponsor.name}</span>
+      <img src={sponsor.image} alt={sponsor.name} className={styles.sponsorImg} />
     </div>
   </motion.div>
 );
@@ -55,7 +51,7 @@ const Sponsors = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSponsors(prev => shuffleArray(prev));
-    }, 4000); // Reshuffle every 4 seconds
+    }, 4000); 
 
     return () => clearInterval(interval);
   }, []);

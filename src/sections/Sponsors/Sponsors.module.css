@@ -31,7 +31,7 @@
   aspect-ratio: 16/10;
   width: calc(33.333% - var(--space-xl));
   min-width: 220px;
-  padding: var(--space-xl);
+  padding: 10px;
   border-radius: var(--radius-lg);
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
@@ -58,21 +58,15 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  filter: grayscale(1) brightness(2);
   transition: filter var(--transition-base);
 }
 
-.logoWrapper:hover .logoIcon {
-  filter: grayscale(0) brightness(1.2);
-}
 
-.logoName {
-  font-size: var(--font-size-base);
-  font-weight: 700;
-  color: var(--color-space-white);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  opacity: 0.8;
+.sponsorImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition-base);
 }
 
 /* CTA */

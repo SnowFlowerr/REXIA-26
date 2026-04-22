@@ -21,7 +21,7 @@ const FlyingAstronaut = () => {
           left: '10%' 
         }}
         initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 0.4, scale: 0.8 }}
+        whileInView={{ opacity: 0.15, scale: 0.8 }}
         transition={{ duration: 2 }}
       >
         <img src="/astronaut.png" alt="Flying Astronaut" />
@@ -37,7 +37,7 @@ const FlyingAstronaut = () => {
           right: '5%' 
         }}
         initial={{ opacity: 0, scale: 0.3 }}
-        whileInView={{ opacity: 0.3, scale: 0.6 }}
+        whileInView={{ opacity: 0.1, scale: 0.6 }}
         transition={{ duration: 3, delay: 0.5 }}
       >
         <img src="/astronaut.png" alt="Flying Astronaut" />
@@ -53,7 +53,7 @@ const FlyingAstronaut = () => {
           rotate: useTransform(rotate, r => r * 0.8)
         }}
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.25 }}
+        whileInView={{ opacity: 0.08 }}
         transition={{ duration: 2.5 }}
       >
         <img src="/astronaut.png" alt="Flying Astronaut" />

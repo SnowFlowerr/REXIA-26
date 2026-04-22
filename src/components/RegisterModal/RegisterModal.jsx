@@ -61,7 +61,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
                     <line x1="12" y1="22.08" x2="12" y2="12" />
                   </svg>
                 </div>
-                <h3 className={styles.optionTitle}>starHack 1.0</h3>
+                <h3 className={styles.optionTitle}>StarHacks 1.0</h3>
                 <p className={styles.optionDesc}>24-hour intense hackathon.</p>
               </a>
 

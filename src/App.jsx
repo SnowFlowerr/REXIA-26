@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import StarField from './components/StarField/StarField';
 import ShootingStars from './components/ShootingStars/ShootingStars';
 import FlyingAstronaut from './components/FlyingAstronaut/FlyingAstronaut';
@@ -17,17 +17,27 @@ import Gallery from './sections/Gallery/Gallery';
 import Sponsors from './sections/Sponsors/Sponsors';
 import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Events from './sections/Events/Events';
 import NotFound from './sections/notfound/notfound';
 import EventDetail from './sections/eventDetail/eventDetails';
 
-import EventNavbar from './components/EventNavbar/EventNavbar';
 import RegisterModal from './components/RegisterModal/RegisterModal';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [isRegisterModalOpen, setRegisterModalOpen] = useState(false);
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [hash]);
 
   const handleLoaderComplete = useCallback(() => {
     setLoading(false);
@@ -55,11 +65,12 @@ function App() {
 
       {/* Main content */}
       {!loading && (
-        <Routes>
-          <Route path="/" element={
-            <>
+        <>
           <Navbar onRegisterClick={() => setRegisterModalOpen(true)} />
-          <main>
+          <Routes>
+            <Route path="/" element={
+              <>
+                <main>
             <Hero />
             <SectionDivider variant="purple" />
             <Mission />
@@ -80,10 +91,11 @@ function App() {
           <Footer />
         </>
         } />
-          <Route path="event" element={<><EventNavbar onRegisterClick={() => setRegisterModalOpen(true)} /><Events/></>}/>
-          <Route path="/event/:id" element={<><EventNavbar onRegisterClick={() => setRegisterModalOpen(true)} /><EventDetail/></>}/>
-          <Route path="*" element={<NotFound/>}/>
-        </Routes>
+            <Route path="event" element={<Events/>} />
+            <Route path="/event/:id" element={<EventDetail/>} />
+            <Route path="*" element={<NotFound/>}/>
+          </Routes>
+        </>
       )}
     </>
   );

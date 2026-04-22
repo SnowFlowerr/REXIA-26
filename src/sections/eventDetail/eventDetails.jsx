@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { eventsData } from '../eventsData/events';
 import styles from './EventDetail.module.css';
 import Footer from '../Footer/Footer';
@@ -11,6 +11,12 @@ const EventDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
+
+  const [activeIdx, setActiveIdx] = useState(null);
+
+  const handleSegmentClick = (index) => {
+    setActiveIdx(activeIdx === index ? null : index);
+  };
 
   const allEvents = eventsData.flatMap(cat =>
     cat.events.map(e => ({ ...e, category: cat.category, color: cat.color }))
@@ -150,27 +156,77 @@ const EventDetail = () => {
       <div className={styles.divider} />
 
       {/* ── JUDGEMENT CRITERIA ── */}
-      <div className={styles.section}>
-        <div className={styles.sectionTag}>// JUDGEMENT CRITERIA</div>
-        <div className={styles.criteriaList}>
-          {event.judgementCriteria.map((item, i) => (
-            <div key={i} className={styles.criteriaItem}>
-              <div className={styles.criteriaTop}>
-                <span className={styles.criteriaName}>{item.criteria}</span>
-                <span className={styles.criteriaWeight}>{item.weightage}</span>
+      {event.judgementCriteria && event.judgementCriteria.length > 0 && (
+        <>
+          <div className={styles.section}>
+            <div className={styles.sectionTag}>// JUDGEMENT CRITERIA</div>
+            <div className={styles.criteriaLayout}>
+              <div className={styles.donutContainer}>
+                <svg viewBox="0 0 100 100" className={styles.donutSvg}>
+                  {(() => {
+                    const radius = 40;
+                    const circumference = 2 * Math.PI * radius;
+                    let accumulatedPercent = 0;
+                    const colors = ['#b44aff', '#00d4ff', '#ff2d95', '#ffaa00', '#00ff88'];
+                    
+                    return event.judgementCriteria.map((item, i) => {
+                      // Extract number from string like "30%" or "30"
+                      const percentMatch = item.weightage.match(/\d+(\.\d+)?/);
+                      const percent = percentMatch ? parseFloat(percentMatch[0]) : 0;
+                      
+                      const strokeDasharray = `${(percent / 100) * circumference} ${circumference}`;
+                      const strokeDashoffset = -((accumulatedPercent / 100) * circumference);
+                      accumulatedPercent += percent;
+                      
+                      const isActive = activeIdx === i;
+                      const isDimmed = activeIdx !== null && !isActive;
+                      
+                      return (
+                        <circle
+                          key={i}
+                          cx="50"
+                          cy="50"
+                          r={radius}
+                          fill="transparent"
+                          stroke={colors[i % colors.length]}
+                          strokeWidth={isActive ? "18" : "12"}
+                          strokeDasharray={strokeDasharray}
+                          strokeDashoffset={strokeDashoffset}
+                          transform="rotate(-90 50 50)"
+                          className={`${styles.donutSegment} ${isActive ? styles.active : ''} ${isDimmed ? styles.dimmed : ''}`}
+                          onClick={() => handleSegmentClick(i)}
+                        />
+                      );
+                    });
+                  })()}
+                </svg>
               </div>
-              <div className={styles.criteriaBar}>
-                <div
-                  className={styles.criteriaFill}
-                  style={{ width: item.weightage }}
-                />
+              <div className={styles.criteriaLegend}>
+                {event.judgementCriteria.map((item, i) => {
+                  const colors = ['#b44aff', '#00d4ff', '#ff2d95', '#ffaa00', '#00ff88'];
+                  const isActive = activeIdx === i;
+                  const isDimmed = activeIdx !== null && !isActive;
+                  
+                  return (
+                    <div 
+                      key={i} 
+                      className={`${styles.legendItem} ${isActive ? styles.legendActive : ''} ${isDimmed ? styles.legendDimmed : ''}`}
+                      onClick={() => handleSegmentClick(i)}
+                    >
+                      <span className={styles.legendColor} style={{ backgroundColor: colors[i % colors.length] }} />
+                      <div className={styles.legendText}>
+                        <span className={styles.legendName}>{item.criteria}</span>
+                        <span className={styles.legendWeight}>{item.weightage}</span>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-
-      <div className={styles.divider} />
+          </div>
+          <div className={styles.divider} />
+        </>
+      )}
 
       {/* ── RANKING ── */}
       <div className={styles.section}>

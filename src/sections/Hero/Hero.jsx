@@ -150,7 +150,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.8 }}
           >
-            Managed by Parera
+            Managed by Prera
           </motion.div>
         </motion.h1>
 

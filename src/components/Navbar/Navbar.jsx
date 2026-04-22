@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from '../Logo/Logo';
 import styles from './Navbar.module.css';
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-
+  { label: 'Home', href: '/#home' },
   { label: 'Events', href: '/event' },
-
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Gallery', href: '/#gallery' },
+  { label: 'Sponsors', href: '/#sponsors' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 const linkVariants = {
@@ -52,22 +51,27 @@ const Navbar = ({ onRegisterClick }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
       // Active section detection
-      const sections = navLinks.map(l => l.href.slice(1));
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 150) {
-            setActiveSection(sections[i]);
-            break;
+      if (window.location.pathname === '/') {
+        const sections = navLinks.filter(l => l.href.startsWith('/#')).map(l => l.href.split('#')[1]);
+        let currentSection = 'home';
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const el = document.getElementById(sections[i]);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= 150) {
+              currentSection = sections[i];
+              break;
+            }
           }
         }
+        setActiveSection(currentSection);
       }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -78,14 +82,25 @@ const Navbar = ({ onRegisterClick }) => {
     e.preventDefault();
     setMobileOpen(false);
     
-    if (href.startsWith('#')) {
-      const el = document.querySelector(href);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
+    if (href.startsWith('/#')) {
+      const id = href.split('#')[1];
+      if (pathname === '/') {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        navigate(href);
       }
     } else {
       navigate(href);
     }
+  };
+
+  const isActive = (href) => {
+    if (href === '/event' && pathname.startsWith('/event')) return true;
+    if (href.startsWith('/#') && pathname === '/' && activeSection === href.split('#')[1]) return true;
+    return false;
   };
 
   return (
@@ -98,9 +113,9 @@ const Navbar = ({ onRegisterClick }) => {
       >
         <div className={styles.inner}>
           <motion.a
-            href="#home"
+            href="/#home"
             className={styles.logoLink}
-            onClick={(e) => handleNavClick(e, '#home')}
+            onClick={(e) => handleNavClick(e, '/#home')}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -112,7 +127,7 @@ const Navbar = ({ onRegisterClick }) => {
               <motion.a
                 key={link.href}
                 href={link.href}
-                className={`${styles.link} ${activeSection === link.href.slice(1) ? styles.activeLink : ''}`}
+                className={`${styles.link} ${isActive(link.href) ? styles.activeLink : ''}`}
                 onClick={(e) => handleNavClick(e, link.href)}
                 custom={i}
                 variants={linkVariants}
@@ -121,7 +136,7 @@ const Navbar = ({ onRegisterClick }) => {
                 whileHover={{ y: -2 }}
               >
                 {link.label}
-                {activeSection === link.href.slice(1) && (
+                {isActive(link.href) && (
                   <motion.div
                     className={styles.activeIndicator}
                     layoutId="activeNav"

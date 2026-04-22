@@ -297,49 +297,118 @@
   letter-spacing: 0.02em;
 }
 
-/* ── CRITERIA ── */
-.criteriaList {
+/* ── CRITERIA DONUT CHART ── */
+.criteriaLayout {
   display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  max-width: 640px;
+  align-items: center;
+  gap: 3rem;
+  max-width: 820px;
+  flex-wrap: wrap;
 }
 
-.criteriaItem { display: flex; flex-direction: column; gap: 0.5rem; }
+.donutContainer {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  position: relative;
+  filter: drop-shadow(0 0 10px rgba(180, 74, 255, 0.2));
+}
 
-.criteriaTop {
+.donutSvg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.donutSegment {
+  transition: stroke-dasharray 1s cubic-bezier(0.16, 1, 0.3, 1), 
+              stroke-width 0.4s ease,
+              opacity 0.4s ease,
+              filter 0.4s ease;
+  cursor: pointer;
+}
+
+.donutSegment.active {
+  filter: brightness(1.3) drop-shadow(0 0 10px currentColor);
+  opacity: 1;
+}
+
+.donutSegment.dimmed {
+  opacity: 0.2;
+  filter: grayscale(0.5);
+}
+
+.donutSegment:hover:not(.dimmed) {
+  opacity: 0.9;
+  filter: brightness(1.1);
+}
+
+.criteriaLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  min-width: 240px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  background: rgba(180, 74, 255, 0.05);
+  border: 1px solid rgba(180, 74, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.legendItem.legendActive {
+  background: rgba(180, 74, 255, 0.15);
+  border-color: rgba(180, 74, 255, 0.4);
+  transform: translateX(8px) scale(1.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.legendItem.legendDimmed {
+  opacity: 0.4;
+  transform: scale(0.98);
+  filter: grayscale(0.3);
+}
+
+.legendItem:hover:not(.legendDimmed) {
+  background: rgba(180, 74, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.legendColor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.legendText {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex: 1;
+  gap: 1rem;
 }
 
-.criteriaName {
-  font-size: 0.82rem;
-  font-weight: 700;
+.legendName {
+  font-size: 0.85rem;
+  font-weight: 600;
   color: #f0eaff;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
-.criteriaWeight {
-  font-size: 0.75rem;
+.legendWeight {
+  font-size: 0.85rem;
   font-weight: 800;
   color: #b44aff;
-  letter-spacing: 0.1em;
-}
-
-.criteriaBar {
-  width: 100%;
-  height: 3px;
-  background: rgba(180, 74, 255, 0.1);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.criteriaFill {
-  height: 100%;
-  background: linear-gradient(90deg, #b44aff, #7b2fff);
-  border-radius: 2px;
-  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.05em;
 }
 
 /* ── RANKING ── */

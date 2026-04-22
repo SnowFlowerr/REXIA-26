@@ -6,22 +6,26 @@ const offerings = [
   {
     no: '01',
     title: 'Hackathons',
-    desc: '24-hour sprints where logic meets imagination, building the future of decentralized tech.'
+    desc: '24-hour sprints where logic meets imagination, building the future of decentralized tech.',
+    image: '/hackathone.png'
   },
   {
     no: '02',
     title: 'DriftX (Go-Kart)',
-    desc: 'Burn rubber, chase glory. Hit the track and race for bragging rights that last a lifetime.'
+    desc: 'Burn rubber, chase glory. Hit the track and race for bragging rights that last a lifetime.',
+    image: '/gocart.png'
   },
   {
     no: '03',
     title: 'Concert Night',
-    desc: 'Lights down, volume up. One electric night with headline artists that shakes the whole campus.'
+    desc: 'Lights down, volume up. One electric night with headline artists that shakes the whole campus.',
+    image: '/concert.png'
   },
   {
     no: '04',
     title: 'Startup Pitch',
-    desc: 'One idea. Two minutes. A room full of investors. Pitch bold, pitch sharp        or go home.'
+    desc: 'One idea. Two minutes. A room full of investors. Pitch bold, pitch sharp or go home.',
+    image: '/startup.png'
   }
 ];
 
@@ -119,6 +123,11 @@ const Offerings = () => {
                     animate={{ x: xOffset, y: yOffset, scale, opacity, zIndex, rotate }}
                     onClick={() => handleDot(i)}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url(${item.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center'
+                    }}
                   >
                     <div className={styles.cardHeader}>
                       <span className={styles.cardNumber}>/ {item.no}</span>

@@ -178,8 +178,9 @@
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.9);
   letter-spacing: 0.12em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .cardInfo {
@@ -200,9 +201,10 @@
 
 .cardDesc {
   font-size: 1rem;
-  color: #888888;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.65;
   font-weight: 400;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hackathonTitle {

@@ -321,26 +321,25 @@
 }
 
 .donutSegment {
-  transition: stroke-dasharray 1s cubic-bezier(0.16, 1, 0.3, 1), 
-              stroke-width 0.4s ease,
-              opacity 0.4s ease,
-              filter 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
+  stroke: rgba(255,255,255,0.1);
+  stroke-width: 0.5;
 }
 
 .donutSegment.active {
-  filter: brightness(1.3) drop-shadow(0 0 10px currentColor);
+  filter: brightness(1.3) drop-shadow(0 0 12px currentColor);
   opacity: 1;
 }
 
 .donutSegment.dimmed {
-  opacity: 0.2;
-  filter: grayscale(0.5);
+  opacity: 0.15;
+  filter: grayscale(0.6);
 }
 
 .donutSegment:hover:not(.dimmed) {
   opacity: 0.9;
-  filter: brightness(1.1);
+  filter: brightness(1.2);
 }
 
 .criteriaLegend {

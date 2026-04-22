@@ -163,38 +163,59 @@ const EventDetail = () => {
             <div className={styles.criteriaLayout}>
               <div className={styles.donutContainer}>
                 <svg viewBox="0 0 100 100" className={styles.donutSvg}>
+                  {/* Background Track Circle */}
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="37.5"
+                    fill="transparent"
+                    stroke="rgba(180, 74, 255, 0.05)"
+                    strokeWidth="15"
+                  />
+                  
                   {(() => {
-                    const radius = 40;
-                    const circumference = 2 * Math.PI * radius;
-                    let accumulatedPercent = 0;
+                    let accumulated = 0;
                     const colors = ['#b44aff', '#00d4ff', '#ff2d95', '#ffaa00', '#00ff88'];
                     
                     return event.judgementCriteria.map((item, i) => {
-                      // Extract number from string like "30%" or "30"
                       const percentMatch = item.weightage.match(/\d+(\.\d+)?/);
                       const percent = percentMatch ? parseFloat(percentMatch[0]) : 0;
                       
-                      const strokeDasharray = `${(percent / 100) * circumference} ${circumference}`;
-                      const strokeDashoffset = -((accumulatedPercent / 100) * circumference);
-                      accumulatedPercent += percent;
+                      const start = accumulated;
+                      accumulated += percent;
                       
                       const isActive = activeIdx === i;
                       const isDimmed = activeIdx !== null && !isActive;
+
+                      // Calculate Path Data for Donut Segment
+                      const innerR = 30;
+                      const outerR = isActive ? 45 : 42;
+                      const startAngle = (start / 100) * 360 - 90;
+                      const endAngle = ((start + percent) / 100) * 360 - 90;
+                      
+                      const x1 = 50 + outerR * Math.cos(Math.PI * startAngle / 180);
+                      const y1 = 50 + outerR * Math.sin(Math.PI * startAngle / 180);
+                      const x2 = 50 + outerR * Math.cos(Math.PI * endAngle / 180);
+                      const y2 = 50 + outerR * Math.sin(Math.PI * endAngle / 180);
+                      const x3 = 50 + innerR * Math.cos(Math.PI * endAngle / 180);
+                      const y3 = 50 + innerR * Math.sin(Math.PI * endAngle / 180);
+                      const x4 = 50 + innerR * Math.cos(Math.PI * startAngle / 180);
+                      const y4 = 50 + innerR * Math.sin(Math.PI * startAngle / 180);
+                      
+                      const largeArc = percent > 50 ? 1 : 0;
+                      const d = `M ${x1} ${y1} A ${outerR} ${outerR} 0 ${largeArc} 1 ${x2} ${y2} L ${x3} ${y3} A ${innerR} ${innerR} 0 ${largeArc} 0 ${x4} ${y4} Z`;
                       
                       return (
-                        <circle
+                        <path
                           key={i}
-                          cx="50"
-                          cy="50"
-                          r={radius}
-                          fill="transparent"
-                          stroke={colors[i % colors.length]}
-                          strokeWidth={isActive ? "18" : "12"}
-                          strokeDasharray={strokeDasharray}
-                          strokeDashoffset={strokeDashoffset}
-                          transform="rotate(-90 50 50)"
+                          d={d}
+                          fill={colors[i % colors.length]}
                           className={`${styles.donutSegment} ${isActive ? styles.active : ''} ${isDimmed ? styles.dimmed : ''}`}
                           onClick={() => handleSegmentClick(i)}
+                          style={{ 
+                            transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                            cursor: 'pointer'
+                          }}
                         />
                       );
                     });

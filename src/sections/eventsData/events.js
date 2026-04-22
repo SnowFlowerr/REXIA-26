@@ -8,12 +8,12 @@ export const eventsData = [
         name: "starHack 1.0",
         tagline: "24 Hour Hackathon",
         description: "A thrilling 24-hour hackathon where you build, break, and innovate. Push your limits and create something extraordinary.",
-        location: "Main Auditorium",
+        location: "computer science block",
         overview: "starHack 1.0 is the premier 24-hour hackathon. Teams will collaborate to solve real-world problems. Expect late-night coding, mentors, and intense competition.",
         details: {
-          date: "April 18, 2026",
+          date: "May 7th & 8th, 2026",
           time: "10:00 AM (24 Hours)",
-          venue: "Main Auditorium",
+          venue: "computer science block",
           club: "Tech Club",
           facultyAdvisor: "Yashwant",
           teamSize: "2-4 members",
@@ -36,7 +36,7 @@ export const eventsData = [
         ],
         ranking: "Top 3 teams will be awarded.",
         contact: [
-          { name: "Alice", role: "Coordinator", phone: "+91 9876543210", email: "alice@example.com" }
+          { name: "Ravi", role: "Coordinator", phone: "+91 9311891503 ", email: "jharavi0605@gmail.com" }
         ]
       },
       {
@@ -44,17 +44,17 @@ export const eventsData = [
         name: "Startup Pitch Competition",
         tagline: "Pitch your next big idea",
         description: "Present your startup idea to a panel of expert judges and investors.",
-        location: "Computer Science Block",
+        location: "amar krishna hall",
         overview: "An opportunity for budding entrepreneurs to showcase their business models and prototypes.",
         details: {
-          date: "6th May, 2026",
+          date: "May 7th, 2026",
           time: "11:00 AM",
-          venue: "Computer Science Block",
+          venue: "amar krishna hall",
           club: "E-Cell",
           facultyAdvisor: "Yashwant",
           teamSize: "2-4 members",
-          registrationFee: "₹649 per team",
-          prizePoll: "60,000*"
+          registrationFee: "₹659 per team",
+          prizePoll: "fund according to pitch"
         },
         snapshots: [
           { round: "Round 1", format: "Pitch Deck", duration: "10 mins", eliminates: "Yes" }
@@ -71,7 +71,7 @@ export const eventsData = [
         ],
         ranking: "Top 3 startups will be funded/awarded.",
         contact: [
-          { name: "Bob", role: "Lead", phone: "+91 9876543211", email: "bob@example.com" }
+          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }
         ]
       },
       
@@ -80,16 +80,16 @@ export const eventsData = [
         name: "Stock Market Simulation",
         tagline: "Trade to win",
         description: "Experience the thrill of the stock market in this real-time simulation.",
-        location: "Computer Lab 3",
+        location: "computer science block",
         overview: "Participants will use virtual money to trade stocks in a simulated environment reflecting real-world market volatility.",
         details: {
-          date: "April 19, 2026",
-          time: "9:00 AM",
-          venue: "Computer Lab 3",
+          date: "May 7th, 2026",
+          time: "11:00 AM",
+          venue: "computer science block",
           club: "Finance Club",
           facultyAdvisor: "Dr. Mehra",
           teamSize: "1 member",
-          registrationFee: "₹150",
+          registrationFee: "₹249",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -105,7 +105,8 @@ export const eventsData = [
         ],
         ranking: "Traders with the highest portfolio value win.",
         contact: [
-          { name: "Diana", role: "Coordinator", phone: "+91 9876543213", email: "diana@example.com" }
+          { name: "Bhudeo", role: "Coordinator", phone: "+91 6206310174", email: "jharavi0605@gmail.com" },
+          { name: "Aditya jindal", role: "Coordinator", phone: "+91 7719415700", email: "jharavi0605@gmail.com" }
         ]
       }
     ]
@@ -119,16 +120,16 @@ export const eventsData = [
         name: "Badminton",
         tagline: "Smash your way to victory",
         description: "Compete in the ultimate badminton tournament. Show your agility and reflexes.",
-        location: "Indoor Sports Complex",
+        location: "Badminton court ",
         overview: "Singles and doubles tournaments for both men and women.",
         details: {
-          date: "April 18, 2026",
+       date: "May 7th, 2026",
           time: "9:00 AM",
           venue: "Indoor Sports Complex",
-          club: "Sports Committee",
+          club: "Badminton court ",
           facultyAdvisor: "Mr. Singh",
           teamSize: "1-2 members",
-          registrationFee: "₹200",
+          registrationFee: "₹249",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -145,7 +146,8 @@ export const eventsData = [
         ],
         ranking: "Winner, Runner-up, and 3rd Place.",
         contact: [
-          { name: "Eve", role: "Sports Rep", phone: "+91 9876543214", email: "eve@example.com" }
+          { name: "Umang", role: "Sports Rep", phone: "+91 6204936468", email: "jharavi0605@gmail.com" },
+          { name: "Bhodeo", role: "Sports Rep", phone: "+91 6206310174", email: "jharavi0605@gmail.com" }
         ]
       },
       {
@@ -156,13 +158,13 @@ export const eventsData = [
         location: "Main Ground",
         overview: "Inter-college volleyball championship. Bring your best team to dominate the court.",
         details: {
-          date: "April 18, 2026",
+         date: "May 7th, 2026",
           time: "10:00 AM",
-          venue: "Main Ground",
+          venue: "Volleyball court",
           club: "Sports Committee",
           facultyAdvisor: "Mr. Singh",
           teamSize: "6-8 members",
-          registrationFee: "₹600 per team",
+          registrationFee: "₹249 per team",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -179,6 +181,7 @@ export const eventsData = [
         ],
         ranking: "Top 3 teams will be awarded.",
         contact: [
+          { name: "Frank", role: "Coordinator", phone: "+91 9876543215", email: "frank@example.com" },
           { name: "Frank", role: "Coordinator", phone: "+91 9876543215", email: "frank@example.com" }
         ]
       },
@@ -190,7 +193,7 @@ export const eventsData = [
         location: "Tennis Courts",
         overview: "Showcase your serves and volleys in our open tennis tournament.",
         details: {
-          date: "April 19, 2026",
+         date: "May 7th, 2026",
           time: "8:00 AM",
           venue: "Tennis Courts",
           club: "Sports Committee",
@@ -213,7 +216,8 @@ export const eventsData = [
         ],
         ranking: "Winner, Runner-up, and 3rd Place.",
         contact: [
-          { name: "Grace", role: "Coordinator", phone: "+91 9876543216", email: "grace@example.com" }
+          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" },
+          { name: "Utkarsh", role: "Lead", phone: "+91 6393257287", email: "jharavi0605@gmail.com" }
         ]
       },
       {
@@ -221,16 +225,16 @@ export const eventsData = [
         name: "Chess",
         tagline: "Checkmate your rivals",
         description: "A battle of minds in a classic chess tournament.",
-        location: "Library Hall",
+        location: "Guru teg Bahadur hall",
         overview: "Rapid and blitz chess tournaments. Calculate your moves and outsmart your opponents.",
         details: {
-          date: "April 18, 2026",
+    date: "May 7th, 2026",
           time: "1:00 PM",
-          venue: "Library Hall",
+          venue: "Guru teg Bahadur hall",
           club: "Chess Club",
           facultyAdvisor: "Dr. Verma",
           teamSize: "1 member",
-          registrationFee: "₹100",
+          registrationFee: "₹249",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -246,7 +250,7 @@ export const eventsData = [
         ],
         ranking: "Based on final Swiss standings.",
         contact: [
-          { name: "Heidi", role: "Arbiter", phone: "+91 9876543217", email: "heidi@example.com" }
+            { name: "Umang", role: "Sports Rep", phone: "+91 6204936468", email: "jharavi0605@gmail.com" },
         ]
       },
       {
@@ -257,13 +261,13 @@ export const eventsData = [
         location: "Main Ground",
         overview: "Gather your strongest teammates and pull your way to the top.",
         details: {
-          date: "April 19, 2026",
-          time: "4:00 PM",
-          venue: "Main Ground",
+          date: "May 7th, 2026",
+          time: "11:00 AM",
+          venue: "near vollyball court",
           club: "Sports Committee",
           facultyAdvisor: "Mr. Singh",
           teamSize: "8 members",
-          registrationFee: "₹400 per team",
+          registrationFee: "₹549 per team",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -279,7 +283,7 @@ export const eventsData = [
         ],
         ranking: "Last team standing wins.",
         contact: [
-          { name: "Ivan", role: "Coordinator", phone: "+91 9876543218", email: "ivan@example.com" }
+          { name: "Ravi", role: "Coordinator", phone: "+91 9311891503 ", email: "jharavi0605@gmail.com" }
         ]
       },
       {
@@ -287,12 +291,12 @@ export const eventsData = [
         name: "Esports (BGMI)",
         tagline: "Survival of the fittest",
         description: "Battle Royale tournament featuring BGMI.",
-        location: "Computer Lab 1 & 2",
+        location: "Computer Science Department",
         overview: "Squad up and drop into the battleground. Show your tactical skills and gunplay to secure the chicken dinner.",
         details: {
-          date: "April 18, 2026",
+         date: "May 7th, 2026",
           time: "5:00 PM",
-          venue: "Computer Lab 1",
+          venue: "computer science block",
           club: "Gaming Club",
           facultyAdvisor: "Mr. Kumar",
           teamSize: "4 members",
@@ -314,7 +318,7 @@ export const eventsData = [
         ],
         ranking: "Based on overall team standings.",
         contact: [
-          { name: "Jack", role: "Admin", phone: "+91 9876543219", email: "jack@example.com" }
+          { name: "Ayush Prashad", role: "coordinator", phone: "+91 9350648039", email: "jharavi0605@gmail.com" }
         ]
       }
       ,{
@@ -322,16 +326,16 @@ export const eventsData = [
   name: "Table Tennis",
   tagline: "Small ball. Big battles.",
   description: "Step up to the table and prove your reflexes are faster than the rest. Singles and doubles — every point counts.",
-  location: "Indoor Sports Complex",
+  location: "Guru teg Bahadur hall ",
   overview: "Singles and doubles tournaments for both men and women. Fast-paced rallies, precision shots, and nerves of steel — the table tennis arena at REXIA'26 is where champions are separated from the rest.",
   details: {
-    date: "April 19, 2026",
+      date: "May 7th, 2026",
     time: "10:00 AM",
-    venue: "Indoor Sports Complex, Table Tennis Hall",
+    venue: "Guru teg Bahadur hall ",
     club: "Sports Committee",
     facultyAdvisor: "Mr. Singh",
     teamSize: "1-2 members",
-    registrationFee: "₹200",
+    registrationFee: "₹249",
     prizePoll: "10,000*"
   },
   snapshots: [
@@ -354,7 +358,7 @@ export const eventsData = [
   ],
   ranking: "Winner, Runner-up, and 3rd Place decided by playoff.",
   contact: [
-    { name: "Eve", role: "Sports Rep", phone: "+91 9876543214", email: "eve@example.com" }
+    { name: "Keshav Agarwal", role: "Sports Rep", phone: "+91 8777768303", email: "jharavi0605@gmail.com" }
   ]
 }
     ]
@@ -368,16 +372,16 @@ export const eventsData = [
         name: "Group Dance",
         tagline: "Sync your steps",
         description: "Showcase your choreography and coordination in the group dance competition.",
-        location: "Main Stage",
+        location: "amar krishna hall ",
         overview: "An energetic dance battle where teams perform various styles from hip-hop to classical.",
         details: {
-          date: "April 18, 2026",
-          time: "6:00 PM",
+         date: "May 7th, 2026",
+          time: "4:00 PM",
           venue: "Main Stage",
           club: "Dance Society",
           facultyAdvisor: "Mrs. Desai",
-          teamSize: "5-15 members",
-          registrationFee: "₹1000 per team",
+          teamSize: "2-9 members",
+          registrationFee: "₹599 per team",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -395,8 +399,7 @@ export const eventsData = [
         ],
         ranking: "Top 3 performances.",
         contact: [
-          { name: "Karen", role: "Coordinator", phone: "+91 9876543220", email: "karen@example.com" }
-        ]
+  { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }        ]
       },
     
       {
@@ -404,16 +407,16 @@ export const eventsData = [
         name: "Singing",
         tagline: "Let your voice be heard",
         description: "Solo and duet singing competition covering all genres.",
-        location: "Acoustic Hall",
+        location: "amar krishna hall ",
         overview: "Serenade the audience and judges with your vocal prowess.",
         details: {
-          date: "April 18, 2026",
+          date: "May 7th, 2026",
           time: "11:00 AM",
-          venue: "Acoustic Hall",
+          venue: "amar krishna hall ",
           club: "Music Society",
           facultyAdvisor: "Dr. Bose",
           teamSize: "1-2 members",
-          registrationFee: "₹200",
+          registrationFee: "₹249",
           prizePoll: "10,000*"
         },
         snapshots: [
@@ -432,7 +435,7 @@ export const eventsData = [
         ],
         ranking: "Top 3 singers.",
         contact: [
-          { name: "Mona", role: "Coordinator", phone: "+91 9876543222", email: "mona@example.com" }
+          { name: "Subhi", role: "Coordinator", phone: "+91 8112540737", email: "jharavi0605@gmail.com" }
         ]
       },
       {
@@ -440,12 +443,12 @@ export const eventsData = [
         name: "Poster Design",
         tagline: "Paint your imagination",
         description: "A digital and physical poster making competition.",
-        location: "Art Gallery",
+        location: "Guru teg Bahadur hall ",
         overview: "Showcase your artistic and design skills based on a given theme.",
         details: {
-          date: "April 19, 2026",
+          date: "May 7th, 2026",
           time: "10:00 AM",
-          venue: "Art Gallery",
+          venue: "Guru teg Bahadur hall ",
           club: "Fine Arts Club",
           facultyAdvisor: "Mr. Das",
           teamSize: "1-2 members",
@@ -467,7 +470,7 @@ export const eventsData = [
         ],
         ranking: "Top 3 designs.",
         contact: [
-          { name: "Nina", role: "Coordinator", phone: "+91 9876543223", email: "nina@example.com" }
+         { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }  
         ]
       },
       {
@@ -478,13 +481,13 @@ export const eventsData = [
         location: "Campus Wide",
         overview: "Create the most engaging and viral reel showcasing the spirit of REXIA'26.",
         details: {
-          date: "April 18-19, 2026",
+           date: "May 7th, 2026",
           time: "All Day",
           venue: "Campus Wide",
           club: "Media Club",
           facultyAdvisor: "Mrs. Kapoor",
           teamSize: "1-3 members",
-          registrationFee: "Free (Inner Students Only)",
+          registrationFee: "₹249",
           prizePoll: "10,000*"
         },
         snapshots: [

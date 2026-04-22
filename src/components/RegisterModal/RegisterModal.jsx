@@ -65,13 +65,13 @@ const RegisterModal = ({ isOpen, onClose }) => {
                 <p className={styles.optionDesc}>24-hour intense hackathon.</p>
               </a>
 
-              <a href="https://unstop.com/" target="_blank" rel="noreferrer" className={styles.optionCard}>
+              <a href="https://forms.gle/6e9tq9MnMduuJy3N6" target="_blank" rel="noreferrer" className={styles.optionCard}>
                 <div className={styles.iconWrapper} style={{ color: '#00d4ff', borderColor: 'rgba(0, 212, 255, 0.3)' }}>
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                   </svg>
                 </div>
-                <h3 className={styles.optionTitle}>Events</h3>
+                <h3 className={styles.optionTitle}>Other Events</h3>
                 <p className={styles.optionDesc}>Cultural, technical & sports events.</p>
               </a>
             </div>

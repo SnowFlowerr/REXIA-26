@@ -56,7 +56,14 @@ const Drift = ({ onRegisterClick }) => {
           >
             <div className={styles.imageWrapper}>
               <div className={styles.glow} />
-              <img src="/driftx_demo.png" alt="DriftX Cyberpunk Car" className={styles.image} />
+              <video 
+                src="/driftX.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className={styles.image} 
+              />
               <div className={styles.overlayText}>VIP ACCESS</div>
             </div>
           </motion.div>

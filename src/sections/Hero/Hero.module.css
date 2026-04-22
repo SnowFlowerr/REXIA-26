@@ -431,6 +431,21 @@
   50% { transform: translateY(10px); opacity: 0.3; }
 }
 
+/* Managed by label */
+.managedBy {
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  color: var(--color-space-white);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  opacity: 0.9;
+  font-family: var(--font-body);
+}
+
 /* Glow orbs — enhanced */
 .orbContainer {
   position: absolute;

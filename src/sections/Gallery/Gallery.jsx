@@ -4,14 +4,13 @@ import styles from './Gallery.module.css';
 
 // Using gradient placeholders for gallery images
 const galleryItems = [
-  { id: 1, title: 'Opening Ceremony', gradient: 'linear-gradient(135deg, #2e1155, #4a1a8a)', aspect: 'tall' },
-  { id: 2, title: 'Hackathon Floor', gradient: 'linear-gradient(135deg, #1e3a8a, #00d4ff)', aspect: 'wide' },
-  { id: 3, title: 'Dance Battle', gradient: 'linear-gradient(135deg, #ff2d95, #b44aff)', aspect: 'normal' },
-  { id: 4, title: 'Sports', gradient: 'linear-gradient(135deg, #00d4ff, #2e1155)', aspect: 'normal' },
-  { id: 5, title: 'Pro Show Night', gradient: 'linear-gradient(135deg, #b44aff, #ff2d95)', aspect: 'tall' },
-  { id: 6, title: 'Coding Sprint', gradient: 'linear-gradient(135deg, #1e3a8a, #b44aff)', aspect: 'wide' },
-  { id: 7, title: 'Art Installation', gradient: 'linear-gradient(135deg, #4a1a8a, #00d4ff)', aspect: 'normal' },
-  { id: 8, title: 'Closing Fireworks', gradient: 'linear-gradient(135deg, #ff2d95, #00d4ff)', aspect: 'normal' },
+  { id: 1, title: 'Opening Ceremony', image: '/pic1.jpg', aspect: 'tall' },
+  { id: 2, title: 'Hackathon Floor', image: '/pic2.jpg', aspect: 'wide' },
+  { id: 3, title: 'Dance Battle', image: '/pic3.jpg', aspect: 'normal' },
+  { id: 4, title: 'Sports', image: '/pic4.jpg', aspect: 'normal' },
+  { id: 5, title: 'Pro Show Night', image: '/pic5.jpg', aspect: 'tall' },
+  { id: 6, title: 'Coding Sprint', image: '/pic6.jpg', aspect: 'wide' },
+  { id: 7, title: 'Treasure Hunt', image: '/pic7.jpg', aspect: 'wide' },
 ];
 
 const Gallery = () => {
@@ -65,7 +64,7 @@ const Gallery = () => {
             >
               <div
                 className={styles.image}
-                style={{ background: item.gradient }}
+                style={{ backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
               >
                 <div className={styles.imageOverlay}>
                   <span className={styles.imageTitle}>{item.title}</span>
@@ -103,7 +102,7 @@ const Gallery = () => {
             >
               <div
                 className={styles.lightboxImage}
-                style={{ background: selected.gradient }}
+                style={{ backgroundImage: `url(${selected.image})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}
               >
                 <div className={styles.lightboxLabel}>{selected.title}</div>
               </div>

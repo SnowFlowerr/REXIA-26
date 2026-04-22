@@ -126,10 +126,11 @@
 }
 
 .prizeAmt {
-  font-size: 1.3rem;
+  font-size: clamp(0.9rem, 4vw, 1.3rem);
   font-weight: 900;
   color: #f0eaff;
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 /* ── DIVIDER ── */

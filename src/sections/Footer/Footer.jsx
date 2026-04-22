@@ -8,6 +8,7 @@ const Footer = () => {
   const socialLinks = [
     {
       label: 'Instagram',
+      href: 'https://instagram.com/rexiafest/',
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -19,6 +20,7 @@ const Footer = () => {
 
     {
       label: 'YouTube',
+      href: 'https://youtube.com/@rexia26?si=iYc_DgsT0J5tQpYb',
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z" />
@@ -36,12 +38,12 @@ const Footer = () => {
             <motion.div whileHover={{ scale: 1.05 }}>
               <Logo size="md" />
             </motion.div>
-            <p className={styles.tagline}>Beyond Gravity. Beyond Limits.</p>
+            <p className={styles.tagline}>Redefining Boundaries</p>
             <div className={styles.socialLinks}>
               {socialLinks.map((link) => (
                 <motion.a
                   key={link.label}
-                 href="https://instagram.com/rexiafest/" target="_blank"
+                  href={link.href} target="_blank" rel="noreferrer"
                   className={styles.socialLink}
                   aria-label={link.label}
                   whileHover={{
@@ -63,8 +65,8 @@ const Footer = () => {
               {[
                 { label: 'Home', href: '#home' },
                 { label: 'About', href: '#about' },
-                { label: 'Events', href: '#events' },
-                { label: 'Schedule', href: '#timeline' },
+                { label: 'Events', href: '/event' },
+               
               ].map((l) => (
                 <motion.a
                   key={l.href}
@@ -79,7 +81,7 @@ const Footer = () => {
             <div className={styles.linkGroup}>
               <h4 className={styles.linkTitle}>Explore</h4>
               {[
-                { label: 'Team', href: '#team' },
+            
                 { label: 'Gallery', href: '#gallery' },
                 { label: 'Sponsors', href: '#sponsors' },
                 { label: 'Contact', href: '#contact' },
@@ -96,14 +98,17 @@ const Footer = () => {
             </div>
             <div className={styles.linkGroup}>
               <h4 className={styles.linkTitle}>Connect</h4>
-              {['Instagram', 'YouTube'].map((label) => (
+              {[
+                { label: 'Instagram', href: 'https://instagram.com/rexiafest/' },
+                { label: 'YouTube', href: 'https://youtube.com/@rexia26?si=iYc_DgsT0J5tQpYb' }
+              ].map((l) => (
                 <motion.a
-                  key={label}
-                  href="https://instagram.com/rexiafest/" target="_blank"
+                  key={l.label}
+                  href={l.href} target="_blank" rel="noreferrer"
                   className={styles.link}
                   whileHover={{ x: 4, color: '#eef0f6' }}
                 >
-                  {label}
+                  {l.label}
                 </motion.a>
               ))}
             </div>

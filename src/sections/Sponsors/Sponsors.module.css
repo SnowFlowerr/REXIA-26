@@ -16,8 +16,9 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-xl);
   margin-top: var(--space-xl);
   position: relative;
@@ -28,6 +29,8 @@
   align-items: center;
   justify-content: center;
   aspect-ratio: 16/10;
+  width: calc(33.333% - var(--space-xl));
+  min-width: 220px;
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
   background: var(--glass-bg);
@@ -101,16 +104,10 @@
 }
 
 @media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  /* removed grid */
 }
 
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .logoName {
     font-size: var(--font-size-sm);
   }

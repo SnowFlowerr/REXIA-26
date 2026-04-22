@@ -62,14 +62,16 @@ const Contact = () => {
                   <span className={styles.infoIcon}>📧</span>
                   <div>
                     <span className={styles.infoLabel}>Email</span>
-                    <span className={styles.infoValue}>jhellp@rexia26.com</span>
+                    <a href="mailto:rexiafest@starexuniversity.co.in" className={styles.infoValue} style={{ textDecoration: 'none' }}>
+                      rexiafest@starexuniversity.co.in
+                    </a>
                   </div>
                 </div>
                 <div className={styles.infoItem}>
                   <span className={styles.infoIcon}>📍</span>
                   <div>
                     <span className={styles.infoLabel}>Location</span>  
-                    <span className={styles.infoValue}>Starx University NH-48 <br/> Delhi NCR, Gurugram, Haryana, 122413</span>
+                    <span className={styles.infoValue}>Starex University NH-48 <br/> Delhi NCR, Gurugram, Haryana, 122413</span>
                   </div>
                 </div>
                 <div className={styles.infoItem}>

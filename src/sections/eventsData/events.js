@@ -56,17 +56,17 @@ export const eventsData = [
       name: "Startup Pitch Competition",
       tagline: "Pitch your next big idea",
       description: "Present your startup idea to a panel of expert judges and investors.",
-      location: "amar krishna hall",
+      location: "Amar krishna hall",
       overview: "An opportunity for budding entrepreneurs to showcase their business models and prototypes.",
       details: {
         date: "May 7th, 2026",
         time: "11:00 AM",
-        venue: "amar krishna hall",
+        venue: "Amar krishna hall",
         club: "E-Cell",
         facultyAdvisor: "Yashwant",
         teamSize: "2-4 members",
         registrationFee: "₹600 per team",
-        prizePoll: "Equity + Mentorship. Your idea sets the prize."
+        prizePoll: "Funds Against Equity"
       },
       snapshots: [
         { round: "Round 1", format: "Pitch Deck (PPT/PDF)", duration: "8–10 mins", eliminates: "Yes" },
@@ -109,8 +109,8 @@ export const eventsData = [
         time: "11:00 AM",
         venue: "computer science block",
         club: "Finance Club",
-        facultyAdvisor: "Dr. Mehra",
-        teamSize: "1 member",
+       
+       
         registrationFee: "₹250",
         prizePoll: "10,000*"
       },
@@ -163,8 +163,8 @@ export const eventsData = [
           time: "9:00 AM",
           venue: "Indoor Sports Complex",
           club: "Badminton court",
-          facultyAdvisor: "Mr. Singh",
-          teamSize: "1 members",
+         
+         
           registrationFee: "₹250",
           prizePoll: "10,000*"
         },
@@ -193,7 +193,7 @@ export const eventsData = [
         ranking: "Winner, Runner-up, and 3rd Place. Prize: Winner ₹3k, Runner-up ₹2k (each for Men & Women).",
         contact: [
           { name: "Umang", role: "Sports Rep", phone: "+91 6204936468", email: "jharavi0605@gmail.com" },
-          { name: "Bhodeo", role: "Sports Rep", phone: "+91 6206310174", email: "jharavi0605@gmail.com" }
+          { name: "Bhudeo", role: "Sports Rep", phone: "+91 6206310174", email: "jharavi0605@gmail.com" }
         ]
       },
       {
@@ -208,7 +208,7 @@ export const eventsData = [
           time: "10:00 AM",
           venue: "Volleyball court",
           club: "Sports Committee",
-          facultyAdvisor: "Mr. Singh",
+        
           teamSize: "6-8 members",
           registrationFee: "₹599 per team",
           prizePoll: "10,000*"
@@ -253,8 +253,7 @@ export const eventsData = [
           time: "8:00 AM",
           venue: "Tennis Courts",
           club: "Sports Committee",
-          facultyAdvisor: "Mr. Singh",
-          teamSize: "1 members",
+       
           registrationFee: "₹250",
           prizePoll: "10,000*"
         },
@@ -299,8 +298,7 @@ export const eventsData = [
           time: "1:00 PM",
           venue: "Guru teg Bahadur hall",
           club: "Chess Club",
-          facultyAdvisor: "Dr. Verma",
-          teamSize: "1 member",
+          
           registrationFee: "₹250",
           prizePoll: "10,000*"
         },
@@ -343,7 +341,7 @@ export const eventsData = [
           time: "11:00 AM",
           venue: "near vollyball court",
           club: "Sports Committee",
-          facultyAdvisor: "Mr. Singh",
+         
           teamSize: "8 members",
           registrationFee: "₹600 per team",
           prizePoll: "10,000*"
@@ -386,7 +384,7 @@ export const eventsData = [
           time: "5:00 PM",
           venue: "computer science block",
           club: "Gaming Club",
-          facultyAdvisor: "Mr. Kumar",
+         
           teamSize: "4 members",
           registrationFee: "₹500 per squad",
           prizePoll: "10,000*"
@@ -430,8 +428,7 @@ export const eventsData = [
           time: "10:00 AM",
           venue: "Guru teg Bahadur hall",
           club: "Sports Committee",
-          facultyAdvisor: "Mr. Singh",
-          teamSize: "1 members",
+         
           registrationFee: "₹250",
           prizePoll: "10,000*"
         },
@@ -475,14 +472,14 @@ export const eventsData = [
       name: "Group Dance",
       tagline: "Sync your steps",
       description: "Showcase your choreography and coordination in the group dance competition.",
-      location: "amar krishna hall",
+      location: "Amar krishna hall",
       overview: "An energetic dance battle where teams perform various styles from hip-hop to classical.",
       details: {
         date: "May 6th, 2026",
         time: "4:00 PM",
         venue: "Main Stage",
         club: "Dance Society",
-        facultyAdvisor: "Mrs. Desai",
+      
         teamSize: "2-9 members",
         registrationFee: "₹600 per team",
         prizePoll: "10,000*"
@@ -520,15 +517,14 @@ export const eventsData = [
       name: "Solo Singing",
       tagline: "Let your voice be heard",
       description: "Solo singing competition covering all genres.",
-      location: "amar krishna hall",
+      location: "Amar krishna hall",
       overview: "Serenade the audience and judges with your vocal prowess.",
       details: {
         date: "May 6th, 2026",
         time: "11:00 AM",
-        venue: "amar krishna hall",
+        venue: "Amar krishna hall",
         club: "Music Society",
-        facultyAdvisor: "Dr. Bose",
-        teamSize: "1 member",
+      
         registrationFee: "₹250",
         prizePoll: "10,000*"
       },
@@ -562,7 +558,7 @@ export const eventsData = [
     },
     {
       id: "cult-04",
-      name: "Poster Design (For Inner Students)",
+      name: "Poster Design (For University Students)",
       tagline: "Paint your imagination",
       description: "A digital and physical poster making competition.",
       location: "Guru teg Bahadur hall",
@@ -572,8 +568,7 @@ export const eventsData = [
         time: "10:00 AM",
         venue: "Guru teg Bahadur hall",
         club: "Fine Arts Club",
-        facultyAdvisor: "Mr. Das",
-        teamSize: "1 member",
+    
         registrationFee: "Free",
       
       },
@@ -615,8 +610,7 @@ export const eventsData = [
         time: "All Day",
         venue: "Campus Wide",
         club: "Media Club",
-        facultyAdvisor: "Mrs. Kapoor",
-        teamSize: "1 members",
+       
         registrationFee: "₹250",
         prizePoll: "10,000*"
       },

@@ -3,14 +3,11 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import styles from './Sponsors.module.css';
 
 const INITIAL_SPONSORS = [
-  { id: 1, name: "Domino's", color: '#00d4ff' },
-  { id: 2, name: 'Red Bull', color: '#ff2d95' },
-  { id: 3, name: 'Nestlé', color: '#b44aff' },
-  { id: 4, name: 'Kronus', color: '#00d4ff' },
-  { id: 5, name: 'Plum', color: '#ff2d95' },
-  { id: 6, name: 'AIESEC', color: '#b44aff' },
-  { id: 7, name: 'Ganpati', color: '#00d4ff' },
-  { id: 8, name: 'Sip N Pop', color: '#ff2d95' },
+  { id: 1, name: 'Red Bull', color: '#ff2d95' },
+  { id: 2, name: 'CampusXL', color: '#00d4ff' },
+  { id: 3, name: 'Denver', color: '#b44aff' },
+  { id: 4, name: 'DriftX', color: '#ff2d95' },
+  { id: 5, name: 'Parera', color: '#00d4ff' },
 ];
 
 const shuffleArray = (array) => {
@@ -19,6 +16,7 @@ const shuffleArray = (array) => {
     const j = Math.floor(Math.random() * (i + 1));
     [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
   }
+  
   return newArray;
 };
 
@@ -26,8 +24,8 @@ const SponsorLogo = ({ sponsor }) => (
   <motion.div 
     layout
     initial={{ opacity: 0, scale: 0.8 }}
-    animate={{ opacity: 1, scale: 1 }}
-    exit={{ opacity: 0, scale: 0.8 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true }}
     transition={{ 
       layout: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
       opacity: { duration: 0.4 }
@@ -79,11 +77,9 @@ const Sponsors = () => {
         </motion.div>
 
         <div className={styles.grid}>
-          <AnimatePresence mode="popLayout">
-            {sponsors.map((sponsor) => (
-              <SponsorLogo key={sponsor.id} sponsor={sponsor} />
-            ))}
-          </AnimatePresence>
+          {sponsors.map((sponsor) => (
+            <SponsorLogo key={sponsor.id} sponsor={sponsor} />
+          ))}
         </div>
 
         {/* Become a sponsor CTA */}

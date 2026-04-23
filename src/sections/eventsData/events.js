@@ -6,10 +6,11 @@ export const eventsData = [
       {
         id: "tech-01",
         name: "StarHacks 1.0",
+        poweredBy: "unstop",
         tagline: "24 Hour Hackathon",
         description: "A thrilling 24-hour hackathon where you build, break, and innovate. Push your limits and create something extraordinary.",
         location: "Computer Science Block",
-        overview: "StarHacks 1.0 is the premier 24-hour hackathon. Teams will collaborate to solve real-world problems. Expect late-night coding, mentors, and intense competition.",
+        overview:"StarHacks 1.0 is the premier 24-hour hackathon. Teams will collaborate to solve real-world problems. Expect late-night coding, mentors, and intense competition.",
         details: {
           date: "May 6th & 7th, 2026",
           time: "Starting from 1:30 PM (24 Hours)",

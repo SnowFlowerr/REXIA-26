@@ -6,6 +6,7 @@ const offerings = [
   {
     no: '01',
     title: 'Hackathons',
+    poweredBy: 'unstop',
     desc: '24-hour sprints where logic meets imagination, building the future of decentralized tech.',
     image: '/hackathone.png'
   },
@@ -25,7 +26,7 @@ const offerings = [
     no: '04',
     title: 'Startup Pitch',
     desc: 'One idea. Two minutes. A room full of investors. Pitch bold, pitch sharp or go home.',
-    image: '/startup.png'
+    image: '/startup3.jpg'
   }
 ];
 
@@ -136,6 +137,11 @@ const Offerings = () => {
                       <h3 className={`${styles.cardTitle} ${item.title === 'Hackathons' ? styles.hackathonTitle : ''}`}>
                         {item.title}
                       </h3>
+                      {item.poweredBy && (
+                        <div className={styles.cardPoweredBy}>
+                          powered by <span className={styles.poweredByName}>{item.poweredBy}</span>
+                        </div>
+                      )}
                       <p className={styles.cardDesc}>{item.desc}</p>
                     </div>
                   </motion.div>

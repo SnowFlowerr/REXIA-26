@@ -49,6 +49,11 @@ const EventDetail = () => {
             // {categoryLabels[event.category].toUpperCase()}
           </div>
           <h1 className={styles.eventName}>{event.name}</h1>
+          {event.poweredBy && (
+            <div className={styles.poweredBy}>
+              powered by <span className={styles.poweredByName}>{event.poweredBy}</span>
+            </div>
+          )}
           <p className={styles.tagline}>{event.tagline}</p>
           <div className={styles.heroMeta}>
             <div className={styles.metaItem}>
@@ -95,10 +100,9 @@ const EventDetail = () => {
             { label: 'TIME', value: event.details.time },
             { label: 'VENUE', value: event.details.venue },
             { label: 'CLUB', value: event.details.club },
-            { label: 'FACULTY ADVISOR', value: event.details.facultyAdvisor },
             { label: 'TEAM SIZE', value: event.details.teamSize },
             { label: 'REGISTRATION FEE', value: event.details.registrationFee },
-          ].map((item, i) => (
+          ].filter(item => item.value).map((item, i) => (
             <div key={i} className={styles.detailCard}>
               <span className={styles.detailLabel}>{item.label}</span>
               <span className={styles.detailValue}>{item.value}</span>

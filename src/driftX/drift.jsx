@@ -36,14 +36,16 @@ const Drift = ({ onRegisterClick }) => {
                 Join us for the most electrifying drifting competition, showcasing
                 insane turns, burnt rubber, and unmatched skill.
               </p>
-              <motion.button 
+              <motion.a 
                 className={styles.ctaBtn}
-                onClick={(e) => { e.preventDefault(); if (onRegisterClick) onRegisterClick(); }}
+                href="https://l1nq.com/v3k8j1i"
+                target="_blank"
+                rel="noreferrer"
                 whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(180, 74, 255, 0.4)' }}
                 whileTap={{ scale: 0.95 }}
               >
                 BUY TICKETS / REGISTER
-              </motion.button>
+              </motion.a>
             </motion.div>
           </div>
 

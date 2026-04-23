@@ -64,7 +64,7 @@ const Footer = () => {
               <h4 className={styles.linkTitle}>Navigate</h4>
               {[
                 { label: 'Home', href: '#home' },
-                { label: 'About', href: '#about' },
+            
                 { label: 'Events', href: '/event' },
                
               ].map((l) => (

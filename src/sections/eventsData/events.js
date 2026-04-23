@@ -48,7 +48,7 @@ export const eventsData = [
           { criteria: "Presentation & Clarity", weightage: "15%" }
         ],
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Ravi", role: "Coordinator", phone: "+91 9311891503", email: "jharavi0605@gmail.com" }
+          { name: "Ravi", role: "Coordinator", phone: "+91 9311891503", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -94,7 +94,7 @@ export const eventsData = [
         ],
         ranking: "There will be a Winner and Runner up",
         contact: [
-          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }
+          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -140,8 +140,8 @@ export const eventsData = [
           { criteria: "Consistency Across Rounds", weightage: "15%" }
         ],
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Bhudeo", role: "Coordinator", phone: "+91 6206310174", email: "jharavi0605@gmail.com" },
-          { name: "Aditya Jindal", role: "Coordinator", phone: "+91 7719415700", email: "jharavi0605@gmail.com" }
+          { name: "Bhudeo", role: "Coordinator", phone: "+91 6206310174", email: "rexiafest@starexuniversity.co.in" },
+          { name: "Aditya Jindal", role: "Coordinator", phone: "+91 7719415700", email: "rexiafest@starexuniversity.co.in" }
         ]
       }
     ]
@@ -187,8 +187,8 @@ export const eventsData = [
         ],
 
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Umang", role: "Sports Rep", phone: "+91 6204936468", email: "jharavi0605@gmail.com" },
-          { name: "Bhudeo", role: "Sports Rep", phone: "+91 6206310174", email: "jharavi0605@gmail.com" }
+          { name: "Umang", role: "Sports Rep", phone: "+91 6204936468", email: "rexiafest@starexuniversity.co.in" },
+          { name: "Bhudeo", role: "Sports Rep", phone: "+91 6206310174", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -228,7 +228,7 @@ export const eventsData = [
         ],
 
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Aryan", role: "Coordinator", phone: "+91 97843360002", email: "jharavi0605@gmail.com" }
+          { name: "Aryan", role: "Coordinator", phone: "+91 97843360002", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -268,8 +268,8 @@ export const eventsData = [
         ],
 
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" },
-          { name: "Utkarsh", role: "Lead", phone: "+91 6393257287", email: "jharavi0605@gmail.com" }
+          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "rexiafest@starexuniversity.co.in" },
+          { name: "Utkarsh", role: "Lead", phone: "+91 6393257287", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -307,7 +307,7 @@ export const eventsData = [
         ],
 
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Umang", role: "Sports Rep", phone: "+91 6204936468", email: "jharavi0605@gmail.com" }
+          { name: "Umang", role: "Sports Rep", phone: "+91 6204936468", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -346,7 +346,7 @@ export const eventsData = [
         ],
 
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Ravi", role: "Coordinator", phone: "+91 9311891503", email: "jharavi0605@gmail.com" }
+          { name: "Ravi", role: "Coordinator", phone: "+91 9311891503", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -386,7 +386,7 @@ export const eventsData = [
         ],
 
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Ayush Prashad", role: "Coordinator", phone: "+91 9350648039", email: "jharavi0605@gmail.com" }
+          { name: "Ayush Prashad", role: "Coordinator", phone: "+91 9350648039", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -426,7 +426,7 @@ export const eventsData = [
         ],
 
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Keshav Agarwal", role: "Sports Rep", phone: "+91 8777768303", email: "jharavi0605@gmail.com" }
+          { name: "Keshav Agarwal", role: "Sports Rep", phone: "+91 8777768303", email: "rexiafest@starexuniversity.co.in" }
         ]
       }
     ]
@@ -476,7 +476,7 @@ export const eventsData = [
           { criteria: "Overall Impact", weightage: "10%" }
         ],
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }
+          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -519,7 +519,7 @@ export const eventsData = [
           { criteria: "Presentation & Stage Presence", weightage: "20%" }
         ],
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Subhi", role: "Coordinator", phone: "+91 8112540737", email: "jharavi0605@gmail.com" }
+          { name: "Subhi", role: "Coordinator", phone: "+91 8112540737", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -560,7 +560,7 @@ export const eventsData = [
           { criteria: "Neatness & Aesthetics", weightage: "20%" }
         ],
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "jharavi0605@gmail.com" }
+          { name: "Harendra", role: "Lead", phone: "+91 9664056008", email: "rexiafest@starexuniversity.co.in" }
         ]
       },
       {
@@ -604,7 +604,7 @@ export const eventsData = [
           { criteria: "Overall Impact & Engagement", weightage: "10%" }
         ],
         ranking: "There will be a Winner and Runner up", contact: [
-          { name: "Aryan", role: "Coordinator", phone: "+91 97843360002", email: "jharavi0605@gmail.com" }
+          { name: "Aryan", role: "Coordinator", phone: "+91 97843360002", email: "rexiafest@starexuniversity.co.in" }
         ]
       }
     ]

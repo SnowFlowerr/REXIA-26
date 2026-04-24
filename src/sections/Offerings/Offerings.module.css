@@ -212,6 +212,21 @@
   width: 100%;
 }
 
+.cardPoweredByLogoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.cardPoweredByLogo {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.2);
+  border-radius: 2px;
+}
+
 .poweredByName {
   color: #b44aff;
   font-weight: 700;

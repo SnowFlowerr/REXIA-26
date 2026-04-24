@@ -7,6 +7,7 @@ const offerings = [
     no: '01',
     title: 'Hackathons',
     poweredBy: 'unstop',
+    poweredByLogo: '/unstop.jpg',
     desc: '24-hour sprints where logic meets imagination, building the future of decentralized tech.',
     image: '/hackathone.png'
   },
@@ -139,7 +140,14 @@ const Offerings = () => {
                       </h3>
                       {item.poweredBy && (
                         <div className={styles.cardPoweredBy}>
-                          powered by <span className={styles.poweredByName}>{item.poweredBy}</span>
+                          {item.poweredByLogo ? (
+                            <div className={styles.cardPoweredByLogoWrapper}>
+                              <span className={styles.poweredByText}>powered by</span>
+                              <img src={item.poweredByLogo} alt={item.poweredBy} className={styles.cardPoweredByLogo} />
+                            </div>
+                          ) : (
+                            <>powered by <span className={styles.poweredByName}>{item.poweredBy}</span></>
+                          )}
                         </div>
                       )}
                       <p className={styles.cardDesc}>{item.desc}</p>

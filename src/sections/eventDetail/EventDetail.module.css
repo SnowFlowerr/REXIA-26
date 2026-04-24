@@ -76,6 +76,25 @@
   width: 100%;
 }
 
+.poweredByLogoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+.poweredByText {
+  opacity: 0.6;
+}
+
+.poweredByLogo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.2);
+  border-radius: 4px;
+}
+
 .poweredByName {
   color: #b44aff;
   font-weight: 700;

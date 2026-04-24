@@ -8,6 +8,8 @@ const INITIAL_SPONSORS = [
   { id: 3, name: 'Denver', image: '/denver.png' },
   { id: 4, name: 'DriftX', image: '/driftx.png' },
   { id: 5, name: 'Parera', image: '/Prera.png' },
+  { id: 6, name: 'Canva', image: '/canva.jpg' },
+  { id: 7, name: 'Axura', image: '/axure.jpg' },
 ];
 
 const shuffleArray = (array) => {

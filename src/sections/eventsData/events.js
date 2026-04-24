@@ -7,6 +7,7 @@ export const eventsData = [
         id: "tech-01",
         name: "StarHacks 1.0",
         poweredBy: "unstop",
+        poweredByLogo: "/unstop.jpg",
         tagline: "24 Hour Hackathon",
         description: "A thrilling 24-hour hackathon where you build, break, and innovate. Push your limits and create something extraordinary.",
         location: "Computer Science Block",

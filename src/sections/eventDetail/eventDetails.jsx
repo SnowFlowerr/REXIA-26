@@ -51,7 +51,14 @@ const EventDetail = () => {
           <h1 className={styles.eventName}>{event.name}</h1>
           {event.poweredBy && (
             <div className={styles.poweredBy}>
-              powered by <span className={styles.poweredByName}>{event.poweredBy}</span>
+              {event.poweredByLogo ? (
+                <div className={styles.poweredByLogoWrapper}>
+                  <span className={styles.poweredByText}>powered by</span>
+                  <img src={event.poweredByLogo} alt={event.poweredBy} className={styles.poweredByLogo} />
+                </div>
+              ) : (
+                <>powered by <span className={styles.poweredByName}>{event.poweredBy}</span></>
+              )}
             </div>
           )}
           <p className={styles.tagline}>{event.tagline}</p>

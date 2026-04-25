@@ -53,7 +53,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
             <p className={styles.subtitle}>Select the experience you wish to register for.</p>
             
             <div className={styles.optionsGrid}>
-              <a href="https://unstop.com/" target="_blank" rel="noreferrer" className={styles.optionCard}>
+              <a href="https://unstop.com/p/starhack-10-starex-university-haryana-1678920" target="_blank" rel="noreferrer" className={styles.optionCard}>
                 <div className={styles.iconWrapper} style={{ color: '#b44aff', borderColor: 'rgba(180, 74, 255, 0.3)' }}>
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
